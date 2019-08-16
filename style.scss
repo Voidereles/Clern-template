@@ -2,14 +2,24 @@ $clern-blue: #14b8eb;
 $clern-lightGreen:#64b95a;
 $clern-lightYellow: #d3ef8b;
 $clern-dark-text: #322c2e;
+$clern-white-a-bit-purple: #f3f7ff;
 $variable-text-small-1:0.75rem;
 $variable-text-small-3:0.5rem;
 $variable-text-medium-default:1rem;
+$variable-text-medium-1:1.25rem;
 $variable-text-big-2:2.5rem;
 $fast:0.2s;
 
 body {
     color: $clern-dark-text;
+}
+
+.font-size-doubled {
+    font-size: 200%;
+}
+
+.text-small-1 {
+    font-size: $variable-text-small-1;
 }
 
 .text-small-3 {
@@ -182,7 +192,7 @@ body {
 
 
 .main {
-    background-color: $clern-blue;
+    background-color: white;
     width: 100%;
     top: 0;
     position: absolute;
@@ -195,7 +205,7 @@ body {
     background-color: transparent;
     background-image: url('images/background-slider.png');
     background-size: cover;
-    height: 100vh;
+    height: 83vh;
     width: 100%;
     z-index: 1;
     position: absolute;
@@ -203,12 +213,12 @@ body {
     left: 0;
 }
 
+
 .owl-one {
     z-index: 0;
     max-height: 83vh;
     overflow: hidden;
-
-    // &__item {
+    background-image: linear-gradient(to right, #fff 48%, #14b8eb 48%); // &__item {
 
     //     background-image: url('images/bg-place-1.jpg');
     //     background-size: cover;
@@ -286,6 +296,46 @@ body {
     }
 }
 
-.next {
-    margin-top: 100vh;
+.steps {
+    background-color: white;
+    background-image: url('images/background-steps.png');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position-x: -500px;
+    background-repeat: no-repeat;
+
+    &__heading {
+        color: $clern-blue;
+    }
+
+    &__intro {
+        padding-top: 160px;
+    }
+
+    &__svg {
+        background: white;
+        -webkit-box-shadow: -1px 2px 5px 1px #efefef;
+        -moz-box-shadow: -1px 2px 5px 1px #efefef;
+        box-shadow: -1px 2px 5px 1px #efefef;
+        border-radius: 15px;
+        height: 18%;
+    }
+
+    &__info-step-heading {
+        color: $clern-blue;
+        font-size: $variable-text-medium-1;
+    }
+
+    &__info-step-subheading {
+        font-size: $variable-text-small-1;
+    }
+
+    // &__steps-info {}
+}
+
+.testimonials {
+    &__heading {
+        color: $clern-lightGreen;
+    }
 }
