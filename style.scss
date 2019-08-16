@@ -1,0 +1,129 @@
+img {
+    max-height: 200px;
+}
+
+$clern-blue: #14b8eb;
+$clern-text-color: #322c2e;
+$variable-text-small-1:0.75rem;
+
+body {
+    color: $clern-text-color;
+}
+
+.header {
+    max-height: 100px;
+
+    &__logo {
+        max-height: 60px;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: $clern-text-color;
+    }
+
+    &__nav-item .active {
+        color: $clern-text-color;
+        position: relative;
+    }
+
+    &__nav-link {
+        font-size: $variable-text-small-1;
+    }
+
+    &__nav-item .active::after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 0.25rem;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: $clern-blue;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        color: $clern-text-color;
+        background-color: transparent;
+    }
+
+    .dropdown-toggle::after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 0;
+        vertical-align: 0;
+        content: none;
+        border-top: 0;
+    }
+
+    .dropdown-toggle {
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        font-size: $variable-text-small-1;
+        background-color: white;
+        color: $clern-blue;
+        border: 0px white;
+        -webkit-box-shadow: -2px 2px 20px 0px $clern-blue;
+        -moz-box-shadow: -2px 2px 20px 0px $clern-blue;
+        box-shadow: -2px 2px 20px 0px $clern-blue;
+        z-index: 2000;
+
+        .header__lang-btn-text {
+            z-index: 2000;
+            position: relative;
+        }
+    }
+
+    .custom-carets {
+        .dropdown-toggle:after {
+            font-family: FontAwesome;
+            content: '\f107';
+            font-size: 0.5rem;
+            z-index: 2000;
+            position: relative;
+        }
+
+        .dropdown-toggle>span.caret {
+            display: none;
+        }
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 46px;
+        float: left;
+        min-width: 0;
+        padding: 1.5rem 0;
+        margin: .125rem 0 0;
+        font-size: 1rem;
+        color: #212529;
+        text-align: center;
+        list-style: none;
+        -webkit-box-shadow: 0 10px 20px 1px $clern-blue;
+        -moz-box-shadow: 0 10px 20px 1px $clern-blue;
+        box-shadow: 0 10px 20px 1px $clern-blue;
+        background-clip: padding-box;
+        border: none;
+    }
+
+    .dropdown-item {
+        padding: 0;
+        color: $clern-blue;
+        font-size: $variable-text-small-1;
+    }
+
+    // &__lang-change {
+    //     border-radius: 50%;
+    //     width: 20px;
+    //     height: 20px;
+    // }
+}
+
+.main {
+    margin-top: 200px;
+}
