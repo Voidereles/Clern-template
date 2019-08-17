@@ -309,31 +309,22 @@ body {
   text-align: center;
 }
 
-.steps__svg-1::after {
+.steps__svg-1::after, .steps__svg-2::after, .steps__svg-3::after {
   content: '01';
-  color: #14b8eb;
+  color: #64b95a;
   position: absolute;
   width: 10px;
   right: -12px;
   height: 10px;
+  bottom: 8px;
 }
 
 .steps__svg-2::after {
   content: '02';
-  color: #14b8eb;
-  position: absolute;
-  width: 10px;
-  right: -12px;
-  height: 10px;
 }
 
 .steps__svg-3::after {
   content: '03';
-  color: #14b8eb;
-  position: absolute;
-  width: 10px;
-  right: -12px;
-  height: 10px;
 }
 
 .steps__info-step-heading {
@@ -345,13 +336,99 @@ body {
   font-size: 0.75rem;
 }
 
-.testimonials__heading {
+.offer {
+  color: #14b8eb;
+}
+
+.offer__heading {
   color: #64b95a;
+}
+
+.offer__item {
+  -webkit-box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 10px 3px;
+          box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 10px 3px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  position: relative;
+  z-index: 0;
+}
+
+.offer__item-heading {
+  font-size: 0.75rem;
+  position: relative;
+  display: block;
+}
+
+.offer__line {
+  width: 20%;
+  display: block;
+}
+
+.offer__svg {
+  width: 40%;
+}
+
+.offer__svg path, .offer__svg {
+  fill: #14b8eb !important;
+}
+
+.offer__more {
+  display: inline-block;
+  position: absolute;
+  font-size: 1.5rem;
+  background-color: #14b8eb;
+  padding: 1rem;
+  border-radius: 50%;
+  bottom: 1rem;
+  right: 1rem;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  width: 32px;
+  -webkit-box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 5px 3px;
+          box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 5px 3px;
+}
+
+.offer__more:hover {
+  border-radius: 25px;
+  width: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.offer__more:hover .offer__more-dots {
+  right: 5px;
+  color: #14b8eb;
+}
+
+.offer__more:hover .offer__more-hidden {
+  left: 38%;
+  z-index: 2;
+  display: inline-block;
+}
+
+.offer__more-hidden {
+  display: none;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
+  left: -25px;
+  font-size: 0.75rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.offer__more-dots {
+  position: absolute;
+  color: white;
+  font-size: 1.5rem;
+  /* top: 50%; */
+  /* left: 50%; */
+  -webkit-transform: translate(-50%, -71%);
+          transform: translate(-50%, -71%);
 }
 
 .footer img {
   width: 50px;
   height: 50px;
-  display: none;
 }
 /*# sourceMappingURL=style.css.map */
