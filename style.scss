@@ -387,6 +387,10 @@ body {
     color: $clern-blue;
     transition: $fast;
 
+    .owl-item {
+        padding: 0.5rem;
+    }
+
     &__heading {
         color: $clern-lightGreen;
     }
@@ -398,10 +402,12 @@ body {
         position: relative;
         transition: 1s;
         z-index: 1;
+        background-color: white;
     }
 
     &__item:hover {
         background-color: #3fbae1;
+        transition: 1s;
     }
 
     &__item:hover::after {
@@ -427,6 +433,7 @@ body {
         position: relative;
         display: block;
         z-index: 2;
+        height: 4rem;
     }
 
     &__item:hover &__item-heading {
@@ -518,7 +525,113 @@ body {
 }
 
 
+.testimonials {
+    margin-top: -20vh;
 
+    .container {
+        background-color: #5DB65A;
+        background: rgba(93, 182, 90, 1);
+        background: -moz-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(93, 182, 90, 1)), color-stop(100%, rgba(147, 208, 87, 1)));
+        background: -webkit-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+        background: -o-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+        background: -ms-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+        background: linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+        padding-top: 30vh;
+        min-height: 40vh;
+        border-bottom-right-radius: 10vh;
+        border-top-left-radius: 10vh;
+    }
+
+    &__portrait,
+    .owl-carousel .owl-item img {
+        border-radius: 50%;
+        background-color: white;
+        width: 75px;
+        display: inline-block;
+    }
+
+    &__card {
+        border: 0;
+        background-color: transparent;
+    }
+
+    &__blockquote {
+        font-size: $variable-text-medium-default;
+    }
+
+    .fa-chevron-left,
+    .fa-chevron-right {
+        position: absolute;
+        font-size: 5rem;
+        top: 0;
+        color: white;
+    }
+
+    .fa-chevron-left {
+        left: 5%;
+    }
+
+
+    .fa-chevron-right {
+        font-size: 5rem;
+        right: 5%;
+    }
+
+    .owl-dots {
+        text-align: center;
+        margin-top: -2rem;
+        padding-bottom: 5rem;
+    }
+
+    .owl-dot {
+        width: 13px;
+        height: 13px;
+        top: 50%;
+        left: 0px;
+        box-shadow: inset rgba(255, 255, 255, 1) 0px 0px 0px 3px;
+        z-index: 1;
+        transform: translateY(-50%);
+        padding: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+        transition: all 0.3s ease 0s;
+        border-radius: 50%;
+        // background: transparent !important;
+        appearance: none;
+        // background-color: transparent !important;
+        // border: 1px solid #fff;
+        cursor: pointer;
+        display: inline-block;
+        // margin: 0 5px;
+        outline: none;
+        padding: 5px;
+    }
+
+    .owl-dots .active {
+        box-shadow: rgba(255, 255, 255, 1) 0px 0px 0px 6px;
+    }
+
+    .owl-dot::after {
+        content: '';
+        width: 15px;
+        height: 2px;
+        display: inline-block;
+    }
+
+    .owl-dots .active::after {
+        width: 100px !important;
+        content: "";
+        display: block;
+        width: 15px;
+        height: 2px;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.25s ease-in-out 0s;
+    }
+}
 
 
 
