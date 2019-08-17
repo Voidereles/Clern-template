@@ -336,8 +336,14 @@ body {
   font-size: 0.75rem;
 }
 
+.steps .owl-item {
+  width: 100%;
+}
+
 .offer {
   color: #14b8eb;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .offer__heading {
@@ -350,22 +356,67 @@ body {
   border-bottom-right-radius: 25px;
   border-top-left-radius: 25px;
   position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 1;
+}
+
+.offer__item:hover {
+  background-color: #3fbae1;
+}
+.offer__item:hover::after {
+  content: "";
+  background: url("images/offer-flats-bg.png");
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 0;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  z-index: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .offer__item-heading {
   font-size: 0.75rem;
   position: relative;
   display: block;
+  z-index: 2;
+}
+
+.offer__item:hover .offer__item-heading {
+  color: white;
 }
 
 .offer__line {
+  position: relative;
   width: 20%;
   display: block;
+  fill: #14b8eb;
+  stroke: #14b8eb;
+  z-index: 2;
+}
+
+.offer__item:hover .offer__line {
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 .offer__svg {
-  width: 40%;
+  max-height: 60px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 1;
+}
+
+.offer__item:hover .offer__svg {
+  opacity: 0;
 }
 
 .offer__svg path, .offer__svg {
@@ -386,6 +437,7 @@ body {
   width: 32px;
   -webkit-box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 5px 3px;
           box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 5px 3px;
+  z-index: 2;
 }
 
 .offer__more:hover {

@@ -378,11 +378,14 @@ body {
         font-size: $variable-text-small-1;
     }
 
-    // &__steps-info {}
+    .owl-item {
+        width: 100%;
+    }
 }
 
 .offer {
     color: $clern-blue;
+    transition: $fast;
 
     &__heading {
         color: $clern-lightGreen;
@@ -393,38 +396,65 @@ body {
         border-bottom-right-radius: 25px;
         border-top-left-radius: 25px;
         position: relative;
-        // background-color: #3fbae1;
-        z-index: 0;
+        transition: 1s;
+        z-index: 1;
     }
 
-    // &__item::after {
-    //     content: "";
-    //     background: url('images/offer-flats-bg.png');
-    //     opacity: 0.5;
-    //     top: 0;
-    //     left: 0;
-    //     right: 0;
-    //     bottom: 0;
-    //     z-index: 0;
-    //     position: absolute;
-    //     background-size: cover;
-    //     background-repeat: no-repeat;
-    // }
+    &__item:hover {
+        background-color: #3fbae1;
+    }
+
+    &__item:hover::after {
+        content: "";
+        background: url('images/offer-flats-bg.png');
+        opacity: 0.9;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-bottom-right-radius: 25px;
+        border-top-left-radius: 25px;
+        z-index: 1;
+        transition: 1s;
+    }
 
     &__item-heading {
         font-size: $variable-text-small-1;
         position: relative;
         display: block;
+        z-index: 2;
+    }
+
+    &__item:hover &__item-heading {
+        color: white;
     }
 
     &__line {
+        position: relative;
         width: 20%;
         display: block;
+        fill: $clern-blue;
+        stroke: $clern-blue;
+        z-index: 2;
     }
 
+    &__item:hover &__line {
+        fill: #ffffff !important;
+        stroke: #ffffff !important;
+    }
 
     &__svg {
-        width: 40%;
+        max-height: 60px;
+        transition: 1s;
+        opacity: 1;
+    }
+
+    &__item:hover &__svg {
+        opacity: 0;
     }
 
     &__svg path,
@@ -444,6 +474,7 @@ body {
         transition: 0.5s all;
         width: 32px;
         box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 5px 3px;
+        z-index: 2;
     }
 
     &__more:hover {
