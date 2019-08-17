@@ -259,13 +259,35 @@ body {
 }
 
 .steps {
-  background-color: white;
-  background-image: url("images/background-steps.png");
-  background-size: cover;
+  background-color: #f3f7ff;
   width: 100%;
-  height: 100vh;
-  background-position-x: -500px;
+  height: 120vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.steps__tel-hand {
+  background-size: contain;
+  background-image: url("images/tel-hand.png");
   background-repeat: no-repeat;
+  position: absolute;
+  left: -23%;
+  bottom: -11%;
+  width: 56%;
+  height: 99%;
+  z-index: 1;
+}
+
+.steps__container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/background-steps-inversed.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
 }
 
 .steps__heading {
@@ -281,7 +303,37 @@ body {
   -webkit-box-shadow: -1px 2px 5px 1px #efefef;
   box-shadow: -1px 2px 5px 1px #efefef;
   border-radius: 15px;
-  height: 18%;
+  max-height: 70px;
+  max-width: 70px;
+  position: relative;
+  text-align: center;
+}
+
+.steps__svg-1::after {
+  content: '01';
+  color: #14b8eb;
+  position: absolute;
+  width: 10px;
+  right: -12px;
+  height: 10px;
+}
+
+.steps__svg-2::after {
+  content: '02';
+  color: #14b8eb;
+  position: absolute;
+  width: 10px;
+  right: -12px;
+  height: 10px;
+}
+
+.steps__svg-3::after {
+  content: '03';
+  color: #14b8eb;
+  position: absolute;
+  width: 10px;
+  right: -12px;
+  height: 10px;
 }
 
 .steps__info-step-heading {
@@ -295,5 +347,11 @@ body {
 
 .testimonials__heading {
   color: #64b95a;
+}
+
+.footer img {
+  width: 50px;
+  height: 50px;
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
