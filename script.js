@@ -2,6 +2,8 @@ $('.owl-one').owlCarousel({
     loop: true,
     margin: 10,
     autoplay: true,
+    lazyLoad: true,
+    animateOut: 'fadeOut',
     items: 1
 })
 
@@ -10,8 +12,6 @@ $('.owl-two').owlCarousel({
     margin: 10,
     autoplay: true,
     responsiveClass: true,
-    nav: true,
-    navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
     responsive: {
         0: {
             items: 1,
@@ -41,8 +41,8 @@ $('.owl-three').owlCarousel({
 $('.owl-four').owlCarousel({
     loop: true,
     margin: 10,
-    nav: true,
-    // autoplay: true,
+    autoplay: true,
+    nav: false,
     responsive: {
         0: {
             items: 1,
@@ -59,10 +59,25 @@ $('.owl-four').owlCarousel({
     }
 })
 
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-        $('#header').addClass('header-scrolled');
-    } else {
-        $('#header').removeClass('header-scrolled');
-    }
+// $(window).scroll(function () {
+//     if ($(this).scrollTop() > 100) {
+//         $('#header').addClass('header-scrolled');
+//     } else {
+//         $('#header').removeClass('header-scrolled');
+//     }
+// });
+
+
+$('input').focus(function () {
+    $(this).parents('.form-group').addClass('focused');
 });
+
+$('input').blur(function () {
+    var inputValue = $(this).val();
+    if (inputValue == "") {
+        $(this).removeClass('filled');
+        $(this).parents('.form-group').removeClass('focused');
+    } else {
+        $(this).addClass('filled');
+    }
+})  

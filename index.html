@@ -194,14 +194,14 @@
 
 
 
-        <section class="steps py-3">
+        <section class="steps py-5">
             <div class="steps__container">
                 <div class="container">
                     <div class="row steps__intro">
                         <div class="col-12 col-lg-5"></div>
                         <div class="col-12 col-lg-7">
                             <h3 class="steps__heading"><span class="font-size-doubled mr-1">3</span> proste kroki</h3>
-                            <p class="text-small-1 w-75">Zobacz jak w prosty sposób, sprzed ekranu komputera lub
+                            <p class="w-75">Zobacz jak w prosty sposób, sprzed ekranu komputera lub
                                 telefonu,
                                 wycenisz, zamówisz i
                                 opłacisz usługę sprzatania Twojego mieszkania, domu lub firmy!</p>
@@ -813,8 +813,10 @@
                     <div class="owl-container col-12 col-md-8 col-lg-9 mt-4 mt-lg-0">
                         <div class="owl-four owl-carousel wow fadeInUp">
                             <div class="news__item px-2">
-                                <img class="news__img" src="images/news-faucet.jpg"
-                                    alt="Czyszczenie chromowanego kranu">
+                                <div class="news__img-container">
+                                    <img class="news__img" src="images/news-faucet.jpg"
+                                        alt="Czyszczenie chromowanego kranu">
+                                </div>
                                 <time class="news__time d-block my-3" datetime="01-06-2018">01-06-2018</time>
                                 <p class="news__img-description">vitientes honorem tamquam et coheredibus gratiae vitae
                                     uti
@@ -822,8 +824,10 @@
                             </div>
 
                             <div class="news__item px-2">
-                                <img class="news__img" src="images/news-faucet.jpg"
-                                    alt="Czyszczenie chromowanego kranu">
+                                <div class="news__img-container">
+                                    <img class="news__img" src="images/news-faucet.jpg"
+                                        alt="Czyszczenie chromowanego kranu">
+                                </div>
                                 <time class="news__time d-block my-3" datetime="01-06-2018">01-06-2018</time>
                                 <p class="news__img-description">vitientes honorem tamquam et coheredibus gratiae vitae
                                     uti
@@ -831,37 +835,95 @@
                             </div>
 
                             <div class="news__item px-2">
-                                <img class="news__img" src="images/news-faucet.jpg"
-                                    alt="Czyszczenie chromowanego kranu">
+                                <div class="news__img-container">
+                                    <img class="news__img" src="images/news-faucet.jpg"
+                                        alt="Czyszczenie chromowanego kranu">
+                                </div>
                                 <time class="news__time d-block my-3" datetime="01-06-2018">01-06-2018</time>
                                 <p class="news__img-description">vitientes honorem tamquam et coheredibus gratiae vitae
                                     uti
                                     nstrae</p>
                             </div>
-                            <!-- zdjęcie
-                            data
-                            podpis -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="newsletter">
+        <section class="newsletter mt-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-2">Newsletter</div>
-                    <div class="col-12 col-lg-8">
-                        <input type="email" name="email" id="">
+                <div class="row p-5 text-center text-lg-left">
+                    <div class="col-12 col-lg-3">
+                        <h3 class="newsletter__heading text-white py-3">Newsletter</h3>
                     </div>
-                    <div class="col-12 col-lg-2"><button type="submit" class="btn btn-primary"></button></div>
+                    <div class="col-12 col-lg-7 pb-3 pt-2">
+                        <form action="" class="newsletter__form">
+                            <div class="form-group">
+                                <label class="form-label" for="email">Twój adres email</label>
+                                <input id="email" type="email" name="email" class="form-input" type="text" />
+                            </div>
+                        </form>
 
+                    </div>
+                    <div class="col-12 col-lg-2">
+                        <button type="submit" class="btn newsletter__btn mt-3 mt-lg-0 py-3 px-4">Zapisz się</button>
+                    </div>
                 </div>
             </div>
         </section>
 
 
-        <footer class="footer mt-5">
+        <footer class="footer">
+            <div class="container">
+                <div class="row py-4">
+                    <div class="col-12 col-lg-3">
+                        <a class="footer__logo-container" href="#start">
+                            <img src="images/logo.png" class="footer__logo pb-3" alt="">
+                        </a>
+                        <p class="footer__grey"> &copy; 2019 clern.pl</p>
+                    </div>
+
+                    <div class="col-6 col-lg-2 pr-3 mt-4 mt-lg-0">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a class="footer__link" href="#">Zamów sprzątanie</a></li>
+                            <li class="mb-2"><a class="footer__link" href="#">Oferta</a></li>
+                            <li class="mb-2"><a class="footer__link" href="#">O firmie</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-2 mt-4 mt-lg-0">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a class="footer__link" href="#">Aktualności</a></li>
+                            <li class="mb-2"><a class="footer__link" href="#">Blog</a></li>
+                            <li class="mb-2"><a class="footer__link" href="#">Food Services</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-12 col-lg-5 text-left text-lg-right mt-4 mt-lg-0">
+                        <div class="footer__address">
+                            <p class="footer__grey">42-500 Będzin, ul. Modrzejowska 95</p>
+                        </div>
+
+                        <a class="footer__tel" href="#tel:+48519017017"><span class="text-small-3">+48 </span>519 017
+                            017</a>
+                        <a class="footer__email" href="mailto:info@clern.pl">info@clern.pl</a>
+                    </div>
+
+
+                </div>
+                <div class="row py-4">
+                    <div class="col-12 col-lg-6 footer__social text-center text-lg-left my-4 my-lg-0">
+                        <i class="fab fa-facebook-f p-2"></i>
+                        <i class="fab fa-twitter p-2"></i>
+                        <i class="fab fa-instagram p-2"></i>
+                    </div>
+                    <div class="col-12 col-lg-6 footer__pay text-center text-lg-right">
+                        <a href="#"><img class="footer__pay-img" src="images/przelewy24.png" alt="Logo przelewy24"></a>
+                        <a href="#"><img class="footer__pay-img" src="images/visa.png" alt="Logo przelewy24"></a>
+                        <a href="#"><img class="footer__pay-img" src="images/mastercard.png" alt="Logo przelewy24"></a>
+                    </div>
+                </div>
+            </div>
             <!-- logo - kolumna - kolumna - kolumna justify end
 
             hr

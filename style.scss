@@ -3,7 +3,7 @@ $clern-lightGreen:#64b95a;
 $clern-lightYellow: #d3ef8b;
 $clern-dark-text: #322c2e;
 $clern-white-a-bit-purple: #f3f7ff;
-$variable-text-small-1:0.75rem;
+$variable-text-small-1:0.9rem;
 $variable-text-small-3:0.5rem;
 $variable-text-medium-default:1rem;
 $variable-text-medium-1:1.25rem;
@@ -195,10 +195,7 @@ body {
 .main {
     background-color: white;
     width: 100%;
-    top: 0;
-    position: absolute;
 }
-
 
 
 
@@ -206,7 +203,6 @@ body {
     background-color: transparent;
     background-image: url('images/background-slider.png');
     background-size: cover;
-    height: 83vh;
     width: 100%;
     z-index: 1;
     position: absolute;
@@ -217,7 +213,6 @@ body {
 
 .owl-one {
     z-index: 0;
-    max-height: 83vh;
     overflow: hidden;
     background-image: linear-gradient(to right, #fff 48%, #14b8eb 48%); // &__item {
 
@@ -299,33 +294,19 @@ body {
 
 .steps {
 
-    background-color: $clern-white-a-bit-purple;
     width: 100%;
-    height: 120vh;
+    height: 100%;
     position: relative;
     overflow: hidden;
-
-    &__tel-hand {
-        background-size: contain;
-        background-image: url('images/tel-hand.png');
-        background-repeat: no-repeat;
-        position: absolute;
-        left: -23%;
-        bottom: -11%;
-        width: 56%;
-        height: 99%;
-        z-index: 1;
-    }
+    background-image: url('images/background-steps-with-tel.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-position-x: -22vmin;
+    background-position-y: -30px;
 
     &__container {
-        position: absolute;
-        left: 0;
-        top: 0;
         width: 100%;
-        height: 100%;
-        background-image: url('images/background-steps-inversed.png');
-        background-size: cover;
-        background-repeat: no-repeat;
         z-index: 2;
     }
 
@@ -518,7 +499,6 @@ body {
         font-size: 1.5rem;
         transform: translate(-50%, -71%);
     }
-
 }
 
 
@@ -560,7 +540,7 @@ body {
     .fa-chevron-left,
     .fa-chevron-right {
         position: absolute;
-        font-size: 5rem;
+        font-size: 4rem;
         top: 0;
         color: white;
     }
@@ -569,9 +549,7 @@ body {
         left: 5%;
     }
 
-
     .fa-chevron-right {
-        font-size: 5rem;
         right: 5%;
     }
 
@@ -712,17 +690,29 @@ body {
         height: 100%;
     }
 
-    &__img::after {
-        content: '';
+    &__img-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        border-bottom-right-radius: 35px;
+        border-top-left-radius: 35px;
     }
 
-    &__item:hover::after {
-        content: "";
+    &__img-container::after {
+        content: '';
+        // border-bottom-right-radius: 35px;
+        // border-top-left-radius: 35px;
+        // without border we have imho nice animation
+    }
+
+    &__img-container:hover::after {
+        content: '';
         display: block;
         background-color: #3fbae1;
         width: 100%;
         height: 100%;
-        opacity: 0.9;
+        opacity: 0.8;
         top: 0;
         left: 0;
         right: 0;
@@ -732,7 +722,8 @@ body {
         background-repeat: no-repeat;
         border-bottom-right-radius: 35px;
         border-top-left-radius: 35px;
-        transition: 1s;
+        transition: $fast;
+        z-index: 2;
     }
 
 }
@@ -742,12 +733,166 @@ body {
         padding-left: 10vw;
         padding-right: 10vw;
     }
+
+    .row {
+        background-color: $clern-blue;
+        border-radius: 15vh;
+        border-bottom-right-radius: 0;
+        position: relative;
+    }
+
+
+    &__btn {
+        border-radius: 35px;
+        border-bottom-right-radius: 0;
+        background-color: white;
+        color: $clern-blue;
+        border: 3px solid transparent;
+        transition: $fast;
+        box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 5px 3px;
+    }
+
+    &__btn:hover {
+        background-color: transparent;
+        color: white;
+        border: 3px solid white;
+    }
+
+    body {
+        background-color: #f5f5f5;
+    }
+
+
+
+    .form-group {
+        position: relative;
+
+        &+.form-group {
+            margin-top: 30px;
+        }
+    }
+
+    .form-label {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        color: white;
+        background-color: transparent;
+        z-index: 10;
+        transition: transform 150ms ease-out, font-size 150ms ease-out;
+    }
+
+    .focused .form-label {
+        transform: translateY(-125%);
+        font-size: .75em;
+    }
+
+    .form-input {
+        position: relative;
+        padding: 12px 0px 5px 0;
+        width: 100%;
+        max-width: 270px;
+        outline: 0;
+        border: 0;
+        box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.4);
+        transition: box-shadow 150ms ease-out;
+        background-color: transparent;
+        color: white;
+
+        &:focus {
+            box-shadow: 0 2px 0 0 #fff;
+        }
+    }
+
+    .form-label:hover {
+        cursor: text;
+    }
+
+    .form-input.filled {
+        box-shadow: 0 2px 0 0 lightgreen;
+    }
 }
 
 
 .footer {
-    img {
-        width: 50px;
-        height: 50px;
+    margin-top: -90px;
+    z-index: -1;
+
+    .container {
+        background-color: $clern-white-a-bit-purple;
+        border-top-left-radius: 15vh;
+        padding: 3rem 6rem;
+        padding-top: 150px;
+    }
+
+    .row:last-child {
+        border-top: 1px solid rgba(25, 25, 25, 0.1);
+    }
+
+    &__logo {
+        max-height: 60px;
+    }
+
+    &__grey {
+        font-size: $variable-text-small-1;
+        opacity: 0.7;
+    }
+
+    &__link {
+        color: $clern-dark-text;
+    }
+
+    &__tel,
+    &__email {
+        color: $clern-blue;
+        display: block;
+    }
+
+    &__social .fab {
+        border-radius: 50%;
+        background-color: rgba(117, 223, 255, 0.5);
+        color: white;
+        transition: $fast;
+    }
+
+    &__social .fab:hover {
+        background-color: rgba(0, 172, 224, 1);
+        cursor: pointer;
+    }
+
+    &__pay-img {
+        opacity: 0.14;
+        transition: $fast;
+    }
+
+    &__pay-img:hover {
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 992px) {
+    .steps {
+        background-position-x: -300px;
+        display: block;
+        position: relative;
+    }
+
+    .steps::after {
+        content: '';
+        background: white;
+        display: block;
+        opacity: 0.8;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .footer .container {
+        padding: 15px;
+        padding-top: 150px;
     }
 }
