@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/ngn2ooc.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 </head>
@@ -52,7 +54,7 @@
                                 <ul id="headerNavPills"
                                     class="nav nav-pills nav-fill header__nav-pills flex-lg-row px-3 px-lg-0">
                                     <li class="nav-item header__nav-item px-2">
-                                        <a class="nav-link header__nav-link active" href="#start">Oferta</a>
+                                        <a class="nav-link header__nav-link" href="#start">Oferta</a>
                                     </li>
                                     <li class="nav-item header__nav-item px-2">
                                         <a class="nav-link header__nav-link" href="#about">O firmie</a>
@@ -61,7 +63,7 @@
                                         <a class="nav-link header__nav-link" href="#drive">Blog</a>
                                     </li>
                                     <li class="nav-item header__nav-item px-2">
-                                        <a class="nav-link header__nav-link" href="#contact">Kontakt</a>
+                                        <a class="nav-link header__nav-link active" href="#contact">Kontakt</a>
                                     </li>
                                 </ul>
                             </div>
@@ -118,62 +120,61 @@
                         <p class="map__p">42-500 Będzin, ul. Modrzejowska 95</p>
                     </div>
                     <div class="col-12 col-lg-6">
-                        <h3 class="communication__heading">Skontaktuj się z nami</h3>
+                        <h3 class="communication__heading font-weight-light">Skontaktuj się z nami</h3>
+                        <span class="communication__deco-line mr-3"></span>
                         <p class="communication__subheading">Chcesz uzyskać informacje dotyczące naszej oferty? <span
                                 class="d-block">Zadzwoń albo napisz do nas!</span></p>
 
-                        <div class="communication__tel"><a class="" href="#tel:+48519017017"><span
-                                    class="text-small-3">+48 </span>519 017 017</a></div>
-                        <div class="communication__time-open">
-                            <i class="far fa-clock"></i>
+                        <div class="communication__tel mt-5"><a class="" href="#tel:+48519017017"><span
+                                    class="text-small-1">+48 </span>519 017 017</a></div>
+                        <div class="communication__time-open mt-2">
+                            <i class="far fa-clock mr-2"></i>
                             8<sup>00</sup> - 20<sup>00</sup>
                         </div>
 
-                        <div class="communication__form">
+                        <div class="communication__form mt-5">
                             <h4 class="communication__form-heading">Formularz kontaktowy</h4>
 
 
-                            <form action="" class="newsletter__form">
+                            <form action="" class="newsletter__form mt-4">
 
                                 <div class="row">
-                                    <div class="form-group col-12 col-lg-6">
+                                    <div class="form-group col-12 col-lg-6 mt-2">
                                         <label class="form-label" for="firstName">Imię</label>
                                         <input id="firstName" type="text" name="firstName" class="form-input" />
                                     </div>
 
-                                    <div class="form-group col-12 col-lg-6">
+                                    <div class="form-group col-12 col-lg-6 mt-2">
                                         <label class="form-label" for="lastName">Nazwisko</label>
                                         <input id="lastName" name="lastName" class="form-input" type="text" />
                                     </div>
 
-                                    <div class="form-group col-12 col-lg-6">
+                                    <div class="form-group col-12 col-lg-6 mt-2">
                                         <label class="form-label" for="tel">Telefon</label>
                                         <input id="tel" type="tel" name="tel" class="form-input" />
                                     </div>
 
-                                    <div class="form-group col-12 col-lg-6">
+                                    <div class="form-group col-12 col-lg-6 mt-2">
                                         <label class="form-label" for="email">Adres e-mail</label>
-                                        <input id="email" type="email" name="email" class="form-input" type="text" />
+                                        <input id="email" type="email" name="email" class="form-input" type="text"
+                                            required />
                                     </div>
 
-                                    <div class="form-group col-12">
+                                    <div class="form-group col-12 col-lg-12 mt-2">
                                         <label class="form-label" for="message">Wiadomość</label>
-                                        <textarea id="message" type="textarea" name="message"
-                                            class="form-input"></textarea>
+                                        <input id="message" type="textarea" name="message" class="form-input"></input>
                                     </div>
 
-                                    <div class="form-group input-group col-12 mb-3">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
-                                            </div>
-                                        </div>
-                                        <p>Wyrażam zgodę na Lorem ipsum</p>
+                                    <div class="form-group input-group col-12 mt-4 mb-3">
+                                        <input class="pt-5" type="checkbox" id="accept" />
+                                        <label for="accept">Wyrażam zgodę na przetwarzanie moich danych osobowych
+                                            zawartych w formularzu
+                                            kontaktowym.</label>
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary">Wyślij</button>
+                                    <button type="submit"
+                                        class="btn communication__btn p-3 text-small-1">Wyślij</button>
                                 </div>
-
 
 
 

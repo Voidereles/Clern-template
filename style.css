@@ -1,5 +1,20 @@
 body {
   color: #322c2e;
+  font-family: vag-rundschrift-d, sans-serif;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+input,
+button {
+  font-weight: 300 !important;
 }
 
 .font-size-doubled {
@@ -841,12 +856,137 @@ body {
   opacity: 0.8;
 }
 
+/* Checkbox */
+input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+input[type="checkbox"] + label {
+  padding-left: 25px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  margin: 0 0 10px 0;
+}
+
+input[type="checkbox"] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.14em;
+  background: #DDD;
+  -webkit-transition: background .15s;
+  transition: background .15s;
+}
+
+input[type="checkbox"]:disabled + label {
+  color: #999;
+}
+
+input[type="checkbox"]:disabled + label,
+input[type="checkbox"]:disabled + label:before,
+input[type="checkbox"]:disabled + label:after {
+  cursor: not-allowed;
+}
+
+input[type="checkbox"]:disabled + label:before {
+  background: #EEE;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background: #3081F2;
+}
+
+input[type="checkbox"]:disabled:checked + label:before {
+  background: #609DF2;
+}
+
+input[type="checkbox"] + label:after {
+  /* Font Awesome */
+  font-family: "FontAwesome";
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f00c";
+  /* fa-check */
+  font-size: 14px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  color: #FAFAFA;
+  -webkit-transition: -webkit-transform .15s;
+  transition: -webkit-transform .15s;
+  transition: transform .15s;
+  transition: transform .15s, -webkit-transform .15s;
+  -webkit-transform: scale(0) rotate(90deg);
+          transform: scale(0) rotate(90deg);
+}
+
+input[type="checkbox"]:checked + label:after {
+  -webkit-transform: scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg);
+}
+
 .communication {
   margin-top: 150px;
 }
 
 .communication__map {
   height: 50vh;
+}
+
+.communication__heading {
+  color: #64b95a;
+  font-size: 2.5rem;
+}
+
+.communication__subheading {
+  display: inline-block;
+}
+
+.communication__deco-line {
+  width: 3.75rem;
+  height: 2px;
+  background-color: #64b95a;
+  display: inline-block;
+  margin-bottom: 1.75rem;
+}
+
+.communication__tel a {
+  font-size: 1.5rem;
+  color: #14b8eb;
+}
+
+.communication__time-open {
+  font-size: 1.25rem;
+  color: #14b8eb;
+}
+
+.communication__form-heading {
+  color: #14b8eb;
+}
+
+.communication__btn {
+  display: inline-block;
+  position: relative;
+  background: #00ace0;
+  font-size: 0.9rem;
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #00ace0), color-stop(100%, #75dfff));
+  background: linear-gradient(45deg, #00ace0 0%, #75dfff 100%);
+  -webkit-transition: 0.5s, color 0.2s;
+  transition: 0.5s, color 0.2s;
+  -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+  box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+  z-index: 2;
+  border-radius: 40px;
+  width: 100px;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
 }
 
 .communication .form-label {
@@ -858,11 +998,13 @@ body {
   -webkit-box-shadow: 0 1px 0 0 rgba(25, 25, 25, 0.4);
           box-shadow: 0 1px 0 0 rgba(25, 25, 25, 0.4);
   color: #322c2e;
+  max-width: 100%;
 }
 
 .communication .form-input:focus {
   -webkit-box-shadow: 0 2px 0 0 #14b8eb;
           box-shadow: 0 2px 0 0 #14b8eb;
+  color: #14b8eb;
 }
 
 .testimonials--contact-subpage {
