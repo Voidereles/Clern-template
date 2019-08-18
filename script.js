@@ -34,8 +34,29 @@ $('.owl-three').owlCarousel({
     margin: 10,
     nav: true,
     navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
-    // autoplay: true,
+    autoplay: true,
     items: 1
+})
+
+$('.owl-four').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    // autoplay: true,
+    responsive: {
+        0: {
+            items: 1,
+            nav: true
+        },
+        600: {
+            items: 2,
+            nav: false
+        },
+        992: {
+            items: 3,
+            nav: false
+        }
+    }
 })
 
 $(window).scroll(function () {
