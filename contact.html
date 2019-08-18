@@ -22,6 +22,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+</head>
 
 <body>
     <!--[if lt IE 7]>
@@ -105,9 +106,91 @@
     </header>
     <main class="main">
 
+        <section class="communication mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
 
 
-        <section class="testimonials">
+                        <div id="map" class="communication__map">
+
+                        </div>
+                        <p class="map__p">42-500 Będzin, ul. Modrzejowska 95</p>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="communication__heading">Skontaktuj się z nami</h3>
+                        <p class="communication__subheading">Chcesz uzyskać informacje dotyczące naszej oferty? <span
+                                class="d-block">Zadzwoń albo napisz do nas!</span></p>
+
+                        <div class="communication__tel"><a class="" href="#tel:+48519017017"><span
+                                    class="text-small-3">+48 </span>519 017 017</a></div>
+                        <div class="communication__time-open">
+                            <i class="far fa-clock"></i>
+                            8<sup>00</sup> - 20<sup>00</sup>
+                        </div>
+
+                        <div class="communication__form">
+                            <h4 class="communication__form-heading">Formularz kontaktowy</h4>
+
+
+                            <form action="" class="newsletter__form">
+
+                                <div class="row">
+                                    <div class="form-group col-12 col-lg-6">
+                                        <label class="form-label" for="firstName">Imię</label>
+                                        <input id="firstName" type="text" name="firstName" class="form-input" />
+                                    </div>
+
+                                    <div class="form-group col-12 col-lg-6">
+                                        <label class="form-label" for="lastName">Nazwisko</label>
+                                        <input id="lastName" name="lastName" class="form-input" type="text" />
+                                    </div>
+
+                                    <div class="form-group col-12 col-lg-6">
+                                        <label class="form-label" for="tel">Telefon</label>
+                                        <input id="tel" type="tel" name="tel" class="form-input" />
+                                    </div>
+
+                                    <div class="form-group col-12 col-lg-6">
+                                        <label class="form-label" for="email">Adres e-mail</label>
+                                        <input id="email" type="email" name="email" class="form-input" type="text" />
+                                    </div>
+
+                                    <div class="form-group col-12">
+                                        <label class="form-label" for="message">Wiadomość</label>
+                                        <textarea id="message" type="textarea" name="message"
+                                            class="form-input"></textarea>
+                                    </div>
+
+                                    <div class="form-group input-group col-12 mb-3">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                            </div>
+                                        </div>
+                                        <p>Wyrażam zgodę na Lorem ipsum</p>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Wyślij</button>
+                                </div>
+
+
+
+
+
+
+
+                        </div>
+
+                        </form>
+                        <!-- schema with opening time should be implemented -->
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="testimonials testimonials--contact-subpage">
             <div class="container text-center">
                 <h3 class="testimonials__heading text-white">Opinie klientów</h3>
                 <div class="owl-container">
@@ -166,81 +249,7 @@
             </div>
         </section>
 
-        <section class="news">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-4 col-lg-3">
-                        <h4 class="news__heading">Aktualności</h4>
-                        <p class="news__subheading mt-3">Bądź na bieżąco z nowościami w naszej firmie</p>
-                        <div class="news__more mt-2 mt-lg-5 py-4 px-3">
-                            <span class="news__more-hidden">Więcej</span>
-                            <span class="news__more-dots">...</span>
-                        </div>
-                    </div>
-                    <div class="owl-container col-12 col-md-8 col-lg-9 mt-4 mt-lg-0">
-                        <div class="owl-four owl-carousel wow fadeInUp">
-                            <div class="news__item px-2">
-                                <div class="news__img-container">
-                                    <img class="news__img" src="images/news-faucet.jpg"
-                                        alt="Czyszczenie chromowanego kranu">
-                                </div>
-                                <time class="news__time d-block my-3" datetime="01-06-2018">01-06-2018</time>
-                                <p class="news__img-description">vitientes honorem tamquam et coheredibus gratiae vitae
-                                    uti
-                                    nstrae</p>
-                            </div>
-
-                            <div class="news__item px-2">
-                                <div class="news__img-container">
-                                    <img class="news__img" src="images/news-faucet.jpg"
-                                        alt="Czyszczenie chromowanego kranu">
-                                </div>
-                                <time class="news__time d-block my-3" datetime="01-06-2018">01-06-2018</time>
-                                <p class="news__img-description">vitientes honorem tamquam et coheredibus gratiae vitae
-                                    uti
-                                    nstrae</p>
-                            </div>
-
-                            <div class="news__item px-2">
-                                <div class="news__img-container">
-                                    <img class="news__img" src="images/news-faucet.jpg"
-                                        alt="Czyszczenie chromowanego kranu">
-                                </div>
-                                <time class="news__time d-block my-3" datetime="01-06-2018">01-06-2018</time>
-                                <p class="news__img-description">vitientes honorem tamquam et coheredibus gratiae vitae
-                                    uti
-                                    nstrae</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="newsletter mt-5">
-            <div class="container">
-                <div class="row p-5 text-center text-lg-left">
-                    <div class="col-12 col-lg-3">
-                        <h3 class="newsletter__heading text-white py-3">Newsletter</h3>
-                    </div>
-                    <div class="col-12 col-lg-7 pb-3 pt-2">
-                        <form action="" class="newsletter__form">
-                            <div class="form-group">
-                                <label class="form-label" for="email">Twój adres email</label>
-                                <input id="email" type="email" name="email" class="form-input" type="text" />
-                            </div>
-                        </form>
-
-                    </div>
-                    <div class="col-12 col-lg-2">
-                        <button type="submit" class="btn newsletter__btn mt-3 mt-lg-0 py-3 px-4">Zapisz się</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <footer class="footer">
+        <footer class="footer footer--contact-subpage">
             <div class="container">
                 <div class="row py-4">
                     <div class="col-12 col-lg-3">
@@ -326,6 +335,11 @@
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'
         integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' crossorigin='anonymous'>
     </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8KdL8MvqIE2c_GFJNGPVDfGRPad-SqjU&callback=initMap"
+        async defer></script>
+
+
     <script src="owlcarousel/owl.carousel.min.js"></script>
     <script src="script.js" async defer></script>
 </body>

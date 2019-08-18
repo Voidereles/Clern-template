@@ -724,47 +724,13 @@ body {
   background-color: #f5f5f5;
 }
 
-.newsletter .form-group {
-  position: relative;
-}
-
-.newsletter .form-group + .form-group {
-  margin-top: 30px;
-}
-
 .newsletter .form-label {
-  position: absolute;
-  left: 0;
-  top: 10px;
   color: white;
-  background-color: transparent;
-  z-index: 10;
-  -webkit-transition: font-size 150ms ease-out, -webkit-transform 150ms ease-out;
-  transition: font-size 150ms ease-out, -webkit-transform 150ms ease-out;
-  transition: transform 150ms ease-out, font-size 150ms ease-out;
-  transition: transform 150ms ease-out, font-size 150ms ease-out, -webkit-transform 150ms ease-out;
-}
-
-.newsletter .focused .form-label {
-  -webkit-transform: translateY(-125%);
-          transform: translateY(-125%);
-  font-size: .75em;
 }
 
 .newsletter .form-input {
-  position: relative;
-  padding: 12px 0px 5px 0;
-  width: 100%;
-  max-width: 270px;
-  outline: 0;
-  border: 0;
   -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.4);
           box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.4);
-  -webkit-transition: -webkit-box-shadow 150ms ease-out;
-  transition: -webkit-box-shadow 150ms ease-out;
-  transition: box-shadow 150ms ease-out;
-  transition: box-shadow 150ms ease-out, -webkit-box-shadow 150ms ease-out;
-  background-color: transparent;
   color: white;
 }
 
@@ -773,11 +739,47 @@ body {
           box-shadow: 0 2px 0 0 #fff;
 }
 
-.newsletter .form-label:hover {
+.form-group {
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background-color: transparent;
+  z-index: 10;
+  -webkit-transition: font-size 150ms ease-out, -webkit-transform 150ms ease-out;
+  transition: font-size 150ms ease-out, -webkit-transform 150ms ease-out;
+  transition: transform 150ms ease-out, font-size 150ms ease-out;
+  transition: transform 150ms ease-out, font-size 150ms ease-out, -webkit-transform 150ms ease-out;
+}
+
+.focused .form-label {
+  -webkit-transform: translateY(-125%);
+          transform: translateY(-125%);
+  font-size: .75em;
+}
+
+.form-input {
+  position: relative;
+  padding: 12px 0px 5px 0;
+  width: 100%;
+  max-width: 270px;
+  outline: 0;
+  border: 0;
+  -webkit-transition: -webkit-box-shadow 150ms ease-out;
+  transition: -webkit-box-shadow 150ms ease-out;
+  transition: box-shadow 150ms ease-out;
+  transition: box-shadow 150ms ease-out, -webkit-box-shadow 150ms ease-out;
+  background-color: transparent;
+}
+
+.form-label:hover {
   cursor: text;
 }
 
-.newsletter .form-input.filled {
+.form-input.filled {
   -webkit-box-shadow: 0 2px 0 0 lightgreen;
           box-shadow: 0 2px 0 0 lightgreen;
 }
@@ -837,6 +839,48 @@ body {
 
 .footer__pay-img:hover {
   opacity: 0.8;
+}
+
+.communication {
+  margin-top: 150px;
+}
+
+.communication__map {
+  height: 50vh;
+}
+
+.communication .form-label {
+  left: initial;
+  color: #322c2e;
+}
+
+.communication .form-input {
+  -webkit-box-shadow: 0 1px 0 0 rgba(25, 25, 25, 0.4);
+          box-shadow: 0 1px 0 0 rgba(25, 25, 25, 0.4);
+  color: #322c2e;
+}
+
+.communication .form-input:focus {
+  -webkit-box-shadow: 0 2px 0 0 #14b8eb;
+          box-shadow: 0 2px 0 0 #14b8eb;
+}
+
+.testimonials--contact-subpage {
+  margin-top: initial;
+}
+
+.testimonials--contact-subpage .container {
+  border-bottom-right-radius: 0;
+  padding-top: 10vh;
+}
+
+.footer--contact-subpage {
+  z-index: -1;
+  margin-top: 0;
+}
+
+.footer--contact-subpage .container {
+  border-top-left-radius: 0;
 }
 
 @media (max-width: 992px) {
