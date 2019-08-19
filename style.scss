@@ -4,6 +4,7 @@ $clern-lightYellow: #d3ef8b;
 $clern-dark-text: #322c2e;
 $clern-white-a-bit-purple: #f3f7ff;
 $variable-text-small-1:0.9rem;
+$variable-text-small-2:0.75rem;
 $variable-text-small-3:0.5rem;
 $variable-text-medium-default:1rem;
 $variable-text-medium-1:1.25rem;
@@ -27,7 +28,8 @@ h6,
 p,
 label,
 input,
-button {
+button,
+a {
     font-weight: 300 !important;
 }
 
@@ -99,10 +101,23 @@ button {
     &__contact &__nav-link {
         color: white;
         font-size: $variable-text-medium-default;
+        position: relative;
+        overflow: hidden;
     }
 
-    &__contact &__nav-link:hover {
-        color: $clern-dark-text;
+    &__contact &__nav-link::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        bottom: 0;
+        left: -100%;
+        transition: 0.3s;
+    }
+
+    &__contact &__nav-link:hover::after {
+        left: 0;
     }
 
     &__contact-btn {
@@ -113,6 +128,7 @@ button {
         font-size: $variable-text-small-1;
         line-height: 1.5rem;
         text-transform: uppercase;
+        box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
     }
 
     &__contact-btn:hover {
@@ -125,6 +141,7 @@ button {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        z-index: 3;
 
         .dropdown-toggle::after {
             display: inline-block;
@@ -144,9 +161,9 @@ button {
             background-color: white;
             color: $clern-blue;
             border: 0px white;
-            -webkit-box-shadow: -2px 2px 20px 0px $clern-blue;
-            -moz-box-shadow: -2px 2px 20px 0px $clern-blue;
-            box-shadow: -2px 2px 20px 0px $clern-blue;
+            -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+            -moz-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+            box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
             z-index: 2000;
         }
 
@@ -182,9 +199,9 @@ button {
             color: #212529;
             text-align: center;
             list-style: none;
-            -webkit-box-shadow: 0 10px 20px 1px $clern-blue;
-            -moz-box-shadow: 0 10px 20px 1px $clern-blue;
-            box-shadow: 0 10px 20px 1px $clern-blue;
+            -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+            -moz-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+            box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
             background-clip: padding-box;
             border: none;
             border-radius: 25px;
@@ -893,6 +910,18 @@ button {
 
 
 // subpages
+// subpage contact
+
+
+.header--contact {
+    &__tear-bg {
+        width: 50%;
+        position: absolute;
+        left: 43%;
+        top: -2vw;
+    }
+}
+
 /* Checkbox */
 input[type="checkbox"] {
     position: absolute;
@@ -970,6 +999,8 @@ input[type="checkbox"]:checked+label:after {
 
     &__map {
         height: 50vh;
+        border-top-right-radius: 10vmin;
+        border-bottom-left-radius: 10vmin;
     }
 
     &__heading {
@@ -1060,6 +1091,157 @@ input[type="checkbox"]:checked+label:after {
 
 }
 
+//about-us
+
+.testimonials--about-us-subpage {
+    margin-top: initial;
+
+    .container {
+        border-radius: 0;
+        padding-top: 10vh;
+    }
+}
+
+.about-us {
+    min-height: 50vh;
+    position: relative;
+    color: white;
+
+    &__background {
+        width: 60%;
+        position: absolute;
+    }
+
+    .row {
+        position: absolute;
+        width: 25%;
+        left: 30%;
+        top: 25%;
+    }
+
+    &__heading {
+        font-size: $variable-text-big-2;
+    }
+
+    &__subheading {
+        font-size: $variable-text-small-1;
+        line-height: 1.7;
+    }
+
+    &__p {
+        font-size: $variable-text-small-2;
+    }
+
+    &__deco-line {
+        height: 3px;
+        background-color: white;
+    }
+}
+
+.insurance {
+    min-height: 400px;
+    margin-top: 10vh;
+
+    .row {
+        position: relative;
+    }
+
+    &__img-oc,
+    &__img-allianz {
+        max-width: 150px;
+        width: 100%;
+        height: auto;
+    }
+
+    &__img-allianz {
+        right: 0;
+        position: absolute;
+    }
+
+    &__info {
+        width: 50% !important;
+        position: absolute;
+        right: 0;
+        padding: 2rem 1rem 0rem 9rem;
+    }
+}
+
+.numbers {
+    &__heading {
+        color: $clern-blue;
+        font-size: $variable-text-big-2;
+    }
+
+    &__svg {
+        fill: white !important;
+        border-radius: 50%;
+        background-color: $clern-blue;
+        width: 100px;
+        height: 100px;
+    }
+
+    &__amount {
+        color: $clern-blue;
+        font-size: $variable-text-doubled;
+        line-height: 1;
+    }
+}
+
+.comp-coop {
+    .container {
+        background-color: $clern-white-a-bit-purple;
+        padding: 3rem 3rem;
+    }
+
+    .owl-carousel .owl-stage {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        max-height: 75px;
+    }
+
+    .owl-carousel .owl-item {
+        height: 75px;
+        width: 100%;
+    }
+
+
+}
+
+
+
+@media (min-width:1920px) {
+    .header--contact__tear-bg {
+        width: 30%;
+        position: absolute;
+        left: 46%;
+        top: -2vw;
+    }
+
+}
+
+
+
+@media (max-width:1200px) {
+    .about-us {
+        min-height: 70vh;
+        position: relative;
+        color: white;
+
+        &__background {
+            width: 70%;
+            position: absolute;
+        }
+
+        .row {
+            position: absolute;
+            width: 35%;
+            left: 35%;
+            top: 10%;
+        }
+
+    }
+}
 
 @media (max-width: 992px) {
     .steps {
@@ -1086,4 +1268,42 @@ input[type="checkbox"]:checked+label:after {
         padding: 15px;
         padding-top: 150px;
     }
+
+    .header--contact__tear-bg {
+        width: 55%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .about-us {
+        min-height: 70vh;
+        position: relative;
+        color: white;
+
+        &__background {
+            width: 70%;
+            position: static;
+            background-size: contain;
+        }
+
+        .row {
+            text-align: center;
+            position: static;
+            width: 100%;
+            left: 0;
+            color: $clern-dark-text;
+        }
+
+        &__heading {
+            color: $clern-blue;
+        }
+
+        &__subheading {
+            text-align: justify;
+
+        }
+
+    }
+
 }

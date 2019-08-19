@@ -13,7 +13,8 @@ h6,
 p,
 label,
 input,
-button {
+button,
+a {
   font-weight: 300 !important;
 }
 
@@ -87,10 +88,24 @@ button {
 .header__contact .header__nav-link {
   color: white;
   font-size: 1rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.header__contact .header__nav-link:hover {
-  color: #322c2e;
+.header__contact .header__nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  bottom: 0;
+  left: -100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__contact .header__nav-link:hover::after {
+  left: 0;
 }
 
 .header__contact-btn {
@@ -102,6 +117,8 @@ button {
   font-size: 0.9rem;
   line-height: 1.5rem;
   text-transform: uppercase;
+  -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+          box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
 }
 
 .header__contact-btn:hover {
@@ -115,6 +132,7 @@ button {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  z-index: 3;
 }
 
 .header__lang-change .dropdown-toggle::after {
@@ -135,8 +153,8 @@ button {
   background-color: white;
   color: #14b8eb;
   border: 0px white;
-  -webkit-box-shadow: -2px 2px 20px 0px #14b8eb;
-  box-shadow: -2px 2px 20px 0px #14b8eb;
+  -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+  box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
   z-index: 2000;
 }
 
@@ -170,8 +188,8 @@ button {
   color: #212529;
   text-align: center;
   list-style: none;
-  -webkit-box-shadow: 0 10px 20px 1px #14b8eb;
-  box-shadow: 0 10px 20px 1px #14b8eb;
+  -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+  box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
   background-clip: padding-box;
   border: none;
   border-radius: 25px;
@@ -856,6 +874,13 @@ button {
   opacity: 0.8;
 }
 
+.header--contact__tear-bg {
+  width: 50%;
+  position: absolute;
+  left: 43%;
+  top: -2vw;
+}
+
 /* Checkbox */
 input[type="checkbox"] {
   position: absolute;
@@ -937,6 +962,8 @@ input[type="checkbox"]:checked + label:after {
 
 .communication__map {
   height: 50vh;
+  border-top-right-radius: 10vmin;
+  border-bottom-left-radius: 10vmin;
 }
 
 .communication__heading {
@@ -1025,6 +1052,145 @@ input[type="checkbox"]:checked + label:after {
   border-top-left-radius: 0;
 }
 
+.testimonials--about-us-subpage {
+  margin-top: initial;
+}
+
+.testimonials--about-us-subpage .container {
+  border-radius: 0;
+  padding-top: 10vh;
+}
+
+.about-us {
+  min-height: 50vh;
+  position: relative;
+  color: white;
+}
+
+.about-us__background {
+  width: 60%;
+  position: absolute;
+}
+
+.about-us .row {
+  position: absolute;
+  width: 25%;
+  left: 30%;
+  top: 25%;
+}
+
+.about-us__heading {
+  font-size: 2.5rem;
+}
+
+.about-us__subheading {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.about-us__p {
+  font-size: 0.75rem;
+}
+
+.about-us__deco-line {
+  height: 3px;
+  background-color: white;
+}
+
+.insurance {
+  min-height: 400px;
+  margin-top: 10vh;
+}
+
+.insurance .row {
+  position: relative;
+}
+
+.insurance__img-oc, .insurance__img-allianz {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+}
+
+.insurance__img-allianz {
+  right: 0;
+  position: absolute;
+}
+
+.insurance__info {
+  width: 50% !important;
+  position: absolute;
+  right: 0;
+  padding: 2rem 1rem 0rem 9rem;
+}
+
+.numbers__heading {
+  color: #14b8eb;
+  font-size: 2.5rem;
+}
+
+.numbers__svg {
+  fill: white !important;
+  border-radius: 50%;
+  background-color: #14b8eb;
+  width: 100px;
+  height: 100px;
+}
+
+.numbers__amount {
+  color: #14b8eb;
+  font-size: 200%;
+  line-height: 1;
+}
+
+.comp-coop .container {
+  background-color: #f3f7ff;
+  padding: 3rem 3rem;
+}
+
+.comp-coop .owl-carousel .owl-stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  max-height: 75px;
+}
+
+.comp-coop .owl-carousel .owl-item {
+  height: 75px;
+  width: 100%;
+}
+
+@media (min-width: 1920px) {
+  .header--contact__tear-bg {
+    width: 30%;
+    position: absolute;
+    left: 46%;
+    top: -2vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-us {
+    min-height: 70vh;
+    position: relative;
+    color: white;
+  }
+  .about-us__background {
+    width: 70%;
+    position: absolute;
+  }
+  .about-us .row {
+    position: absolute;
+    width: 35%;
+    left: 35%;
+    top: 10%;
+  }
+}
+
 @media (max-width: 992px) {
   .steps {
     background-position-x: -300px;
@@ -1047,6 +1213,35 @@ input[type="checkbox"]:checked + label:after {
   .footer .container {
     padding: 15px;
     padding-top: 150px;
+  }
+  .header--contact__tear-bg {
+    width: 55%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .about-us {
+    min-height: 70vh;
+    position: relative;
+    color: white;
+  }
+  .about-us__background {
+    width: 70%;
+    position: static;
+    background-size: contain;
+  }
+  .about-us .row {
+    text-align: center;
+    position: static;
+    width: 100%;
+    left: 0;
+    color: #322c2e;
+  }
+  .about-us__heading {
+    color: #14b8eb;
+  }
+  .about-us__subheading {
+    text-align: justify;
   }
 }
 /*# sourceMappingURL=style.css.map */
