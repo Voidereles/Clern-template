@@ -1102,7 +1102,8 @@ input[type="checkbox"]:checked+label:after {
     }
 }
 
-.about-us {
+.about-us,
+.our-services {
     min-height: 50vh;
     position: relative;
     color: white;
@@ -1208,9 +1209,197 @@ input[type="checkbox"]:checked+label:after {
 
 }
 
+//company-offer
+.company-services {
+    margin-left: 35%;
+
+    .card {
+        border: none;
+        background-color: transparent;
+    }
+
+    .card-header {
+        border-top-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+        background-color: #5DB65A;
+        background: rgba(93, 182, 90, 1);
+        background: -moz-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(93, 182, 90, 1)), color-stop(100%, rgba(147, 208, 87, 1)));
+        background: -webkit-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+        background: -o-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+        background: -ms-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+        background: linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+    }
+
+    .card-header--collapsed {
+        background: #f3f7ff;
+    }
+
+    .card-header .btn {
+        transition: $fast;
+    }
+
+    .accordion .card:not(:first-of-type) .card-header:first-child {
+
+        border-top-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+    }
+
+    .card-body {
+        background-color: white;
+    }
+
+    .owl-services .owl-dots {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-45%);
+    }
+
+    .owl-services .owl-dot {
+        width: 1rem;
+        height: 1rem;
+        box-shadow: $clern-lightGreen;
+        z-index: 1;
+        transform: translateY(-50%);
+        padding: 0px;
+        margin: 0px 15px 0px 0px;
+        transition: all 0.3s ease 0s;
+        border-radius: 50%;
+        background: rgb(255, 255, 255);
+        appearance: none;
+        background-color: transparent;
+        border: 1px solid #fff;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 5px;
+        outline: none;
+        padding: 5px;
+    }
+
+    .owl-services .owl-dot::after {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: grey;
+        transition: all 0.25s ease-in-out 0s;
+    }
+
+    .owl-services .owl-dots .active::after {
+        background: white;
+        border: 3px solid $clern-lightGreen;
+    }
+
+    .fa-chevron-left,
+    .fa-chevron-right,
+    .arrow-down,
+    .arrow-up {
+        color: white;
+        border-radius: 50%;
+    }
+
+    .fa-chevron-left,
+    .fa-chevron-right,
+    .arrow-down {
+        background-color: #5DB65A;
+        background: rgba(93, 182, 90, 1);
+        background: -moz-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(93, 182, 90, 1)), color-stop(100%, rgba(147, 208, 87, 1)));
+        background: -webkit-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+        background: -o-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+        background: -ms-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+        background: linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+    }
+
+    .fa-chevron-left,
+    .fa-chevron-right {
+        padding: 0.75rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-85%);
+        box-shadow: rgba(147, 208, 87, 0.5) 0 0 6px 3px
+    }
+
+    .arrow-up {
+        background: transparent;
+        border: 2px solid white;
+    }
+
+    .arrow-down {
+        transform: rotateZ(180deg);
+        border-radius: 50%;
+        border: 2px solid transparent;
+        box-shadow: rgba(147, 208, 87, 0.5) 0 0 6px 3px
+    }
 
 
-@media (min-width:1920px) {
+
+    .fa-chevron-left {
+        left: -1rem;
+    }
+
+    .fa-chevron-right {
+        right: -1rem;
+    }
+
+
+    .list-group-item:first-child {
+        border-top: 0;
+    }
+
+    &__heading {
+        color: white;
+        width: 100%;
+        text-align: left;
+    }
+
+    &__heading--collapsed {
+        color: $clern-lightGreen;
+    }
+
+    &__heading:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+    &__heading--collapsed:hover {
+        color: $clern-lightGreen;
+    }
+
+    &__p {
+        font-size: $variable-text-small-2;
+    }
+
+    .tariff {
+
+        &__heading,
+        &__price {
+            color: $clern-lightGreen;
+        }
+
+    }
+
+
+}
+
+@media (min-width: 1600px) {
+    .header--contact__tear-bg {
+        width: 41%;
+        position: absolute;
+        left: 45%;
+        top: -2vw;
+    }
+
+    .about-us {
+        &__p {
+            font-size: $variable-text-medium-1;
+        }
+    }
+}
+
+
+@media (min-width:1921px) {
     .header--contact__tear-bg {
         width: 30%;
         position: absolute;
@@ -1276,7 +1465,8 @@ input[type="checkbox"]:checked+label:after {
         top: 0;
     }
 
-    .about-us {
+    .about-us,
+    .our-services {
         min-height: 70vh;
         position: relative;
         color: white;
@@ -1306,4 +1496,7 @@ input[type="checkbox"]:checked+label:after {
 
     }
 
+    .company-services {
+        margin-left: 0;
+    }
 }

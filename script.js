@@ -82,6 +82,16 @@ $('.owl-companies').owlCarousel({
     }
 })
 
+$('.owl-services').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+    autoplay: true,
+    dots: true,
+    items: 1
+})
+
 ////////////////////////////////////////////
 
 let a = 0;
@@ -242,3 +252,20 @@ function initMap() {
     });
     marker.setMap(map);
 }
+
+///////////////////////
+//collapsing
+
+$('.card-header').on('click', function () {
+    $('.card-header .btn-success').toggleClass('arrow-down');
+    $('.card-header .btn-success').toggleClass('arrow-up');
+    $('.card-header').toggleClass('card-header--collapsed');
+    $('.company-services__heading').toggleClass('company-services__heading--collapsed');
+
+})
+
+
+
+
+//////////////////////
+//progressBar
