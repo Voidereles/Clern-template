@@ -1482,9 +1482,8 @@ input[type="checkbox"]:checked + label:after {
   background: -webkit-gradient(left bottom, right top, color-stop(0%, #00ace0), color-stop(100%, #75dfff));
   background: linear-gradient(45deg, #00ace0 0%, #75dfff 100%);
   border-radius: 50%;
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
-  width: 32px;
+  width: 2rem;
+  height: 2rem;
   -webkit-box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 5px 3px;
           box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 5px 3px;
   z-index: 2;
@@ -1494,16 +1493,30 @@ input[type="checkbox"]:checked + label:after {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   text-align: center;
+  color: white;
+}
+
+.form-check-label > input:checked + div .purchase__more {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  background: transparent;
+  border: 2px solid white;
 }
 
 .purchase__more:hover {
-  background-color: white;
+  background: white;
   cursor: pointer;
+  color: #322c2e;
 }
 
 .purchase__more-dots {
-  margin-bottom: 0.5rem;
-  color: white;
+  top: -8px;
+  left: 7px;
+  position: absolute;
+}
+
+.form-check-label > input:checked + div .purchase__more:hover {
+  background: white;
 }
 
 .purchase__checkbox-container {

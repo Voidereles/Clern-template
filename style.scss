@@ -1521,9 +1521,9 @@ input[type="checkbox"]:checked+label:after {
     }
 
     //element>element div>p Selects all <p>elements where the parent is a
-     //<div>element element+element 
-     
-     //div+p Selects all 
+    //<div>element element+element 
+
+    //div+p Selects all 
     // <p>elements that are placed immediately after <div>elements .labl {
 
 
@@ -1555,8 +1555,8 @@ input[type="checkbox"]:checked+label:after {
         background: -webkit-gradient(left bottom, right top, color-stop(0%, #00ace0), color-stop(100%, #75dfff));
         background: linear-gradient(45deg, #00ace0 0%, #75dfff 100%);
         border-radius: 50%;
-        transition: 0.5s all;
-        width: 32px;
+        width: 2rem;
+        height: 2rem;
         box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 5px 3px;
         z-index: 2;
         position: absolute;
@@ -1564,17 +1564,32 @@ input[type="checkbox"]:checked+label:after {
         top: 50%;
         transform: translateY(-50%);
         text-align: center;
+        color: white;
+    }
+
+    .form-check-label>input:checked+div &__more {
+        box-sizing: content-box;
+        background: transparent;
+        border: 2px solid white;
     }
 
     &__more:hover {
-        background-color: white;
+        background: white;
         cursor: pointer;
+        color: $clern-dark-text;
     }
 
     &__more-dots {
-        margin-bottom: 0.5rem;
-        color: white;
+        top: -8px;
+        left: 7px;
+        position: absolute;
     }
+
+    .form-check-label>input:checked+div &__more:hover {
+
+        background: white;
+    }
+
 
 
 
