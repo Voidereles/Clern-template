@@ -269,4 +269,7 @@ $('.card-header').on('click', function () {
 
 
 //////////////////////
-//progressBar
+//additional purchase cleaning
+
+
+

@@ -45,6 +45,14 @@ a {
     font-size: $variable-text-small-3;
 }
 
+.text-light-green {
+    color: $clern-lightGreen !important;
+}
+
+.text-dark {
+    color: $clern-dark-text !important;
+}
+
 .z-1 {
     z-index: 1;
 }
@@ -228,7 +236,6 @@ a {
 .main {
     background-color: white;
     width: 100%;
-    margin-top: -100px;
 }
 
 
@@ -1383,6 +1390,321 @@ input[type="checkbox"]:checked+label:after {
 
 
 }
+
+//////////////
+//purchase
+
+
+.purchase {
+    font-size: $variable-text-small-1;
+
+    &__step {
+        position: relative;
+    }
+
+    &__step:nth-child(2) img {
+        opacity: 0.45;
+    }
+
+    &__step:not(:first-child) {
+        filter: grayscale(80);
+        opacity: 0.5;
+    }
+
+    &__step:not(:last-child) &__svg-container::after {
+        content: '';
+        position: absolute;
+        width: 10vw;
+        border-top: 2px dotted;
+        border-style: dotted;
+        border-color: $clern-blue;
+        border-image-source: url('images/svg/border-dots.svg');
+        border-image-slice: 33% 33%;
+        border-image-repeat: round;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        border-width: 0 0 8px 0;
+        top: calc(50% - 1.5rem);
+        left: 7.5vw;
+    }
+
+    &__step:hover,
+    &__step:hover &__step:nth-child(2) img {
+        opacity: 1;
+        filter: grayscale(0);
+    }
+
+    &__svg-container {
+        background: white;
+        -webkit-box-shadow: -1px 2px 5px 1px #efefef;
+        -moz-box-shadow: -1px 2px 5px 1px #efefef;
+        box-shadow: -1px 2px 5px 1px #efefef;
+        border-radius: 15px;
+        max-height: 70px;
+        max-width: 70px;
+        position: relative;
+        text-align: center;
+    }
+
+    &__svg-description {
+        font-size: $variable-text-medium-default;
+        color: $clern-blue;
+    }
+
+    &__summary {
+        background: white;
+        -webkit-box-shadow: -1px 2px 5px 1px rgba(25, 25, 25, 0.3);
+        -moz-box-shadow: -1px 2px 5px 1px rgba(25, 25, 25, 0.3);
+        box-shadow: -1px 2px 5px 1px rgba(25, 25, 25, 0.3);
+        position: relative;
+        text-align: center;
+        border-bottom-right-radius: 25px;
+        border-top-left-radius: 25px;
+        overflow: hidden;
+        height: 380px;
+    }
+
+    .summary {
+        &__heading {
+            color: $clern-blue;
+        }
+
+        &__info {
+            background-color: $clern-white-a-bit-purple;
+            color: $clern-blue;
+            border-radius: 15px;
+        }
+
+        &__final-cost {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #5DB65A;
+            background: rgba(93, 182, 90, 1);
+            background: -moz-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+            background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(93, 182, 90, 1)), color-stop(100%, rgba(147, 208, 87, 1)));
+            background: -webkit-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+            background: -o-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+            background: -ms-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+            background: linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+            font-size: $variable-text-medium-2;
+        }
+    }
+
+
+
+    .form-label {
+        left: initial;
+        opacity: 0.6;
+    }
+
+    .form-input {
+        max-width: 100%;
+        box-shadow: 0 2px 0 0 #999;
+        opacity: 0.6;
+    }
+
+    .form-input.filled {
+        box-shadow: 0 2px 0 0 $clern-blue;
+        color: $clern-blue;
+        opacity: 1;
+    }
+
+    .form-check {
+        border-top-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+        font-size: $variable-text-doubled;
+        text-transform: uppercase;
+
+
+    }
+
+    //element>element div>p Selects all <p>elements where the parent is a
+     //<div>element element+element 
+     
+     //div+p Selects all 
+    // <p>elements that are placed immediately after <div>elements .labl {
+
+
+    .form-check-label>input {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .form-check-label>input+div {
+        cursor: pointer;
+        transition: $fast;
+    }
+
+    .form-check-label>input:not(:checked)+div {
+        color: $clern-blue;
+        background: $clern-white-a-bit-purple;
+    }
+
+    .form-check-label>input:checked+div {
+        background: #00ace0;
+        color: white;
+        background: -webkit-gradient(left bottom, right top, color-stop(0%, #00ace0), color-stop(100%, #75dfff));
+        background: linear-gradient(45deg, #00ace0 0%, #75dfff 100%);
+    }
+
+    &__more {
+        display: inline-block;
+        font-size: 1.5rem;
+        background: -webkit-gradient(left bottom, right top, color-stop(0%, #00ace0), color-stop(100%, #75dfff));
+        background: linear-gradient(45deg, #00ace0 0%, #75dfff 100%);
+        border-radius: 50%;
+        transition: 0.5s all;
+        width: 32px;
+        box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 5px 3px;
+        z-index: 2;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    &__more:hover {
+        background-color: white;
+        cursor: pointer;
+    }
+
+    &__more-dots {
+        margin-bottom: 0.5rem;
+        color: white;
+    }
+
+
+
+
+
+
+
+    &__checkbox-container {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin: 0;
+    }
+
+    /* Hide the browser's default checkbox */
+    &__checkbox-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        transition: $fast;
+    }
+
+    /* On mouse-over, add a grey background color */
+    &__checkbox-container:hover input~.checkmark {
+        background-color: #ccc;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    &__checkbox-container input:checked~.checkmark {
+        background-color: #2196F3;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the checkmark when checked */
+    &__checkbox-container input:checked~.checkmark:after {
+        display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    &__checkbox-container .checkmark:after {
+        left: 10px;
+        top: 5px;
+        width: 6px;
+        height: 13px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    &__img-container {
+        margin-left: 45px;
+        font-size: $variable-text-small-2;
+        opacity: 0.5;
+    }
+
+    &__img {
+        height: 50px;
+    }
+
+
+    &__form-heading {
+        color: $clern-blue;
+    }
+
+
+    &__btn {
+        display: inline-block;
+        position: relative;
+        background: $clern-blue;
+        font-size: $variable-text-small-1;
+        background: -webkit-gradient(left bottom, right top, color-stop(0%, #00ace0), color-stop(100%, $clern-blue));
+        background: linear-gradient(45deg, #00ace0 0%, $clern-blue 100%);
+        -webkit-transition: 0.5s, color 0.2s;
+        transition: 0.5s, color 0.2s;
+        -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+        box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+        z-index: 2;
+        border-radius: 40px;
+        cursor: pointer;
+        color: white;
+        text-transform: uppercase;
+    }
+
+
+    &__additional-item--checked {
+        color: $clern-blue !important;
+        fill: $clern-blue !important;
+        opacity: 1;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 1600px) {
     .header--contact__tear-bg {

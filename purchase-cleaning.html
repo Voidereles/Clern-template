@@ -110,20 +110,14 @@
     <main class="main">
 
         <section class="our-services">
-            <img class="our-services__background" src="images/background_service.png" alt="">
+            <img class="our-services__background" src="images/background_purchase.png" alt="">
             <div class="container">
                 <div class="row p-4 p-lg-0 mt-xl-4">
-                    <h3 class="about-us__heading col-12 pl-0 mb-4">Nasze usługi</h3>
-
-                    <span class="about-us__deco-line col-1 mt-2 d-none d-xl-inline-block"></span>
-                    <div class="about-us__description-container col-12 col-xl-10">
-                        <p class="about-us__p text-justify">Codzienny pośpiech i zapracowanie nie sprzyja realizacji
-                            domowych obowiązków.<br>
-                            Po ciężkim tygodniu w pracy ostatnią rzeczą o jakiej marzymy jest sprzątania mieszkania czy
-                            biura.
-                            <br><br>
-                            Nieocenione w takiej sytuacji staje się wsparcie clern.pl - profesjonalnej firmy
-                            sprzątającej.
+                    <h3 class="about-us__heading col-12 pl-0 mb-4 text-light-green">Zamów sprzątanie</h3>
+                    <div class="about-us__description-container">
+                        <p class="about-us__p text-justify text-dark">Zarezerwuj usługę na określoną liczbę godzin. Czas
+                            sprzątania, podany dla poszczególnych metraży, jest czasem sugerowanym. Więcej informacji
+                            znajdziesz w zakładce Pomoc.
                         </p>
                     </div>
 
@@ -131,84 +125,251 @@
             </div>
         </section>
 
-        <div class="row text-center justify-content-center w-100 mt-5">
-            <div class="col-12 col-lg-3">
-                <div class="steps__svg p-3 steps__svg-1 mx-auto">
-                    <img class="" src="images/svg/time-n-place.svg" alt="">
+        <section class="purchase mx-5 mb-5">
+            <div class="container">
+                <div class="row text-center justify-content-center w-100 mt-2">
+                    <div class="purchase__step col-12 col-lg-3">
+                        <div class="purchase__svg-container p-3 steps__svg-1 mx-auto">
+                            <img class="" src="images/svg/time-n-place.svg" alt="">
+                        </div>
+
+                        <h4 class="purchase__svg-description mt-3">Wybierz miejsce i czas</h4>
+                    </div>
+                    <div class="purchase__step col-12 col-lg-3 mt-4 mt-lg-0">
+                        <div class="purchase__svg-container p-3 steps__svg-2 mx-auto">
+                            <img class="" src="images/svg/note-checkboxes.svg" alt="">
+                        </div>
+                        <h4 class="purchase__svg-description mt-3">Skonfiguruj usługę</h4>
+                    </div>
+
+
+
+
+
+
+                    <div class="purchase__step col-12 col-lg-3 mt-4 mt-lg-0">
+                        <div class="purchase__svg-container p-3 steps__svg-3 mx-auto">
+                            <img class="" src="images/svg/card-security.svg" alt="">
+                        </div>
+                        <h4 class="purchase__svg-description mt-3">Finalizuj zamówienie</h4>
+                    </div>
                 </div>
 
-                <h4 class="steps__info-step-heading mt-2 mt-lg-5">Wybierz miejsce i czas</h4>
-                <p class="steps__info-step-subheading">Podaj adres, dzień i godzinę sprzątania</p>
+                <div class="row d-flex justify-content-center my-5">
+                    <div class="col-12 col-lg-3">
+                        <div class="purchase__summary summary p-4">
+                            <h3 class="summary__heading mb-4">Podsumowanie</h3>
+
+                            <p>Data i godzina sprzątania:</p>
+                            <div class="summary__info p-2 mb-4">
+                                <span class="d-block">17.06.2016 14:50</span>
+                            </div>
+
+                            <p>Usługi:</p>
+                            <div class="summary__info p-2">
+                                <span class="d-block">Sprzątanie STANDARD</span>
+                                <span class="d-block">Mycie okien</span>
+                                <span class="d-block">Prasowanie</span>
+                            </div>
+
+                            <div class="summary__final-cost p-3 d-flex justify-content-between text-white">
+                                <div class="text-small-1 pt-2">Do zapłaty</div>
+                                <div>175 PLN</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ml-lg-4">
+                        <form action="" class="purchase__form mt-4">
+
+                            <div class="row m-0">
+
+                                <!-- LOKALIZACJA -->
+                                <h5 class="purchase__form-heading col-12 pl-0">Lokalizacja:</h5>
+                                <div class="col-12 col-12 mt-2 pl-0">
+                                    <div class="row m-0">
+                                        <div class="purchase__form-description col-12 col-lg-3 mt-3 pl-0">Gdzie mamy
+                                            przyjechać?
+                                        </div>
+                                        <div class="col-12 col-lg-9">
+                                            <div class="row m-0">
+                                                <div class="form-group col-6 col-lg-4 pr-0">
+                                                    <label class="form-label" for="zipcode">Kod pocztowy</label>
+                                                    <input id="zipcode" name="zipcode" class="form-input" type="text" />
+                                                </div>
+                                                <div class="form-group col-6 col-lg-8 pr-0">
+                                                    <label class="form-label" for="city">Miejscowość</label>
+                                                    <input id="city" name="city" class="form-input" type="text" />
+                                                </div>
+                                                <div class="form-group col-12 col-lg-12 pr-0">
+                                                    <label class="form-label" for="street">Ulica i nr lokalu</label>
+                                                    <input id="street" name="street" class="form-input" type="text" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- TERMIN -->
+                                <h5 class="purchase__form-heading col-12 pl-0">Termin:</h5>
+                                <div class="row w-100">
+                                    <div class="form-group col-6 col-lg-7">
+                                        <label class="form-label" for="date">Data</label>
+                                        <input id="date" name="date" class="form-input" type="date min=2019-08-20" />
+                                        <!-- Można by zrobić, aby nie można było wprowadzać dat z przeszłości -->
+                                    </div>
+                                    <div class="form-group col-6 col-lg-5">
+                                        <label class="form-label" for="hour">Godzina</label>
+                                        <input id="hor" name="hour" class="form-input" type="time min=8:00 max=20:00" />
+                                    </div>
+                                </div>
+
+                                <!-- WYBÓR STANDARDU -->
+                                <h5 class="purchase__form-heading col-12 pl-0 mt-5 mb-4">Skonfiguruj usługę:</h5>
+                                <div class="row w-100">
+                                    <label class="form-check-label col-12 mb-2">
+                                        <input type="radio" class="form-check-input" value="Standard" name="serviceType"
+                                            checked>
+                                        <div class="w-100 px-4 py-2 form-check">Standard</div>
+                                    </label>
+
+                                    <label class="form-check-label col-12">
+                                        <input type="radio" class="form-check-input" value="Premium Plus"
+                                            name="serviceType">
+                                        <div class="w-100 px-4 py-2 form-check">
+                                            Premium plus<div class="purchase__more">
+                                                <div class="purchase__more-dots">...</div>
+                                            </div>
+                                        </div>
+
+                                    </label>
+                                </div>
+
+
+
+                                <div class="row w-100 mt-4">
+                                    <div class="form-group col-6 col-lg-5 mt-3">
+                                        Podaj wielkość powierzchni:
+                                    </div>
+                                    <div class="form-group col-6 col-lg-7">
+                                        <label class="form-label" for="surface">Wielkość powierzchni w m<sup>2</sup>
+                                        </label>
+                                        <input id="surface" name="surface" class="form-input" type="number" />
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row w-100">
+                                    <p class="col-12">Usługi dodatkowe:</p>
+                                    <div class="purchase__additional-item col-12 col-lg-4">
+                                        <div class="purchase__checkbox">
+                                            <label class="purchase__checkbox-container">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                                <div class="purchase__img-container">
+                                                    <img class="purchase__img" src="images/svg/windows-cleaning.svg"
+                                                        alt="okna">
+                                                    <p class="mt-2">Mycie okien</p>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="purchase__additional-item col-12 col-lg-4">
+                                        <div class="purchase__checkbox">
+                                            <label class="purchase__checkbox-container">
+                                                <input type="checkbox" checked="checked">
+                                                <span class="checkmark"></span>
+
+                                                <div class="purchase__img-container purchase__additional-item--checked">
+                                                    <img class="purchase__img purchase__additional-item--checked"
+                                                        src="images/svg/ironing.svg" alt="okna">
+                                                    <p class="mt-2 purchase__additional-item--checked">Prasowanie</p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="purchase__additional-item col-12 col-lg-4">
+                                        <div class="purchase__checkbox">
+                                            <label class="purchase__checkbox-container">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+
+                                                <div class="purchase__img-container">
+                                                    <img class="purchase__img" src="images/svg/cleaning-supplies.svg"
+                                                        alt="okna">
+                                                    <p class="mt-2">Środki czystości</p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <h5 class="purchase__form-heading col-12 pl-0 mt-4">Finalizuj zamówienie:</h5>
+                                <div class="col-12 col-12 mt-2 pl-0">
+                                    <div class="row">
+                                        <div class="form-group col-12 col-lg-6 mt-2">
+                                            <label class="form-label" for="firstName">Imię</label>
+                                            <input id="firstName" type="text" name="firstName" class="form-input" />
+                                        </div>
+
+                                        <div class="form-group col-12 col-lg-6 mt-2">
+                                            <label class="form-label" for="lastName">Nazwisko</label>
+                                            <input id="lastName" name="lastName" class="form-input" type="text" />
+                                        </div>
+
+                                        <div class="form-group col-12 col-lg-6 mt-2">
+                                            <label class="form-label" for="tel">Telefon</label>
+                                            <input id="tel" type="tel" name="tel" class="form-input" />
+                                        </div>
+
+                                        <div class="form-group col-12 col-lg-6 mt-2">
+                                            <label class="form-label" for="email">Adres e-mail</label>
+                                            <input id="email" type="email" name="email" class="form-input" type="text"
+                                                required />
+                                        </div>
+
+                                        <div class="form-group col-12 col-lg-12 mt-2">
+                                            <label class="form-label" for="additional">Uwagi dodatkowe</label>
+                                            <input id="additional" type="textarea" name="additional"
+                                                class="form-input"></input>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 pl-0 my-4">
+                                    <div class="purchase__checkbox">
+                                        <label class="purchase__checkbox-container">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+
+
+                                            <p class="mt-2 ml-5 text-small-1">Zapoznałem się z Regulaminem oraz Polityką
+                                                prywatności
+                                                i
+                                                akceptuję ich warunki.</p>
+
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn purchase__btn px-4 py-2 mx-auto text-small-1">Zamów
+                                    sprzątanie</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-lg-3 mt-4 mt-lg-0">
-                <div class="steps__svg p-3 steps__svg-2 mx-auto">
-                    <img class="" src="images/svg/card-security.svg" alt="">
-                </div>
-                <h4 class="steps__info-step-heading mt-2 mt-lg-5">Zapłać online</h4>
-                <p class="steps__info-step-subheading">Przelewem internetowym lub kartą kredytową</p>
-            </div>
-            <div class="col-12 col-lg-3 mt-4 mt-lg-0">
-                <div class="steps__svg p-3 steps__svg-3 mx-auto">
-                    <img class="" src="images/svg/colorful-stars.svg" alt="">
-                </div>
-                <h4 class="steps__info-step-heading mt-2 mt-lg-5">Ciesz się porządkiem</h4>
-                <p class="steps__info-step-subheading">...i zaoszczędzonym czasem</p>
-            </div>
-        </div>
-
-        <div class="communication__form mt-5">
-            <h4 class="communication__form-heading">Formularz kontaktowy</h4>
-
-
-            <form action="" class="newsletter__form mt-4">
-
-                <div class="row">
-                    <div class="form-group col-12 col-lg-6 mt-2">
-                        <label class="form-label" for="firstName">Imię</label>
-                        <input id="firstName" type="text" name="firstName" class="form-input" />
-                    </div>
-
-                    <div class="form-group col-12 col-lg-6 mt-2">
-                        <label class="form-label" for="lastName">Nazwisko</label>
-                        <input id="lastName" name="lastName" class="form-input" type="text" />
-                    </div>
-
-                    <div class="form-group col-12 col-lg-6 mt-2">
-                        <label class="form-label" for="tel">Telefon</label>
-                        <input id="tel" type="tel" name="tel" class="form-input" />
-                    </div>
-
-                    <div class="form-group col-12 col-lg-6 mt-2">
-                        <label class="form-label" for="email">Adres e-mail</label>
-                        <input id="email" type="email" name="email" class="form-input" type="text" required />
-                    </div>
-
-                    <div class="form-group col-12 col-lg-12 mt-2">
-                        <label class="form-label" for="message">Wiadomość</label>
-                        <input id="message" type="textarea" name="message" class="form-input"></input>
-                    </div>
-
-                    <div class="form-group input-group col-12 mt-4 mb-3">
-                        <input class="pt-5" type="checkbox" id="accept" />
-                        <label for="accept">Wyrażam zgodę na przetwarzanie moich danych osobowych
-                            zawartych w formularzu
-                            kontaktowym.</label>
-                    </div>
-
-                    <button type="submit"
-                        class="btn communication__btn p-3 mx-auto mx-lg-0 text-small-1">Wyślij</button>
-                </div>
-
-
-
-
-
-
-        </div>
-
-        </form>
-        <!-- schema with opening time should be implemented -->
-        </div>
+        </section>
 
 
         <section class="testimonials testimonials--contact-subpage">
@@ -225,7 +386,8 @@
                                     <blockquote class="blockquote testimonials__blockquote text-white">
                                         <p class="font-italic">Jak wiadomo, klienci zwracają uwagę na wszystko. Nie
                                             można sobie pozwolić na bałagan w biurze, ponieważ zrobi to na nich złe
-                                            wrażenie. O czystość w naszej firmie dba clern.pl i wiemy, że nikt nie zrobi
+                                            wrażenie. O czystość w naszej firmie dba clern.pl i wiemy, że nikt nie
+                                            zrobi
                                             tego lepiej.</p>
                                         <footer class="card-blockquote"><cite title="Source title">Paweł Nowak,
                                                 Sosnowiec</cite></footer>
@@ -301,7 +463,8 @@
                             <p class="footer__grey">42-500 Będzin, ul. Modrzejowska 95</p>
                         </div>
 
-                        <a class="footer__tel" href="#tel:+48519017017"><span class="text-small-3">+48 </span>519 017
+                        <a class="footer__tel" href="#tel:+48519017017"><span class="text-small-3">+48 </span>519
+                            017
                             017</a>
                         <a class="footer__email" href="mailto:info@clern.pl">info@clern.pl</a>
                     </div>
@@ -323,16 +486,13 @@
             </div>
 
 
-            <!-- <img src="images/svg/Ikony_Clern_-02.svg">
-
-
-
+            <img src="images/svg/Ikony_Clern_-02.svg">
             <img src="images/svg/Ikony_Clern_-12.svg">
             <img src="images/svg/Ikony_Clern_-14.svg">
             <img src="images/svg/Ikony_Clern_-15.svg">
             <img src="images/svg/Ikony_Clern_-16.svg">
             <img src="images/svg/Ikony_Clern_-17.svg">
-            <img src="images/svg/Ikony_Clern_-18.svg"> -->
+            <img src="images/svg/Ikony_Clern_-18.svg">
         </footer>
     </main>
 
