@@ -1,9 +1,10 @@
 $('.owl-one').owlCarousel({
     loop: true,
     margin: 10,
-    autoplay: true,
+    // autoplay: true,
     lazyLoad: true,
     animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
     items: 1
 })
 

@@ -228,26 +228,27 @@ a {
 .main {
     background-color: white;
     width: 100%;
+    margin-top: -100px;
 }
 
 
 
-.slider {
-    background-color: transparent;
-    background-image: url('images/background-slider.png');
-    background-size: cover;
-    width: 100%;
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+// .slider {
+//     background-color: transparent;
+//     background-image: url('images/background-slider.png');
+//     background-size: cover;
+//     width: 100%;
+//     z-index: 1;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+// }
 
 
 .owl-one {
     z-index: 0;
     overflow: hidden;
-    background-image: linear-gradient(to right, #fff 48%, #14b8eb 48%); // &__item {
+    // background-image: linear-gradient(to right, #fff 48%, #14b8eb 48%); // &__item {
 
     //     background-image: url('images/bg-place-1.jpg');
     //     background-size: cover;
@@ -264,9 +265,9 @@ a {
     // }
 
 
-    .row {
-        padding-top: 100px;
-    }
+    // .row {
+    //     padding-top: 100px;
+    // }
 
 
 
@@ -522,7 +523,7 @@ a {
         text-transform: uppercase;
         top: 50%;
         left: -25px;
-        font-size: $variable-text-small-1;
+        font-size: $variable-text-small-2;
         transform: translate(-50%, -50%);
     }
 
@@ -688,7 +689,7 @@ a {
         text-transform: uppercase;
         top: 50%;
         left: -25px;
-        font-size: $variable-text-small-1;
+        font-size: $variable-text-small-2;
         transform: translate(-50%, -50%);
         left: 38%;
         z-index: 2;
