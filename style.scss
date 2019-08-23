@@ -1,15 +1,19 @@
-$clern-blue: #14b8eb;
-$clern-lightGreen:#64b95a;
+$clern-blue: #14b9ec;
+$clern-lightGreen:#66ba5a;
 $clern-lightYellow: #d3ef8b;
 $clern-dark-text: #322c2e;
-$clern-white-a-bit-purple: #f3f7ff;
-$variable-text-small-1:0.9rem;
+$clern-grey: #f3f7ff;
+
+$variable-text-small-1:0.8rem;
 $variable-text-small-2:0.75rem;
 $variable-text-small-3:0.5rem;
 $variable-text-medium-default:1rem;
-$variable-text-medium-1:1.25rem;
-$variable-text-medium-2:1.5rem;
+$variable-text-medium-3:0.9rem;
+$variable-text-medium-2:1.25rem;
+$variable-text-medium-1:1.5rem;
 $variable-text-big-2:2.5rem;
+$variable-text-big-3:2rem;
+
 $fast:0.2s;
 $variable-text-doubled:200%;
 
@@ -45,6 +49,14 @@ a {
     font-size: $variable-text-small-3;
 }
 
+.text-medium-3 {
+    font-size: $variable-text-medium-3;
+}
+
+.text-size-default {
+    font-size: $variable-text-medium-default;
+}
+
 .text-light-green {
     color: $clern-lightGreen !important;
 }
@@ -65,9 +77,41 @@ a {
     z-index: -1;
 }
 
+.double-columns {
+    columns: 2;
+}
+
+.bg-green-grad {
+    background-color: #8dce57;
+    background: rgba(93, 182, 90, 1);
+    background: -moz-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(93, 182, 90, 1)), color-stop(100%, rgba(147, 208, 87, 1)));
+    background: -webkit-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+    background: linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+}
+
+.green-shadow {
+    box-shadow: rgba(141, 206, 97, 0.54) 0px 1px 10px 2px;
+
+}
+
+.bg-blue-grad {
+    background: rgba(0, 172, 224, 1);
+    background: -moz-linear-gradient(45deg, rgba(0, 172, 224, 1) 0%, rgba(117, 223, 255, 1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(0, 172, 224, 1)), color-stop(100%, rgba(117, 223, 255, 1)));
+    background: -webkit-linear-gradient(45deg, rgba(0, 172, 224, 1) 0%, rgba(117, 223, 255, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(0, 172, 224, 1) 0%, rgba(117, 223, 255, 1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(0, 172, 224, 1) 0%, rgba(117, 223, 255, 1) 100%);
+    background: linear-gradient(45deg, rgba(0, 172, 224, 1) 0%, rgba(117, 223, 255, 1) 100%);
+}
+
 
 .header {
     max-height: 100px;
+    z-index: 5;
+    position: relative;
 
     &__logo {
         max-height: 60px;
@@ -79,7 +123,7 @@ a {
     }
 
     &__nav-link {
-        font-size: $variable-text-small-1;
+        font-size: $variable-text-medium-3;
         color: $clern-dark-text;
         transition: $fast;
     }
@@ -236,6 +280,7 @@ a {
 .main {
     background-color: white;
     width: 100%;
+    margin-top: -100px;
 }
 
 
@@ -281,15 +326,19 @@ a {
     &__img-container {
         max-width: 100%;
         max-height: 100%;
+        position: relative;
+        text-align: right;
     }
 
-
-
+    .owl-carousel .owl-item img,
     &__img {
-        object-fit: contain;
+        object-fit: cover;
         max-width: 100%;
-        max-height: calc(73vh - 80px);
+        display: inline-block !important;
+        width: 89% !important;
+        z-index: -1;
     }
+
 
     &__text {
         position: absolute;
@@ -864,7 +913,7 @@ a {
     z-index: -1;
 
     .container {
-        background-color: $clern-white-a-bit-purple;
+        background-color: $clern-grey;
         border-top-left-radius: 15vh;
         padding: 3rem 6rem;
         padding-top: 150px;
@@ -1198,7 +1247,7 @@ input[type="checkbox"]:checked+label:after {
 
 .comp-coop {
     .container {
-        background-color: $clern-white-a-bit-purple;
+        background-color: $clern-grey;
         padding: 3rem 3rem;
     }
 
@@ -1470,7 +1519,7 @@ input[type="checkbox"]:checked+label:after {
         }
 
         &__info {
-            background-color: $clern-white-a-bit-purple;
+            background-color: $clern-grey;
             color: $clern-blue;
             border-radius: 15px;
         }
@@ -1539,7 +1588,7 @@ input[type="checkbox"]:checked+label:after {
 
     .form-check-label>input:not(:checked)+div {
         color: $clern-blue;
-        background: $clern-white-a-bit-purple;
+        background: $clern-grey;
     }
 
     .form-check-label>input:checked+div {
@@ -1745,6 +1794,17 @@ input[type="checkbox"]:checked+label:after {
         top: -2vw;
     }
 
+}
+
+@media (min-width:1200px) {
+    .navbar-light .navbar-nav .nav-link {
+        color: $clern-dark-text;
+    }
+
+    .navbar-light .navbar-nav .nav-link:focus,
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: $clern-blue;
+    }
 }
 
 
