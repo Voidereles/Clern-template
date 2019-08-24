@@ -125,7 +125,7 @@
             </div>
         </section>
 
-        <section class="purchase mx-5 mb-5">
+        <section class="purchase mx-lg-5 mb-5">
             <div class="container">
                 <div class="row text-center justify-content-center w-100 mt-2">
                     <div class="purchase__step col-12 col-lg-3">
@@ -156,7 +156,7 @@
                 </div>
 
                 <div class="row d-flex justify-content-center my-5">
-                    <div class="col-12 col-lg-3">
+                    <div class="col-12 col-lg-3 order-2 order-lg-1">
                         <div class="purchase__summary summary p-4">
                             <h3 class="summary__heading mb-4">Podsumowanie</h3>
 
@@ -179,47 +179,45 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6 ml-lg-4">
+                    <div class="col-12 col-lg-6 ml-lg-4 order-1 order-lg-2">
                         <form action="" class="purchase__form mt-4">
 
                             <div class="row m-0">
 
                                 <!-- LOKALIZACJA -->
                                 <h5 class="purchase__form-heading col-12 pl-0">Lokalizacja:</h5>
-                                <div class="col-12 col-12 mt-2 pl-0">
-                                    <div class="row m-0">
-                                        <div class="purchase__form-description col-12 col-lg-3 mt-3 pl-0">Gdzie mamy
-                                            przyjechać?
-                                        </div>
-                                        <div class="col-12 col-lg-9">
-                                            <div class="row m-0">
-                                                <div class="form-group col-6 col-lg-4 pr-0">
-                                                    <label class="form-label" for="zipcode">Kod pocztowy</label>
-                                                    <input id="zipcode" name="zipcode" class="form-input" type="text" />
-                                                </div>
-                                                <div class="form-group col-6 col-lg-8 pr-0">
-                                                    <label class="form-label" for="city">Miejscowość</label>
-                                                    <input id="city" name="city" class="form-input" type="text" />
-                                                </div>
-                                                <div class="form-group col-12 col-lg-12 pr-0">
-                                                    <label class="form-label" for="street">Ulica i nr lokalu</label>
-                                                    <input id="street" name="street" class="form-input" type="text" />
-                                                </div>
+                                <div class="row w-100 m-0">
+                                    <div class="purchase__form-description col-12 col-lg-3 mt-3 pl-0">Gdzie mamy
+                                        przyjechać?
+                                    </div>
+                                    <div class="col-12 col-lg-9 pl-0">
+                                        <div class="row m-0">
+                                            <div class="form-group col-6 col-lg-4 pl-0">
+                                                <label class="form-label" for="zipcode">Kod pocztowy</label>
+                                                <input id="zipcode" name="zipcode" class="form-input" type="text" />
                                             </div>
-
+                                            <div class="form-group col-6 col-lg-8 pl-0">
+                                                <label class="form-label" for="city">Miejscowość</label>
+                                                <input id="city" name="city" class="form-input" type="text" />
+                                            </div>
+                                            <div class="form-group col-12 col-lg-12 pl-0">
+                                                <label class="form-label" for="street">Ulica i nr lokalu</label>
+                                                <input id="street" name="street" class="form-input" type="text" />
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
 
                                 <!-- TERMIN -->
                                 <h5 class="purchase__form-heading col-12 pl-0">Termin:</h5>
-                                <div class="row w-100">
-                                    <div class="form-group col-6 col-lg-7">
+                                <div class="row w-100 m-0">
+                                    <div class="form-group col-6 col-lg-4 pl-0">
                                         <label class="form-label" for="date">Data</label>
                                         <input id="date" name="date" class="form-input" type="date min=2019-08-20" />
                                         <!-- Można by zrobić, aby nie można było wprowadzać dat z przeszłości -->
                                     </div>
-                                    <div class="form-group col-6 col-lg-5">
+                                    <div class="form-group col-6 col-lg-8 pl-0">
                                         <label class="form-label" for="hour">Godzina</label>
                                         <input id="hor" name="hour" class="form-input" type="time min=8:00 max=20:00" />
                                     </div>
@@ -279,9 +277,9 @@
 
                                 <div class="row w-100">
                                     <p class="col-12">Usługi dodatkowe:</p>
-                                    <div class="purchase__additional-item col-12 col-lg-4">
-                                        <div class="purchase__checkbox">
-                                            <label class="purchase__checkbox-container">
+                                    <div class="purchase__additional-item col-6 col-lg-4">
+                                        <div class="checkbox">
+                                            <label class="checkbox-container">
                                                 <input type="checkbox">
                                                 <span class="checkmark"></span>
 
@@ -295,9 +293,9 @@
 
                                     </div>
 
-                                    <div class="purchase__additional-item col-12 col-lg-4">
-                                        <div class="purchase__checkbox">
-                                            <label class="purchase__checkbox-container">
+                                    <div class="purchase__additional-item col-6 col-lg-4">
+                                        <div class="checkbox">
+                                            <label class="checkbox-container">
                                                 <input type="checkbox" checked="checked">
                                                 <span class="checkmark"></span>
 
@@ -310,9 +308,9 @@
                                         </div>
                                     </div>
 
-                                    <div class="purchase__additional-item col-12 col-lg-4">
-                                        <div class="purchase__checkbox">
-                                            <label class="purchase__checkbox-container">
+                                    <div class="purchase__additional-item col-6 col-lg-4">
+                                        <div class="checkbox">
+                                            <label class="checkbox-container">
                                                 <input type="checkbox">
                                                 <span class="checkmark"></span>
 
@@ -363,8 +361,8 @@
 
 
                                 <div class="col-12 pl-0 my-4">
-                                    <div class="purchase__checkbox">
-                                        <label class="purchase__checkbox-container">
+                                    <div class="checkbox">
+                                        <label class="checkbox-container">
                                             <input type="checkbox">
                                             <span class="checkmark"></span>
 

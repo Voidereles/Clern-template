@@ -1,12 +1,102 @@
-$('.owl-one').owlCarousel({
-    loop: true,
-    margin: 10,
-    // autoplay: true,
-    lazyLoad: true,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    items: 1
-})
+$(document).ready(function () {
+    var time = 5; // time in seconds
+
+    var $progressBar,
+        $bar,
+        $elem,
+        isPause,
+        tick,
+        percentTime;
+    function progressBar(elem) {
+        $elem = elem;
+        buildProgressBar();
+        start();
+    }
+
+
+
+    function buildProgressBar() {
+        $progressBar = $("<div>", {
+            class: "progressBar"
+        });
+        $bar = $("<div>", {
+            class: "bar"
+        });
+        $progressBar.append($bar).appendTo($(" .owl-three .owl-dots .active, .owl-one .owl-dots .active"));
+    }
+    function moved() {
+        $(".progressBar").remove();
+        buildProgressBar();
+        clearTimeout(tick);
+        start();
+    }
+    var owl = $(".owl-one");
+    var owlTestimonials = $(".owl-three");
+
+    owl.owlCarousel({
+        autoplayHoverPause: true,
+        onInitialized: progressBar,
+        onTranslate: moved,
+        loop: true,
+        nav: false,
+        dots: true,
+        nav: true,
+        lazyLoad: true,
+        items: 1
+
+    });
+
+    owlTestimonials.owlCarousel({
+        autoplayHoverPause: true,
+        onInitialized: moved,
+        onTranslate: moved,
+        loop: true,
+        nav: true,
+        dots: true,
+        nav: true,
+        lazyLoad: true,
+        navText: [" <img src='images/svg/light-arrow-left.svg' class='fa fa-chevron-left'>", " <img src='images/svg/light-arrow-right.svg' class='fa fa-chevron-right'>"],
+        items: 1
+    });
+
+
+    function interval() {
+        if (isPause === false) {
+            percentTime += 1 / time;
+            //reset timer
+            $(".bar").css({
+                width: percentTime + "%"
+            });
+            //if percentTime is equal or greater than 100
+            if (percentTime >= 100) {
+                //slide to next item 
+                console.log(true);
+                $(".owl-one").trigger('next.owl.carousel');
+                $(".owl-three").trigger('next.owl.carousel');
+            }
+        }
+    }
+    function start() {
+
+        percentTime = 0;
+        isPause = false;
+        //run interval every 10 miliseconds
+        tick = setInterval(interval, 10);
+    };
+    owl.on('mouseover', function () {
+        isPause = true;
+    });
+    owl.on('mouseout', function () {
+        isPause = false;
+    });
+    owlTestimonials.on('mouseover', function () {
+        isPause = true;
+    });
+    owlTestimonials.on('mouseout', function () {
+        isPause = false;
+    });
+
+});
 
 $('.owl-two').owlCarousel({
     loop: true,
@@ -30,14 +120,6 @@ $('.owl-two').owlCarousel({
     }
 })
 
-$('.owl-three').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
-    autoplay: true,
-    items: 1
-})
 
 $('.owl-four').owlCarousel({
     loop: true,
@@ -94,6 +176,22 @@ $('.owl-services').owlCarousel({
 })
 
 ////////////////////////////////////////////
+//menu nav
+$('#navToggler').on('click', function () {
+    $('.header__container').toggleClass('bg-white dark-shadow');
+
+})
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////
 
 let a = 0;
 $(window).scroll(function () {
@@ -264,12 +362,3 @@ $('.card-header').on('click', function () {
     $('.company-services__heading').toggleClass('company-services__heading--collapsed');
 
 })
-
-
-
-
-//////////////////////
-//additional purchase cleaning
-
-
-

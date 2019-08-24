@@ -31,12 +31,12 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <header id="header" class="header header--contact">
-        <img class="header--contact__tear-bg" src="images/blue-header-bg.png" alt="">
-        <div class="container">
+        <img class="header--contact__tear-bg" src="images/green-header-bg.png" alt="">
+        <div class="container header__container">
 
-            <nav id="headerNavbar" class="navbar navbar-default header__navbar navbar-expand-lg custom-carets"
+            <nav id="headerNavbar" class="navbar navbar-light header__navbar navbar-expand-xl custom-carets p-0"
                 role="navigation">
-                <div class="row w-100">
+                <div class="row w-100 d-flex justify-content-between z-fix">
                     <a class="navbar-brand col-2 mr-0" href="index.html">
                         <img src="images/logo.png" id="headerLogo" class="d-inline-block align-top header__logo p-3"
                             alt="">
@@ -48,23 +48,22 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-
                     <div class="collapse navbar-collapse col-10" id="navbarNavAltMarkup">
                         <div class="row d-flex w-100 px-3 justify-content-between">
                             <div class="navbar-nav header__navbar-nav">
                                 <ul id="headerNavPills"
                                     class="nav nav-pills nav-fill header__nav-pills flex-lg-row px-3 px-lg-0">
-                                    <li class="nav-item header__nav-item px-2">
-                                        <a class="nav-link header__nav-link" href="company-offer.html">Oferta</a>
+                                    <li class="nav-item header__nav-item px-xl-2">
+                                        <a class="nav-link header__nav-link active" href="company-offer.html">Oferta</a>
                                     </li>
-                                    <li class="nav-item header__nav-item px-2">
+                                    <li class="nav-item header__nav-item px-xl-2">
                                         <a class="nav-link header__nav-link" href="about-us.html">O firmie</a>
                                     </li>
-                                    <li class="nav-item header__nav-item px-2">
-                                        <a class="nav-link header__nav-link" href="#drive">Blog</a>
+                                    <li class="nav-item header__nav-item px-xl-2">
+                                        <a class="nav-link header__nav-link" href="#blog">Blog</a>
                                     </li>
-                                    <li class="nav-item header__nav-item px-2">
-                                        <a class="nav-link header__nav-link active" href="contact.html">Kontakt</a>
+                                    <li class="nav-item header__nav-item px-xl-2">
+                                        <a class="nav-link header__nav-link" href="contact.html">Kontakt</a>
                                     </li>
                                 </ul>
                             </div>
@@ -81,8 +80,8 @@
                                         <a class="nav-link header__nav-link"
                                             href="mailto:info@clern.pl">info@clern.pl</a>
                                     </li>
-                                    <li class="nav-item header__nav-item px-2">
-                                        <a class="btn btn-lg rounded-pill header__contact-btn px-3"
+                                    <li class="nav-item header__nav-item px-2 pt-2 pt-xl-0 pb-5 pb-xl-0">
+                                        <a class="btn btn-lg rounded-pill header__contact-btn header__contact-btn--green px-3"
                                             href="#contact">Zaloguj się</a>
                                     </li>
                                 </ul>
@@ -106,6 +105,7 @@
         </div>
 
     </header>
+
     <main class="main">
 
         <section class="communication mb-5">
@@ -162,12 +162,29 @@
                                         <input id="message" type="textarea" name="message" class="form-input"></input>
                                     </div>
 
-                                    <div class="form-group input-group col-12 mt-4 mb-3">
+                                    <div class="col-12 my-4">
+                                        <div class="checkbox">
+                                            <label class="checkbox-container">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+
+
+                                                <p class="mt-2 ml-5 text-small-1">Zapoznałem się z Regulaminem oraz
+                                                    Polityką
+                                                    prywatności
+                                                    i
+                                                    akceptuję ich warunki.</p>
+
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="form-group input-group col-12 mt-4 mb-3">
                                         <input class="pt-5" type="checkbox" id="accept" />
                                         <label for="accept">Wyrażam zgodę na przetwarzanie moich danych osobowych
                                             zawartych w formularzu
                                             kontaktowym.</label>
-                                    </div>
+                                    </div> -->
 
                                     <button type="submit"
                                         class="btn communication__btn p-3 mx-auto mx-lg-0 text-small-1">Wyślij</button>
@@ -259,7 +276,8 @@
 
                     <div class="col-6 col-lg-2 pr-3 mt-4 mt-lg-0">
                         <ul class="list-unstyled">
-                            <li class="mb-2"><a class="footer__link" href="#">Zamów sprzątanie</a></li>
+                            <li class="mb-2"><a class="footer__link" href="purchase-cleaning.html">Zamów sprzątanie</a>
+                            </li>
                             <li class="mb-2"><a class="footer__link" href="#">Oferta</a></li>
                             <li class="mb-2"><a class="footer__link" href="#">O firmie</a></li>
                         </ul>

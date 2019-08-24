@@ -94,7 +94,10 @@ a {
 
 .green-shadow {
     box-shadow: rgba(141, 206, 97, 0.54) 0px 1px 10px 2px;
+}
 
+.dark-shadow {
+    box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 10px 3px;
 }
 
 .bg-blue-grad {
@@ -108,8 +111,93 @@ a {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    transition: $fast;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked~.checkmark {
+    background-color: $clern-blue;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked~.checkmark::after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark::after {
+    left: 10px;
+    top: 5px;
+    width: 6px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
 .header {
-    max-height: 100px;
+    max-height: 120px;
     z-index: 5;
     position: relative;
 
@@ -150,6 +238,13 @@ a {
         background-color: transparent;
     }
 
+    .navbar-toggler {
+        height: 40px;
+        margin-top: 20px;
+        background-color: white;
+    }
+
+
     &__contact &__nav-link {
         color: white;
         font-size: $variable-text-medium-default;
@@ -173,20 +268,36 @@ a {
     }
 
     &__contact-btn {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
         border-radius: 25px;
-        background-color: white;
-        color: $clern-blue !important;
         transition: $fast;
         font-size: $variable-text-small-1;
         line-height: 1.5rem;
         text-transform: uppercase;
         box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
-    }
 
-    &__contact-btn:hover {
-        background-color: $clern-blue;
-        color: white !important;
-        border: 1px solid white;
+        &:hover {
+            background-color: white;
+            color: $clern-blue;
+            border: 1px solid transparent;
+        }
+
+        &--green {
+            background-color: white;
+            color: $clern-blue;
+            border: 1px solid transparent;
+            box-shadow: rgba(25, 25, 25, 0.3) 0px 5px 12px 0px;
+        }
+
+
+        &--green:hover {
+            background-color: $clern-lightGreen;
+            color: white;
+            border: 1px solid transparent;
+            box-shadow: rgba(25, 25, 25, 0.3) 0px 5px 12px 0px;
+        }
     }
 
     &__lang-change {
@@ -194,16 +305,7 @@ a {
         left: 50%;
         transform: translateX(-50%);
         z-index: 3;
-
-        .dropdown-toggle::after {
-            display: inline-block;
-            width: 0;
-            height: 0;
-            margin-left: 0;
-            vertical-align: 0;
-            content: none;
-            border-top: 0;
-        }
+        top: 12px;
 
         .dropdown-toggle {
             border-radius: 50%;
@@ -217,6 +319,21 @@ a {
             -moz-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
             box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
             z-index: 2000;
+
+            &:hover {
+                background-color: $clern-blue;
+                color: white;
+            }
+
+            &::after {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                margin-left: 0;
+                vertical-align: 0;
+                content: none;
+                border-top: 0;
+            }
         }
 
         &__btn-text {
@@ -280,48 +397,66 @@ a {
 .main {
     background-color: white;
     width: 100%;
-    margin-top: -100px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
 }
 
+.owl-carousel {
 
 
-// .slider {
-//     background-color: transparent;
-//     background-image: url('images/background-slider.png');
-//     background-size: cover;
-//     width: 100%;
-//     z-index: 1;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-// }
 
+    .owl-dots .active span {
+        transform: translate(-2px, -13px) scale(1.5);
+        margin-right: 6px;
+    }
+
+    .owl-dots button {
+        outline: none;
+    }
+
+    .owl-dots .owl-dot span {
+        height: 2px;
+        width: 2px;
+        box-shadow: inset white 0 0 2px 2px;
+        box-sizing: border-box;
+        background-color: transparent !important;
+        border-radius: 50%;
+        padding: 5px;
+        margin: 10px 5px;
+        float: left;
+        outline: none;
+
+    }
+
+    .bar {
+        width: 0%;
+        height: 100%;
+        background: #fff;
+        opacity: 1 !important;
+        z-index: 3000;
+        position: relative;
+    }
+
+    .progressBar {
+        display: inline-block;
+        width: 4rem;
+        height: 2px;
+        position: relative;
+        background: #94d08b;
+        z-index: 3000;
+        transform: translateY(-14px);
+    }
+
+    .line-container {
+        display: flex;
+        justify-content: center;
+    }
+}
 
 .owl-one {
     z-index: 0;
     overflow: hidden;
-    // background-image: linear-gradient(to right, #fff 48%, #14b8eb 48%); // &__item {
-
-    //     background-image: url('images/bg-place-1.jpg');
-    //     background-size: cover;
-    //     background-repeat: no-repeat;
-    //     background-position-x: 550px;
-    // }
-
-    // &__item--2nd {
-    //     background-image: url('images/bg-place-2.jpg');
-    // }
-
-    // &__item--3rd {
-    //     background-image: url('images/bg-place-3.jpg');
-    // }
-
-
-    // .row {
-    //     padding-top: 100px;
-    // }
-
-
 
     &__img-container {
         max-width: 100%;
@@ -329,6 +464,16 @@ a {
         position: relative;
         text-align: right;
     }
+
+
+    .owl-dots {
+        position: absolute;
+        top: 200px;
+        right: -0.5rem;
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+
 
     .owl-carousel .owl-item img,
     &__img {
@@ -379,6 +524,16 @@ a {
         border-radius: 50px;
         background-color: $clern-blue;
         border-color: $clern-blue;
+        color: white;
+        -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+        box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
+    }
+
+    &__btn:hover {
+        color: $clern-dark-text;
+        background-color: white;
+        -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 2px;
+        box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 2px;
     }
 }
 
@@ -394,10 +549,12 @@ a {
     background-color: #fff;
     background-position-x: -22vmin;
     background-position-y: -30px;
+    padding-bottom: 300px;
 
     &__container {
         width: 100%;
         z-index: 2;
+        position: relative;
     }
 
     &__heading {
@@ -457,6 +614,9 @@ a {
 .offer {
     color: $clern-blue;
     transition: $fast;
+    margin-top: -250px;
+    z-index: 10;
+    position: relative;
 
     .owl-item {
         padding: 0.5rem;
@@ -593,6 +753,7 @@ a {
 
 .testimonials {
     margin-top: -20vh;
+    position: relative;
 
     .container {
         background-color: #5DB65A;
@@ -631,7 +792,12 @@ a {
         position: absolute;
         font-size: 4rem;
         top: 0;
+        transition: $fast;
         color: white;
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 
     .fa-chevron-left {
@@ -642,59 +808,59 @@ a {
         right: 5%;
     }
 
-    .owl-dots {
-        text-align: center;
-        margin-top: -2rem;
-        padding-bottom: 5rem;
-    }
+    // .owl-dots {
+    //     text-align: center;
+    //     margin-top: -2rem;
+    //     padding-bottom: 5rem;
+    // }
 
-    .owl-dot {
-        width: 13px;
-        height: 13px;
-        top: 50%;
-        left: 0px;
-        box-shadow: inset rgba(255, 255, 255, 1) 0px 0px 0px 3px;
-        z-index: 1;
-        transform: translateY(-50%);
-        padding: 0px;
-        margin-left: 10px;
-        margin-right: 10px;
-        transition: all 0.3s ease 0s;
-        border-radius: 50%;
-        // background: transparent !important;
-        appearance: none;
-        // background-color: transparent !important;
-        // border: 1px solid #fff;
-        cursor: pointer;
-        display: inline-block;
-        // margin: 0 5px;
-        outline: none;
-        padding: 5px;
-    }
+    // .owl-dot {
+    //     width: 13px;
+    //     height: 13px;
+    //     top: 50%;
+    //     left: 0px;
+    //     box-shadow: inset rgba(255, 255, 255, 1) 0px 0px 0px 3px;
+    //     z-index: 1;
+    //     transform: translateY(-50%);
+    //     padding: 0px;
+    //     margin-left: 10px;
+    //     margin-right: 10px;
+    //     transition: all 0.3s ease 0s;
+    //     border-radius: 50%;
+    //     // background: transparent !important;
+    //     appearance: none;
+    //     // background-color: transparent !important;
+    //     // border: 1px solid #fff;
+    //     cursor: pointer;
+    //     display: inline-block;
+    //     // margin: 0 5px;
+    //     outline: none;
+    //     padding: 5px;
+    // }
 
-    .owl-dots .active {
-        box-shadow: rgba(255, 255, 255, 1) 0px 0px 0px 6px;
-    }
+    // .owl-dots .active {
+    //     box-shadow: rgba(255, 255, 255, 1) 0px 0px 0px 6px;
+    // }
 
-    .owl-dot::after {
-        content: '';
-        width: 15px;
-        height: 2px;
-        display: inline-block;
-    }
+    // .owl-dot::after {
+    //     content: '';
+    //     width: 15px;
+    //     height: 2px;
+    //     display: inline-block;
+    // }
 
-    .owl-dots .active::after {
-        width: 100px !important;
-        content: "";
-        display: block;
-        width: 15px;
-        height: 2px;
-        background-color: white;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: all 0.25s ease-in-out 0s;
-    }
+    // .owl-dots .active::after {
+    //     width: 100px !important;
+    //     content: "";
+    //     display: block;
+    //     width: 15px;
+    //     height: 2px;
+    //     background-color: white;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     transition: all 0.25s ease-in-out 0s;
+    // }
 }
 
 .news {
@@ -729,7 +895,7 @@ a {
         box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
         z-index: 2;
         border-radius: 25px;
-        width: 100px;
+        width: 120px;
         cursor: pointer;
         color: white;
     }
@@ -943,10 +1109,12 @@ a {
     }
 
     &__social .fab {
+        width: 2rem;
         border-radius: 50%;
         background-color: rgba(117, 223, 255, 0.5);
         color: white;
         transition: $fast;
+        text-align: center;
     }
 
     &__social .fab:hover {
@@ -974,81 +1142,9 @@ a {
     &__tear-bg {
         width: 50%;
         position: absolute;
-        left: 43%;
+        left: 43.5%;
         top: -2vw;
     }
-}
-
-/* Checkbox */
-input[type="checkbox"] {
-    position: absolute;
-    left: -9999px;
-    opacity: 0;
-}
-
-input[type="checkbox"]+label {
-    padding-left: 25px;
-    position: relative;
-    cursor: pointer;
-    display: block;
-    margin: 0 0 10px 0;
-}
-
-input[type="checkbox"]+label:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: $variable-text-medium-1;
-    height: $variable-text-medium-1;
-    border-radius: 0.14em;
-    background: #DDD;
-    transition: background .15s;
-}
-
-input[type="checkbox"]:disabled+label {
-    color: #999;
-}
-
-input[type="checkbox"]:disabled+label,
-input[type="checkbox"]:disabled+label:before,
-input[type="checkbox"]:disabled+label:after {
-    cursor: not-allowed;
-}
-
-input[type="checkbox"]:disabled+label:before {
-    background: #EEE;
-}
-
-input[type="checkbox"]:checked+label:before {
-    background: #3081F2;
-}
-
-input[type="checkbox"]:disabled:checked+label:before {
-    background: #609DF2;
-}
-
-input[type="checkbox"]+label:after {
-    /* Font Awesome */
-    font-family: "FontAwesome";
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "\f00c";
-
-    /* fa-check */
-
-    font-size: 14px;
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    color: #FAFAFA;
-
-    transition: transform .15s;
-    transform: scale(0) rotate(90deg);
-}
-
-input[type="checkbox"]:checked+label:after {
-    transform: scale(1) rotate(0deg);
 }
 
 .communication {
@@ -1108,6 +1204,13 @@ input[type="checkbox"]:checked+label:after {
         cursor: pointer;
         color: white;
         text-transform: uppercase;
+
+        &:hover {
+            color: $clern-dark-text;
+            background: white;
+            -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 2px;
+            box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 2px;
+        }
     }
 
     .form-label {
@@ -1164,6 +1267,7 @@ input[type="checkbox"]:checked+label:after {
     min-height: 50vh;
     position: relative;
     color: white;
+    margin-top: 120px;
 
     &__background {
         width: 60%;
@@ -1196,13 +1300,16 @@ input[type="checkbox"]:checked+label:after {
     }
 }
 
+.about-us {
+    min-height: 70vh;
+}
+
 .insurance {
     min-height: 400px;
-    margin-top: 10vh;
 
-    .row {
-        position: relative;
-    }
+    // .row {
+    //     position: relative;
+    // }
 
     &__img-oc,
     &__img-allianz {
@@ -1211,17 +1318,17 @@ input[type="checkbox"]:checked+label:after {
         height: auto;
     }
 
-    &__img-allianz {
-        right: 0;
-        position: absolute;
+    &__img-oc {
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
     }
 
-    &__info {
-        width: 50% !important;
-        position: absolute;
-        right: 0;
-        padding: 2rem 1rem 0rem 9rem;
-    }
+    // &__info {
+    //     width: 50% !important;
+    //     position: absolute;
+    //     right: 0;
+    //     padding: 2rem 1rem 0rem 9rem;
+    // }
 }
 
 .numbers {
@@ -1258,9 +1365,14 @@ input[type="checkbox"]:checked+label:after {
         max-height: 75px;
     }
 
-    .owl-carousel .owl-item {
+    &__item {
         height: 75px;
         width: 100%;
+    }
+
+    &__img {
+        object-fit: contain;
+        height: 100%;
     }
 
 
@@ -1635,83 +1747,11 @@ input[type="checkbox"]:checked+label:after {
     }
 
     .form-check-label>input:checked+div &__more:hover {
-
         background: white;
     }
 
 
 
-
-
-
-
-
-    &__checkbox-container {
-        display: block;
-        position: relative;
-        cursor: pointer;
-        font-size: 22px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        margin: 0;
-    }
-
-    /* Hide the browser's default checkbox */
-    &__checkbox-container input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-    }
-
-    /* Create a custom checkbox */
-    .checkmark {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 25px;
-        width: 25px;
-        background-color: #eee;
-        transition: $fast;
-    }
-
-    /* On mouse-over, add a grey background color */
-    &__checkbox-container:hover input~.checkmark {
-        background-color: #ccc;
-    }
-
-    /* When the checkbox is checked, add a blue background */
-    &__checkbox-container input:checked~.checkmark {
-        background-color: #2196F3;
-    }
-
-    /* Create the checkmark/indicator (hidden when not checked) */
-    .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-    }
-
-    /* Show the checkmark when checked */
-    &__checkbox-container input:checked~.checkmark:after {
-        display: block;
-    }
-
-    /* Style the checkmark/indicator */
-    &__checkbox-container .checkmark:after {
-        left: 10px;
-        top: 5px;
-        width: 6px;
-        height: 13px;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
 
     &__img-container {
         margin-left: 45px;
@@ -1770,6 +1810,37 @@ input[type="checkbox"]:checked+label:after {
 
 
 
+
+
+@media (min-width:1200px) {
+
+    .header {
+        .navbar-light .navbar-nav .nav-link {
+            color: $clern-dark-text;
+        }
+
+        .navbar-light .navbar-nav .nav-link:focus,
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: $clern-blue;
+        }
+
+        &__contact .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        &__contact .navbar-nav .nav-link:focus,
+        &__contact .navbar-nav .nav-link:hover {
+            color: white !important;
+        }
+
+
+    }
+
+    .insurance {
+        margin-top: -3rem;
+    }
+}
+
 @media (min-width: 1600px) {
     .header--contact__tear-bg {
         width: 41%;
@@ -1778,10 +1849,8 @@ input[type="checkbox"]:checked+label:after {
         top: -2vw;
     }
 
-    .about-us {
-        &__p {
-            font-size: $variable-text-medium-1;
-        }
+    .insurance {
+        margin-top: -150px;
     }
 }
 
@@ -1794,24 +1863,46 @@ input[type="checkbox"]:checked+label:after {
         top: -2vw;
     }
 
-}
-
-@media (min-width:1200px) {
-    .navbar-light .navbar-nav .nav-link {
-        color: $clern-dark-text;
+    .insurance {
+        margin-top: 150px;
     }
 
-    .navbar-light .navbar-nav .nav-link:focus,
-    .navbar-light .navbar-nav .nav-link:hover {
-        color: $clern-blue;
-    }
 }
 
 
 
 @media (max-width:1200px) {
+    .header {
+        &__nav-item {
+
+            width: 100%;
+            text-align: left !important;
+        }
+
+        &__contact-btn {
+            background-color: $clern-blue;
+            color: white !important;
+            border: 1px solid white;
+        }
+
+        &__nav-item .active::after {
+            left: 0;
+            transform: translateX(0);
+        }
+
+    }
+
+    .owl-one {
+
+        .owl-dots {
+            position: absolute;
+            top: 135px;
+            right: -5rem;
+            transform: translate(-50%, -50%) rotate(90deg) scale(0.8);
+        }
+    }
+
     .about-us {
-        min-height: 70vh;
         position: relative;
         color: white;
 
@@ -1828,9 +1919,7 @@ input[type="checkbox"]:checked+label:after {
         }
 
     }
-}
 
-@media (max-width: 992px) {
     .steps {
         background-position-x: -300px;
         display: block;
@@ -1851,6 +1940,35 @@ input[type="checkbox"]:checked+label:after {
         z-index: 0;
     }
 
+}
+
+@media (max-width: 992px) {
+
+    .owl-one {
+
+        &__left {
+            position: static !important;
+        }
+
+        &__right {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        &__text {
+            padding-top: 250px;
+        }
+
+        &__item {
+            min-height: 80vh;
+        }
+    }
+
+
+
+
+
     .footer .container {
         padding: 15px;
         padding-top: 150px;
@@ -1865,6 +1983,7 @@ input[type="checkbox"]:checked+label:after {
 
     .about-us,
     .our-services {
+
         min-height: 70vh;
         position: relative;
         color: white;
@@ -1898,3 +2017,22 @@ input[type="checkbox"]:checked+label:after {
         margin-left: 0;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//those fancy owl-carousel dots
