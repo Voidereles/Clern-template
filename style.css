@@ -1783,6 +1783,11 @@ a {
   .owl-one__item {
     min-height: 80vh;
   }
+  .fa-chevron-left,
+  .fa-chevron-right {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
   .footer .container {
     padding: 15px;
     padding-top: 150px;
