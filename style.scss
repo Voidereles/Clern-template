@@ -1390,6 +1390,22 @@ a {
     .card-header {
         border-top-left-radius: 35px;
         border-bottom-right-radius: 35px;
+    }
+
+    .accordion .card:not(:first-of-type) .card-header:first-child {
+        border-top-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+    }
+
+    .card-header.collapsed {
+        background: #f3f7ff;
+
+        .company-services__heading {
+            color: $clern-lightGreen;
+        }
+    }
+
+    .card-header:not(.collapsed) {
         background-color: #5DB65A;
         background: rgba(93, 182, 90, 1);
         background: -moz-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
@@ -1400,18 +1416,8 @@ a {
         background: linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
     }
 
-    .card-header--collapsed {
-        background: #f3f7ff;
-    }
-
     .card-header .btn {
         transition: $fast;
-    }
-
-    .accordion .card:not(:first-of-type) .card-header:first-child {
-
-        border-top-left-radius: 35px;
-        border-bottom-right-radius: 35px;
     }
 
     .card-body {
@@ -1462,15 +1468,14 @@ a {
 
     .fa-chevron-left,
     .fa-chevron-right,
-    .arrow-down,
-    .arrow-up {
+    .arrow {
         color: white;
         border-radius: 50%;
     }
 
     .fa-chevron-left,
     .fa-chevron-right,
-    .arrow-down {
+    .collapsed .arrow {
         background-color: #5DB65A;
         background: rgba(93, 182, 90, 1);
         background: -moz-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
@@ -1490,19 +1495,17 @@ a {
         box-shadow: rgba(147, 208, 87, 0.5) 0 0 6px 3px
     }
 
-    .arrow-up {
+    .arrow {
         background: transparent;
         border: 2px solid white;
     }
 
-    .arrow-down {
+    .collapsed .arrow {
         transform: rotateZ(180deg);
         border-radius: 50%;
         border: 2px solid transparent;
         box-shadow: rgba(147, 208, 87, 0.5) 0 0 6px 3px
     }
-
-
 
     .fa-chevron-left {
         left: -1rem;
@@ -1523,17 +1526,9 @@ a {
         text-align: left;
     }
 
-    &__heading--collapsed {
-        color: $clern-lightGreen;
-    }
-
     &__heading:hover {
         color: white;
         text-decoration: none;
-    }
-
-    &__heading--collapsed:hover {
-        color: $clern-lightGreen;
     }
 
     &__p {

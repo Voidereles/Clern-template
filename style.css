@@ -1275,24 +1275,31 @@ a {
 .company-services .card-header {
   border-top-left-radius: 35px;
   border-bottom-right-radius: 35px;
+}
+
+.company-services .accordion .card:not(:first-of-type) .card-header:first-child {
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+.company-services .card-header.collapsed {
+  background: #f3f7ff;
+}
+
+.company-services .card-header.collapsed .company-services__heading {
+  color: #66ba5a;
+}
+
+.company-services .card-header:not(.collapsed) {
   background-color: #5DB65A;
   background: #5db65a;
   background: -webkit-gradient(left bottom, right top, color-stop(0%, #5db65a), color-stop(100%, #93d057));
   background: linear-gradient(45deg, #5db65a 0%, #93d057 100%);
 }
 
-.company-services .card-header--collapsed {
-  background: #f3f7ff;
-}
-
 .company-services .card-header .btn {
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
-
-.company-services .accordion .card:not(:first-of-type) .card-header:first-child {
-  border-top-left-radius: 35px;
-  border-bottom-right-radius: 35px;
 }
 
 .company-services .card-body {
@@ -1350,15 +1357,14 @@ a {
 
 .company-services .fa-chevron-left,
 .company-services .fa-chevron-right,
-.company-services .arrow-down,
-.company-services .arrow-up {
+.company-services .arrow {
   color: white;
   border-radius: 50%;
 }
 
 .company-services .fa-chevron-left,
 .company-services .fa-chevron-right,
-.company-services .arrow-down {
+.company-services .collapsed .arrow {
   background-color: #5DB65A;
   background: #5db65a;
   background: -webkit-gradient(left bottom, right top, color-stop(0%, #5db65a), color-stop(100%, #93d057));
@@ -1376,12 +1382,12 @@ a {
           box-shadow: rgba(147, 208, 87, 0.5) 0 0 6px 3px;
 }
 
-.company-services .arrow-up {
+.company-services .arrow {
   background: transparent;
   border: 2px solid white;
 }
 
-.company-services .arrow-down {
+.company-services .collapsed .arrow {
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
   border-radius: 50%;
@@ -1408,17 +1414,9 @@ a {
   text-align: left;
 }
 
-.company-services__heading--collapsed {
-  color: #66ba5a;
-}
-
 .company-services__heading:hover {
   color: white;
   text-decoration: none;
-}
-
-.company-services__heading--collapsed:hover {
-  color: #66ba5a;
 }
 
 .company-services__p {

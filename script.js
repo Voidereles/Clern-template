@@ -355,10 +355,13 @@ function initMap() {
 ///////////////////////
 //collapsing
 
-$('.card-header').on('click', function () {
-    $('.card-header .btn-success').toggleClass('arrow-down');
-    $('.card-header .btn-success').toggleClass('arrow-up');
-    $('.card-header').toggleClass('card-header--collapsed');
-    $('.company-services__heading').toggleClass('company-services__heading--collapsed');
-
-})
+$("#accordion").on("shown.bs.collapse", e => {
+    $("html, body").animate(
+        {
+            scrollTop: $(e.target)
+                .prev()
+                .offset().top
+        },
+        400
+    );
+});

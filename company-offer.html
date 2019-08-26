@@ -133,16 +133,17 @@
         <section class="company-services pb-5">
             <div class="container">
                 <div class="row">
-                    <div class="accordion col-12 col-lg-7" id="accordionExample">
+                    <div class="accordion col-12 col-lg-7" id="accordion">
                         <div class="card py-1">
-                            <div class="card-header" id="headingOne">
+                            <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
                                 <h2 class="mb-0 d-flex justify-content-between">
                                     <button class="btn btn-link company-services__heading" type="button"
                                         data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                                         aria-controls="collapseOne">
                                         Sprzątanie poremontowe
                                     </button>
-                                    <button type="button" class="btn btn-success arrow-up">
+                                    <button type="button" class="btn btn-success arrow">
                                         <i class="fas fa-angle-up"></i>
                                     </button>
 
@@ -150,7 +151,7 @@
                             </div>
 
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                data-parent="#accordionExample">
+                                data-parent="#accordion">
                                 <div class="card-body">
                                     <p class="company-services__p px-2 px-lg-5 py-3">
                                         Jesteśmy pasjonatami tego co robimy i kochamy naszą pracę, której Ty
@@ -215,188 +216,185 @@
                         </div>
 
                         <div class="card py-1">
-                            <div class="card-header card-header--collapsed" id="headingTwo">
+                            <div class="card-header collapsed" id="headingTwo" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 <h2 class="mb-0 d-flex justify-content-between">
-                                    <button
-                                        class="btn btn-link company-services__heading company-services__heading--collapsed"
-                                        type="button" data-toggle="collapse" data-target="#collapseTwo"
-                                        aria-expanded="false" aria-controls="collapseTwo">
-                                        Mycie okien i powierzchni szklanych
-                                    </button>
-                                    <button type="button" class="btn btn-success arrow-down">
-                                        <i class="fas fa-angle-up"></i>
-                                    </button>
-
-                                </h2>
-                            </div>
-
-
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <p class="company-services__p px-2 px-lg-5 py-3">
-                                        Jesteśmy pasjonatami tego co robimy i kochamy naszą pracę, której Ty
-                                        nienawidzisz, więc zrelaksuj się i pozwól nam zrobić brudną robotę, gdy Ty
-                                        spędzisz wolny czas tam gdzie lubisz.</p>
-
-                                    <div class="owl-services owl-carousel wow fadeInUp mt-4">
-
-                                        <div class="company-services__item w-100 mx-auto">
-                                            <img class="company-services__img mx-0" src="images/cleaning.jpg"
-                                                alt="zdjęcie sprzątania">
-                                        </div>
-
-                                        <div class="company-services__item w-100 mx-auto">
-                                            <img class="company-services__img mx-0" src="images/cleaning.jpg"
-                                                alt="zdjęcie sprzątania">
-                                        </div>
-
-                                        <div class="company-services__item w-100 mx-auto">
-                                            <img class="company-services__img mx-0" src="images/cleaning.jpg"
-                                                alt="zdjęcie sprzątania">
-                                        </div>
-                                    </div>
-
-                                    <div class="company-services-tariff tariff p-2 p-lg-5">
-                                        <h5 class="tariff__heading font-size-doubled">Cennik:</h5>
-                                        <ul class="tariff__list-group list-group list-group-flush">
-                                            <li
-                                                class="list-group-item d-flex justify-content-between align-items-center pl-0 py-0">
-                                                Curabitur et ligula <span class="tariff__price"><span
-                                                        class="font-size-doubled">25</span> PLN</span>
-                                            </li>
-
-                                            <li
-                                                class="list-group-item d-flex justify-content-between align-items-center pl-0 py-0">
-                                                Quisque cursus et, portiltor risus <span class="tariff__price"><span
-                                                        class="font-size-doubled">25</span> PLN</span>
-                                            </li>
-
-                                            <li
-                                                class="list-group-item d-flex justify-content-between align-items-center pl-0 py-0">
-                                                Nuilam viverra consectetuer <span class="tariff__price"><span
-                                                        class="font-size-doubled">25</span> PLN</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-
-
-                                    <p class="company-services__p px-2 px-lg-5 py-3">
-                                        Sprzątanie domu do perfekcji zajmuje trochę czasu, więc zanim zarezerwujesz
-                                        regularne domowe sprzatanie, pamiętaj, że wykonanie tej pracy wymaga co najmniej
-                                        trzech godzin. Zalecamy tworzenie listy zadań specjalnych wykraczających poza
-                                        nasze regularne usługi, aby nic nie zostało pominięte.</p>
-
-                                    <p class="company-services__p px-2 px-lg-5 pt-0 py-3">
-                                        Możesz zadzwonić, wysłać e-mail lub skorzystać z naszego formularza rezerwacji,
-                                        aby skontaktować się z nami.</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card py-1">
-                            <div class="card-header card-header--collapsed" id="headingThree">
-                                <h2 class="mb-0 d-flex justify-content-between">
-                                    <button
-                                        class="btn btn-link company-services__heading company-services__heading--collapsed"
-                                        type="button" data-toggle="collapse" data-target="#collapseThree"
-                                        aria-expanded="false" aria-controls="collapseThree">
-                                        Czyszczenie elewacji, ogrodzeń, itp.
-                                    </button>
-                                    <button type="button" class="btn btn-success arrow-down">
-                                        <i class="fas fa-angle-up"></i>
-                                    </button>
-
-                                </h2>
-                            </div>
-
-
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <p class="company-services__p px-2 px-lg-5 py-3">
-                                        Jesteśmy pasjonatami tego co robimy i kochamy naszą pracę, której Ty
-                                        nienawidzisz, więc zrelaksuj się i pozwól nam zrobić brudną robotę, gdy Ty
-                                        spędzisz wolny czas tam gdzie lubisz.</p>
-
-                                    <div class="owl-services owl-carousel wow fadeInUp mt-4">
-
-                                        <div class="company-services__item w-100 mx-auto">
-                                            <img class="company-services__img mx-0" src="images/cleaning.jpg"
-                                                alt="zdjęcie sprzątania">
-                                        </div>
-
-                                        <div class="company-services__item w-100 mx-auto">
-                                            <img class="company-services__img mx-0" src="images/cleaning.jpg"
-                                                alt="zdjęcie sprzątania">
-                                        </div>
-
-                                        <div class="company-services__item w-100 mx-auto">
-                                            <img class="company-services__img mx-0" src="images/cleaning.jpg"
-                                                alt="zdjęcie sprzątania">
-                                        </div>
-                                    </div>
-
-                                    <div class="company-services-tariff tariff p-2 p-lg-5">
-                                        <h5 class="tariff__heading font-size-doubled">Cennik:</h5>
-                                        <ul class="tariff__list-group list-group list-group-flush">
-                                            <li
-                                                class="list-group-item d-flex justify-content-between align-items-center pl-0 py-0">
-                                                Curabitur et ligula <span class="tariff__price"><span
-                                                        class="font-size-doubled">25</span> PLN</span>
-                                            </li>
-
-                                            <li
-                                                class="list-group-item d-flex justify-content-between align-items-center pl-0 py-0">
-                                                Quisque cursus et, portiltor risus <span class="tariff__price"><span
-                                                        class="font-size-doubled">25</span> PLN</span>
-                                            </li>
-
-                                            <li
-                                                class="list-group-item d-flex justify-content-between align-items-center pl-0 py-0">
-                                                Nuilam viverra consectetuer <span class="tariff__price"><span
-                                                        class="font-size-doubled">25</span> PLN</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-
-
-                                    <p class="company-services__p px-2 px-lg-5 py-3">
-                                        Sprzątanie domu do perfekcji zajmuje trochę czasu, więc zanim zarezerwujesz
-                                        regularne domowe sprzatanie, pamiętaj, że wykonanie tej pracy wymaga co najmniej
-                                        trzech godzin. Zalecamy tworzenie listy zadań specjalnych wykraczających poza
-                                        nasze regularne usługi, aby nic nie zostało pominięte.</p>
-
-                                    <p class="company-services__p px-2 px-lg-5 pt-0 py-3">
-                                        Możesz zadzwonić, wysłać e-mail lub skorzystać z naszego formularza rezerwacji,
-                                        aby skontaktować się z nami.</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card py-1">
-                            <div class="card-header card-header--collapsed" id="headingFour">
-                                <h2 class="mb-0 d-flex justify-content-between">
-                                    <button
-                                        class="btn btn-link company-services__heading company-services__heading--collapsed"
-                                        type="button" data-toggle="collapse" data-target="#collapseFour"
-                                        aria-expanded="false" aria-controls="collapseFour">
+                                    <button class="btn btn-link company-services__heading" type="button"
+                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                                        aria-controls="collapseTwo">
                                         Sprzątanie poremontowe
                                     </button>
-                                    <button type="button" class="btn btn-success arrow-down">
+                                    <button type="button" class="btn btn-success arrow">
                                         <i class="fas fa-angle-up"></i>
                                     </button>
 
                                 </h2>
                             </div>
 
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="company-services__p px-2 px-lg-5 py-3">
+                                        Jesteśmy pasjonatami tego co robimy i kochamy naszą pracę, której Ty
+                                        nienawidzisz, więc zrelaksuj się i pozwól nam zrobić brudną robotę, gdy Ty
+                                        spędzisz wolny czas tam gdzie lubisz.</p>
+
+                                    <div class="owl-services owl-carousel wow fadeInUp mt-4">
+
+                                        <div class="company-services__item w-100 mx-auto">
+                                            <img class="company-services__img mx-0" src="images/cleaning.jpg"
+                                                alt="zdjęcie sprzątania">
+                                        </div>
+
+                                        <div class="company-services__item w-100 mx-auto">
+                                            <img class="company-services__img mx-0" src="images/cleaning.jpg"
+                                                alt="zdjęcie sprzątania">
+                                        </div>
+
+                                        <div class="company-services__item w-100 mx-auto">
+                                            <img class="company-services__img mx-0" src="images/cleaning.jpg"
+                                                alt="zdjęcie sprzątania">
+                                        </div>
+                                    </div>
+
+                                    <div class="company-services-tariff tariff p-2 p-lg-5">
+                                        <h5 class="tariff__heading font-size-doubled">Cennik:</h5>
+                                        <ul class="tariff__list-group list-group list-group-flush">
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center pl-0 py-0">
+                                                Curabitur et ligula <span class="tariff__price"><span
+                                                        class="font-size-doubled">25</span> PLN</span>
+                                            </li>
+
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center pl-0 py-0">
+                                                Quisque cursus et, portiltor risus <span class="tariff__price"><span
+                                                        class="font-size-doubled">25</span> PLN</span>
+                                            </li>
+
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center pl-0 py-0">
+                                                Nuilam viverra consectetuer <span class="tariff__price"><span
+                                                        class="font-size-doubled">25</span> PLN</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+
+                                    <p class="company-services__p px-2 px-lg-5 py-3">
+                                        Sprzątanie domu do perfekcji zajmuje trochę czasu, więc zanim zarezerwujesz
+                                        regularne domowe sprzatanie, pamiętaj, że wykonanie tej pracy wymaga co najmniej
+                                        trzech godzin. Zalecamy tworzenie listy zadań specjalnych wykraczających poza
+                                        nasze regularne usługi, aby nic nie zostało pominięte.</p>
+
+                                    <p class="company-services__p px-2 px-lg-5 pt-0 py-3">
+                                        Możesz zadzwonić, wysłać e-mail lub skorzystać z naszego formularza rezerwacji,
+                                        aby skontaktować się z nami.</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card py-1">
+                            <div class="card-header collapsed" id="headingThree" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <h2 class="mb-0 d-flex justify-content-between">
+                                    <button class="btn btn-link company-services__heading" type="button"
+                                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
+                                        aria-controls="collapseThree">
+                                        Sprzątanie poremontowe
+                                    </button>
+                                    <button type="button" class="btn btn-success arrow">
+                                        <i class="fas fa-angle-up"></i>
+                                    </button>
+
+                                </h2>
+                            </div>
+
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="company-services__p px-2 px-lg-5 py-3">
+                                        Jesteśmy pasjonatami tego co robimy i kochamy naszą pracę, której Ty
+                                        nienawidzisz, więc zrelaksuj się i pozwól nam zrobić brudną robotę, gdy Ty
+                                        spędzisz wolny czas tam gdzie lubisz.</p>
+
+                                    <div class="owl-services owl-carousel wow fadeInUp mt-4">
+
+                                        <div class="company-services__item w-100 mx-auto">
+                                            <img class="company-services__img mx-0" src="images/cleaning.jpg"
+                                                alt="zdjęcie sprzątania">
+                                        </div>
+
+                                        <div class="company-services__item w-100 mx-auto">
+                                            <img class="company-services__img mx-0" src="images/cleaning.jpg"
+                                                alt="zdjęcie sprzątania">
+                                        </div>
+
+                                        <div class="company-services__item w-100 mx-auto">
+                                            <img class="company-services__img mx-0" src="images/cleaning.jpg"
+                                                alt="zdjęcie sprzątania">
+                                        </div>
+                                    </div>
+
+                                    <div class="company-services-tariff tariff p-2 p-lg-5">
+                                        <h5 class="tariff__heading font-size-doubled">Cennik:</h5>
+                                        <ul class="tariff__list-group list-group list-group-flush">
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center pl-0 py-0">
+                                                Curabitur et ligula <span class="tariff__price"><span
+                                                        class="font-size-doubled">25</span> PLN</span>
+                                            </li>
+
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center pl-0 py-0">
+                                                Quisque cursus et, portiltor risus <span class="tariff__price"><span
+                                                        class="font-size-doubled">25</span> PLN</span>
+                                            </li>
+
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center pl-0 py-0">
+                                                Nuilam viverra consectetuer <span class="tariff__price"><span
+                                                        class="font-size-doubled">25</span> PLN</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+
+                                    <p class="company-services__p px-2 px-lg-5 py-3">
+                                        Sprzątanie domu do perfekcji zajmuje trochę czasu, więc zanim zarezerwujesz
+                                        regularne domowe sprzatanie, pamiętaj, że wykonanie tej pracy wymaga co najmniej
+                                        trzech godzin. Zalecamy tworzenie listy zadań specjalnych wykraczających poza
+                                        nasze regularne usługi, aby nic nie zostało pominięte.</p>
+
+                                    <p class="company-services__p px-2 px-lg-5 pt-0 py-3">
+                                        Możesz zadzwonić, wysłać e-mail lub skorzystać z naszego formularza rezerwacji,
+                                        aby skontaktować się z nami.</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card py-1">
+                            <div class="card-header collapsed" id="headingFour" data-toggle="collapse"
+                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <h2 class="mb-0 d-flex justify-content-between">
+                                    <button class="btn btn-link company-services__heading" type="button"
+                                        data-toggle="collapse" data-target="#collapseFour" aria-expanded="true"
+                                        aria-controls="collapseFour">
+                                        Sprzątanie poremontowe
+                                    </button>
+                                    <button type="button" class="btn btn-success arrow">
+                                        <i class="fas fa-angle-up"></i>
+                                    </button>
+
+                                </h2>
+                            </div>
 
                             <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                                data-parent="#accordionExample">
+                                data-parent="#accordion">
                                 <div class="card-body">
                                     <p class="company-services__p px-2 px-lg-5 py-3">
                                         Jesteśmy pasjonatami tego co robimy i kochamy naszą pracę, której Ty
@@ -461,24 +459,23 @@
                         </div>
 
                         <div class="card py-1">
-                            <div class="card-header card-header--collapsed" id="headingFive">
+                            <div class="card-header collapsed" id="headingFive" data-toggle="collapse"
+                                data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                 <h2 class="mb-0 d-flex justify-content-between">
-                                    <button
-                                        class="btn btn-link company-services__heading company-services__heading--collapsed"
-                                        type="button" data-toggle="collapse" data-target="#collapseFive"
-                                        aria-expanded="false" aria-controls="collapseFive">
-                                        PRanie dywanów, wykładzin i tapicerki
+                                    <button class="btn btn-link company-services__heading" type="button"
+                                        data-toggle="collapse" data-target="#collapseFive" aria-expanded="true"
+                                        aria-controls="collapseFive">
+                                        Sprzątanie poremontowe
                                     </button>
-                                    <button type="button" class="btn btn-success arrow-down">
+                                    <button type="button" class="btn btn-success arrow">
                                         <i class="fas fa-angle-up"></i>
                                     </button>
 
                                 </h2>
                             </div>
-
 
                             <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
-                                data-parent="#accordionExample">
+                                data-parent="#accordion">
                                 <div class="card-body">
                                     <p class="company-services__p px-2 px-lg-5 py-3">
                                         Jesteśmy pasjonatami tego co robimy i kochamy naszą pracę, której Ty
@@ -543,24 +540,23 @@
                         </div>
 
                         <div class="card py-1">
-                            <div class="card-header card-header--collapsed" id="headingSix">
+                            <div class="card-header collapsed" id="headingSix" data-toggle="collapse"
+                                data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                                 <h2 class="mb-0 d-flex justify-content-between">
-                                    <button
-                                        class="btn btn-link company-services__heading company-services__heading--collapsed"
-                                        type="button" data-toggle="collapse" data-target="#collapseSix"
-                                        aria-expanded="false" aria-controls="collapseSix">
-                                        Prace wysokościowe i alpinistyczne
+                                    <button class="btn btn-link company-services__heading" type="button"
+                                        data-toggle="collapse" data-target="#collapseSix" aria-expanded="true"
+                                        aria-controls="collapseSix">
+                                        Sprzątanie poremontowe
                                     </button>
-                                    <button type="button" class="btn btn-success arrow-down">
+                                    <button type="button" class="btn btn-success arrow">
                                         <i class="fas fa-angle-up"></i>
                                     </button>
 
                                 </h2>
                             </div>
 
-
                             <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
-                                data-parent="#accordionExample">
+                                data-parent="#accordion">
                                 <div class="card-body">
                                     <p class="company-services__p px-2 px-lg-5 py-3">
                                         Jesteśmy pasjonatami tego co robimy i kochamy naszą pracę, której Ty
@@ -623,6 +619,10 @@
                                 </div>
                             </div>
                         </div>
+
+
+
+
 
                     </div>
                 </div>
