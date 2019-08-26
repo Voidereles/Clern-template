@@ -1672,8 +1672,22 @@ a {
         border-bottom-right-radius: 35px;
         font-size: $variable-text-doubled;
         text-transform: uppercase;
+    }
 
+    .form-icon {
+        fill: $clern-blue;
+        position: absolute;
+        width: 0.9rem;
+        height: 100%;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+        transition: $fast;
+    }
 
+    .form-input:focus+.form-icon {
+        opacity: 0;
     }
 
     //element>element div>p Selects all <p>elements where the parent is a
@@ -1747,11 +1761,17 @@ a {
 
 
 
-
     &__img-container {
         margin-left: 45px;
         font-size: $variable-text-small-2;
         opacity: 0.5;
+    }
+
+    .checkbox-container input:checked~.purchase__img-container,
+    .checkbox-container input:checked~.purchase__img-container svg {
+        color: $clern-blue;
+        fill: $clern-blue !important;
+        opacity: 1 !important;
     }
 
     &__img {
@@ -1780,13 +1800,6 @@ a {
         cursor: pointer;
         color: white;
         text-transform: uppercase;
-    }
-
-
-    &__additional-item--checked {
-        color: $clern-blue !important;
-        fill: $clern-blue !important;
-        opacity: 1;
     }
 
 

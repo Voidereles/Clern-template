@@ -1545,6 +1545,24 @@ a {
   text-transform: uppercase;
 }
 
+.purchase .form-icon {
+  fill: #14b9ec;
+  position: absolute;
+  width: 0.9rem;
+  height: 100%;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.purchase .form-input:focus + .form-icon {
+  opacity: 0;
+}
+
 .purchase .form-check-label > input {
   visibility: hidden;
   position: absolute;
@@ -1617,6 +1635,13 @@ a {
   opacity: 0.5;
 }
 
+.purchase .checkbox-container input:checked ~ .purchase__img-container,
+.purchase .checkbox-container input:checked ~ .purchase__img-container svg {
+  color: #14b9ec;
+  fill: #14b9ec !important;
+  opacity: 1 !important;
+}
+
 .purchase__img {
   height: 50px;
 }
@@ -1641,12 +1666,6 @@ a {
   cursor: pointer;
   color: white;
   text-transform: uppercase;
-}
-
-.purchase__additional-item--checked {
-  color: #14b9ec !important;
-  fill: #14b9ec !important;
-  opacity: 1;
 }
 
 @media (min-width: 1200px) {
