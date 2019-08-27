@@ -31,13 +31,13 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <header id="header" class="header header--contact">
-        <img class="header--contact__tear-bg" src="images/green-header-bg.png" alt="">
+        <img class="header--purchase__tear-bg" src="images/blue-header-bg.png" alt="">
         <div class="container">
 
-            <nav id="headerNavbar" class="navbar navbar-default header__navbar navbar-expand-lg custom-carets"
+            <nav id="headerNavbar" class="navbar px-0 navbar-default header__navbar navbar-expand-lg custom-carets"
                 role="navigation">
                 <div class="row w-100">
-                    <a class="navbar-brand col-2 mr-0" href="index.html">
+                    <a class="navbar-brand col-2 px-0 mr-0" href="index.html">
                         <img src="images/logo.png" id="headerLogo" class="d-inline-block align-top header__logo p-3"
                             alt="">
                     </a>
@@ -49,8 +49,8 @@
                     </button>
 
 
-                    <div class="collapse navbar-collapse col-10" id="navbarNavAltMarkup">
-                        <div class="row d-flex w-100 px-3 justify-content-between">
+                    <div class="collapse navbar-collapse col-10 col-xl-12 px-0" id="navbarNavAltMarkup">
+                        <div class="row d-flex mx-0 px-0 w-100 justify-content-between">
                             <div class="navbar-nav header__navbar-nav">
                                 <ul id="headerNavPills"
                                     class="nav nav-pills nav-fill header__nav-pills flex-lg-row px-3 px-lg-0">
@@ -77,18 +77,21 @@
                                         <a class="nav-link header__nav-link" href="#tel:+48519017017"><span
                                                 class="text-small-3">+48 </span>519 017 017</a>
                                     </li>
-                                    <li class="nav-item header__nav-item px-2">
+                                    <li class="nav-item header__nav-item">
                                         <a class="nav-link header__nav-link"
                                             href="mailto:info@clern.pl">info@clern.pl</a>
                                     </li>
-                                    <li class="nav-item header__nav-item px-2">
-                                        <a class="btn btn-lg rounded-pill header__contact-btn px-3"
-                                            href="#contact">Zaloguj się</a>
-                                    </li>
+
+
                                 </ul>
+                                <div class="nav-item header__nav-item">
+                                    <a class="btn btn-lg rounded-pill header__contact-btn px-3" href="#contact">Zaloguj
+                                        się</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <div class="dropdown header__lang-change">
@@ -102,20 +105,23 @@
                         <a class="dropdown-item" href="#">UA</a>
                     </div>
                 </div>
+
             </nav>
+
         </div>
 
     </header>
 
     <main class="main">
 
-        <section class="our-services">
-            <img class="our-services__background" src="images/background_purchase.png" alt="">
+        <section class="purchase-cleaning">
+            <img class="purchase-cleaning__background" src="images/background_purchase.png" alt="">
             <div class="container">
-                <div class="row p-4 p-lg-0 mt-xl-4">
-                    <h3 class="about-us__heading col-12 pl-0 mb-4 text-light-green">Zamów sprzątanie</h3>
-                    <div class="about-us__description-container">
-                        <p class="about-us__p text-justify text-dark">Zarezerwuj usługę na określoną liczbę godzin. Czas
+                <div class="row mx-0 mt-xl-4">
+                    <h3 class="purchase-cleaning__heading col-12 px-0 mb-4 text-light-green">Zamów sprzątanie</h3>
+                    <div class="purchase-cleaning__description-container col-12 px-0 ">
+                        <p class="purchase-cleaning__p text-justify text-dark">Zarezerwuj usługę na określoną liczbę
+                            godzin. Czas
                             sprzątania, podany dla poszczególnych metraży, jest czasem sugerowanym. Więcej informacji
                             znajdziesz w zakładce Pomoc.
                         </p>
@@ -156,7 +162,7 @@
                 </div>
 
                 <div class="row d-flex justify-content-center my-5">
-                    <div class="col-12 col-lg-3 order-2 order-lg-1">
+                    <div class="col-12 col-lg-4 order-2 order-lg-1">
                         <div class="purchase__summary summary p-4">
                             <h3 class="summary__heading mb-4">Podsumowanie</h3>
 
@@ -179,7 +185,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6 ml-lg-4 order-1 order-lg-2">
+                    <div class="col-12 offset-lg-1 col-lg-7 order-1 order-lg-2">
                         <form action="" class="purchase__form mt-4">
 
                             <div class="row m-0">
@@ -659,7 +665,7 @@
         </section>
 
         <footer class="footer footer--contact-subpage">
-            <div class="container">
+            <div class="container px-5">
                 <div class="row py-4">
                     <div class="col-12 col-lg-3">
                         <a class="footer__logo-container" href="#start">

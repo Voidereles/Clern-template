@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var time = 5; // time in seconds
+    var time = 555555; // time in seconds
 
     var $progressBar,
         $bar,
@@ -40,9 +40,16 @@ $(document).ready(function () {
         loop: true,
         nav: false,
         dots: true,
-        nav: true,
         lazyLoad: true,
-        items: 1
+        items: 1, responsiveClass: true,
+        responsive: {
+            0: {
+                dots: false,
+            },
+            600: {
+                dots: true,
+            }
+        }
 
     });
 
@@ -102,6 +109,8 @@ $('.owl-two').owlCarousel({
     loop: true,
     margin: 10,
     autoplay: true,
+    nav: false,
+    dots: false,
     responsiveClass: true,
     responsive: {
         0: {
@@ -109,13 +118,18 @@ $('.owl-two').owlCarousel({
             nav: true
         },
         600: {
-            items: 3,
+            items: 2,
             nav: false
         },
         992: {
+            items: 4,
+            nav: false,
+            loop: true
+        },
+        1200: {
             items: 5,
-            nav: true,
-            loop: false
+            nav: false,
+            loop: false,
         }
     }
 })
@@ -126,6 +140,7 @@ $('.owl-four').owlCarousel({
     margin: 10,
     autoplay: true,
     nav: false,
+    dots: false,
     responsive: {
         0: {
             items: 1,

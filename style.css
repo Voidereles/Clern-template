@@ -2,6 +2,7 @@ body {
   color: #322c2e;
   font-family: vag-rundschrift-d, sans-serif;
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 h1,
@@ -169,7 +170,7 @@ a {
 }
 
 .header__nav-link {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #322c2e;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -424,7 +425,7 @@ a {
 
 .owl-one .owl-dots {
   position: absolute;
-  top: 200px;
+  top: 50%;
   right: -0.5rem;
   -webkit-transform: translate(-50%, -50%) rotate(90deg);
           transform: translate(-50%, -50%) rotate(90deg);
@@ -440,7 +441,7 @@ a {
 }
 
 .owl-one__text {
-  position: absolute;
+  position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -565,7 +566,7 @@ a {
   color: #14b9ec;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  margin-top: -250px;
+  margin-top: -150px;
   z-index: 10;
   position: relative;
 }
@@ -594,6 +595,7 @@ a {
   background-color: #3fbae1;
   -webkit-transition: 1s;
   transition: 1s;
+  cursor: pointer;
 }
 
 .offer__item:hover::after {
@@ -613,27 +615,6 @@ a {
   z-index: 1;
   -webkit-transition: 1s;
   transition: 1s;
-}
-
-.offer__item-heading {
-  font-size: 0.8rem;
-  position: relative;
-  display: block;
-  z-index: 2;
-  height: 4rem;
-}
-
-.offer__item:hover .offer__item-heading {
-  color: white;
-}
-
-.offer__line {
-  position: relative;
-  width: 20%;
-  display: block;
-  fill: #14b9ec;
-  stroke: #14b9ec;
-  z-index: 2;
 }
 
 .offer__item:hover .offer__line {
@@ -656,6 +637,10 @@ a {
   fill: #14b9ec !important;
 }
 
+.offer__svg path {
+  text-align: start;
+}
+
 .offer__more {
   display: inline-block;
   position: absolute;
@@ -673,19 +658,19 @@ a {
   z-index: 2;
 }
 
-.offer__more:hover {
+.offer__item:hover .offer__more {
   border-radius: 25px;
-  width: 50%;
+  width: 60%;
   background-color: white;
   cursor: pointer;
 }
 
-.offer__more:hover .offer__more-dots {
+.offer__item:hover .offer__more .offer__more-dots {
   right: 5px;
   color: #14b9ec;
 }
 
-.offer__more:hover .offer__more-hidden {
+.offer__item:hover .offer__more .offer__more-hidden {
   left: 38%;
   z-index: 2;
   display: inline-block;
@@ -697,6 +682,7 @@ a {
   text-transform: uppercase;
   top: 50%;
   left: -25px;
+  color: #14b9ec;
   font-size: 0.75rem;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -708,6 +694,34 @@ a {
   font-size: 1.5rem;
   -webkit-transform: translate(-50%, -71%);
           transform: translate(-50%, -71%);
+}
+
+.offer__item-heading {
+  font-size: 0.8rem;
+  position: relative;
+  display: block;
+  z-index: 2;
+  height: 4rem;
+  color: #14b9ec;
+  text-decoration: none;
+}
+
+.offer__item:hover .offer__item-heading {
+  color: white;
+  text-decoration: none;
+}
+
+.offer__item-heading:hover {
+  text-decoration: none;
+}
+
+.offer__line {
+  position: relative;
+  width: 20%;
+  display: block;
+  fill: #14b9ec;
+  stroke: #14b9ec;
+  z-index: 2;
 }
 
 .testimonials {
@@ -732,6 +746,11 @@ a {
   background-color: white;
   width: 75px;
   display: inline-block;
+}
+
+.testimonials .owl-dots {
+  margin-top: -6vh;
+  padding: 3rem 0;
 }
 
 .testimonials__card {
@@ -831,6 +850,12 @@ a {
 
 .news__img-description {
   font-size: 1rem;
+  color: #322c2e;
+}
+
+.news__item a:hover {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .news__time {
@@ -861,7 +886,7 @@ a {
   content: '';
 }
 
-.news__img-container:hover::after {
+.news__item:hover .news__img-container::after {
   content: '';
   display: block;
   background-color: #3fbae1;
@@ -1036,10 +1061,17 @@ a {
 }
 
 .header--contact__tear-bg {
-  width: 50%;
+  width: 53%;
   position: absolute;
-  left: 43.5%;
-  top: -2vw;
+  right: 0;
+  top: 0l;
+}
+
+.header--purchase__tear-bg {
+  width: 69%;
+  position: absolute;
+  right: -16%;
+  top: 0;
 }
 
 .communication {
@@ -1183,19 +1215,37 @@ a {
 
 .about-us__subheading,
 .our-services__subheading {
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.7;
 }
 
 .about-us__p,
 .our-services__p {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 .about-us__deco-line,
 .our-services__deco-line {
+  display: none;
   height: 3px;
   background-color: white;
+}
+
+.purchase-cleaning {
+  min-height: 50vh;
+  position: relative;
+  color: white;
+  margin-top: 80px;
+}
+
+.purchase-cleaning__background {
+  width: 70%;
+  position: absolute;
+}
+
+.purchase-cleaning__heading {
+  padding-top: 150px;
+  font-size: 3.5rem;
 }
 
 .about-us {
@@ -1683,32 +1733,69 @@ a {
   .header__contact .navbar-nav .nav-link:hover {
     color: white !important;
   }
-  .insurance {
-    margin-top: -3rem;
+  .communication__heading {
+    padding-top: 50px;
   }
 }
 
 @media (min-width: 1600px) {
-  .header--contact__tear-bg {
-    width: 41%;
-    position: absolute;
-    left: 45%;
-    top: -2vw;
-  }
   .insurance {
     margin-top: -150px;
+  }
+  .about-us__deco-line {
+    display: inline-block;
   }
 }
 
 @media (min-width: 1921px) {
-  .header--contact__tear-bg {
-    width: 30%;
+  .header--contact__tear-bg, .header--purchase__tear-bg {
+    overflow: hidden;
     position: absolute;
-    left: 46%;
-    top: -2vw;
+    width: 52%;
+    right: 0;
+  }
+  .about-us__subheading {
+    font-size: 1.5rem;
+  }
+  .about-us__p {
+    font-size: 1rem;
+  }
+  .communication__heading {
+    padding-top: 150px;
   }
   .insurance {
     margin-top: 150px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .about-us,
+  .our-services {
+    min-height: 70vh;
+    position: relative;
+    color: white;
+  }
+  .about-us__background,
+  .our-services__background {
+    width: 70%;
+    position: static;
+    background-size: contain;
+  }
+  .about-us .row,
+  .our-services .row {
+    text-align: center;
+    position: static;
+    width: 100%;
+    left: 0;
+    color: #322c2e;
+  }
+  .about-us__heading,
+  .our-services__heading {
+    color: #14b9ec;
+  }
+  .about-us__subheading,
+  .our-services__subheading {
+    text-align: justify;
   }
 }
 
@@ -1733,20 +1820,6 @@ a {
     right: -5rem;
     -webkit-transform: translate(-50%, -50%) rotate(90deg) scale(0.8);
             transform: translate(-50%, -50%) rotate(90deg) scale(0.8);
-  }
-  .about-us {
-    position: relative;
-    color: white;
-  }
-  .about-us__background {
-    width: 70%;
-    position: absolute;
-  }
-  .about-us .row {
-    position: absolute;
-    width: 35%;
-    left: 35%;
-    top: 10%;
   }
   .steps {
     background-position-x: -300px;
@@ -1781,7 +1854,7 @@ a {
     padding-top: 250px;
   }
   .owl-one__item {
-    min-height: 80vh;
+    min-height: 60vh;
   }
   .fa-chevron-left,
   .fa-chevron-right {
@@ -1792,42 +1865,20 @@ a {
     padding: 15px;
     padding-top: 150px;
   }
-  .header--contact__tear-bg {
+  .header--contact__tear-bg, .header--purchase__tear-bg {
     width: 55%;
     position: absolute;
     right: 0;
     top: 0;
   }
-  .about-us,
-  .our-services {
-    min-height: 70vh;
-    position: relative;
-    color: white;
-  }
-  .about-us__background,
-  .our-services__background {
-    width: 70%;
-    position: static;
-    background-size: contain;
-  }
-  .about-us .row,
-  .our-services .row {
-    text-align: center;
-    position: static;
-    width: 100%;
-    left: 0;
-    color: #322c2e;
-  }
-  .about-us__heading,
-  .our-services__heading {
-    color: #14b9ec;
-  }
-  .about-us__subheading,
-  .our-services__subheading {
-    text-align: justify;
-  }
   .company-services {
     margin-left: 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1640px;
   }
 }
 /*# sourceMappingURL=style.css.map */

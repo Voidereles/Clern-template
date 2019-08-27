@@ -11,8 +11,10 @@ $variable-text-medium-default:1rem;
 $variable-text-medium-3:0.9rem;
 $variable-text-medium-2:1.25rem;
 $variable-text-medium-1:1.5rem;
+$variable-text-big-1:3rem;
 $variable-text-big-2:2.5rem;
 $variable-text-big-3:2rem;
+$variable-text-huge:3.5rem;
 
 $fast:0.2s;
 $variable-text-doubled:200%;
@@ -21,6 +23,7 @@ body {
     color: $clern-dark-text;
     font-family: vag-rundschrift-d, sans-serif;
     font-weight: 300;
+    overflow-x: hidden;
 }
 
 h1,
@@ -211,7 +214,7 @@ a {
     }
 
     &__nav-link {
-        font-size: $variable-text-medium-3;
+        font-size: $variable-text-medium-default;
         color: $clern-dark-text;
         transition: $fast;
     }
@@ -468,7 +471,7 @@ a {
 
     .owl-dots {
         position: absolute;
-        top: 200px;
+        top: 50%;
         right: -0.5rem;
         transform: translate(-50%, -50%) rotate(90deg);
     }
@@ -486,7 +489,7 @@ a {
 
 
     &__text {
-        position: absolute;
+        position: relative;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -614,7 +617,7 @@ a {
 .offer {
     color: $clern-blue;
     transition: $fast;
-    margin-top: -250px;
+    margin-top: -150px;
     z-index: 10;
     position: relative;
 
@@ -639,6 +642,7 @@ a {
     &__item:hover {
         background-color: #3fbae1;
         transition: 1s;
+        cursor: pointer;
     }
 
     &__item:hover::after {
@@ -659,26 +663,7 @@ a {
         transition: 1s;
     }
 
-    &__item-heading {
-        font-size: $variable-text-small-1;
-        position: relative;
-        display: block;
-        z-index: 2;
-        height: 4rem;
-    }
 
-    &__item:hover &__item-heading {
-        color: white;
-    }
-
-    &__line {
-        position: relative;
-        width: 20%;
-        display: block;
-        fill: $clern-blue;
-        stroke: $clern-blue;
-        z-index: 2;
-    }
 
     &__item:hover &__line {
         fill: #ffffff !important;
@@ -700,6 +685,10 @@ a {
         fill: $clern-blue !important;
     }
 
+    &__svg path {
+        text-align: start;
+    }
+
     &__more {
         display: inline-block;
         position: absolute;
@@ -715,19 +704,19 @@ a {
         z-index: 2;
     }
 
-    &__more:hover {
+    &__item:hover &__more {
         border-radius: 25px;
-        width: 50%;
+        width: 60%;
         background-color: white;
         cursor: pointer;
     }
 
-    &__more:hover &__more-dots {
+    &__item:hover &__more &__more-dots {
         right: 5px;
         color: $clern-blue;
     }
 
-    &__more:hover &__more-hidden {
+    &__item:hover &__more &__more-hidden {
         left: 38%;
         z-index: 2;
         display: inline-block;
@@ -739,6 +728,7 @@ a {
         text-transform: uppercase;
         top: 50%;
         left: -25px;
+        color: $clern-blue;
         font-size: $variable-text-small-2;
         transform: translate(-50%, -50%);
     }
@@ -748,6 +738,35 @@ a {
         color: white;
         font-size: 1.5rem;
         transform: translate(-50%, -71%);
+    }
+
+
+    &__item-heading {
+        font-size: $variable-text-small-1;
+        position: relative;
+        display: block;
+        z-index: 2;
+        height: 4rem;
+        color: $clern-blue;
+        text-decoration: none;
+    }
+
+    &__item:hover &__item-heading {
+        color: white;
+        text-decoration: none;
+    }
+
+    &__item-heading:hover {
+        text-decoration: none;
+    }
+
+    &__line {
+        position: relative;
+        width: 20%;
+        display: block;
+        fill: $clern-blue;
+        stroke: $clern-blue;
+        z-index: 2;
     }
 }
 
@@ -776,6 +795,11 @@ a {
         background-color: white;
         width: 75px;
         display: inline-block;
+    }
+
+    .owl-dots {
+        margin-top: -6vh;
+        padding: 3rem 0;
     }
 
     &__card {
@@ -807,60 +831,6 @@ a {
     .fa-chevron-right {
         right: 5%;
     }
-
-    // .owl-dots {
-    //     text-align: center;
-    //     margin-top: -2rem;
-    //     padding-bottom: 5rem;
-    // }
-
-    // .owl-dot {
-    //     width: 13px;
-    //     height: 13px;
-    //     top: 50%;
-    //     left: 0px;
-    //     box-shadow: inset rgba(255, 255, 255, 1) 0px 0px 0px 3px;
-    //     z-index: 1;
-    //     transform: translateY(-50%);
-    //     padding: 0px;
-    //     margin-left: 10px;
-    //     margin-right: 10px;
-    //     transition: all 0.3s ease 0s;
-    //     border-radius: 50%;
-    //     // background: transparent !important;
-    //     appearance: none;
-    //     // background-color: transparent !important;
-    //     // border: 1px solid #fff;
-    //     cursor: pointer;
-    //     display: inline-block;
-    //     // margin: 0 5px;
-    //     outline: none;
-    //     padding: 5px;
-    // }
-
-    // .owl-dots .active {
-    //     box-shadow: rgba(255, 255, 255, 1) 0px 0px 0px 6px;
-    // }
-
-    // .owl-dot::after {
-    //     content: '';
-    //     width: 15px;
-    //     height: 2px;
-    //     display: inline-block;
-    // }
-
-    // .owl-dots .active::after {
-    //     width: 100px !important;
-    //     content: "";
-    //     display: block;
-    //     width: 15px;
-    //     height: 2px;
-    //     background-color: white;
-    //     top: 50%;
-    //     left: 50%;
-    //     transform: translate(-50%, -50%);
-    //     transition: all 0.25s ease-in-out 0s;
-    // }
 }
 
 .news {
@@ -928,6 +898,12 @@ a {
 
     &__img-description {
         font-size: 1rem;
+        color: $clern-dark-text;
+    }
+
+    &__item a:hover {
+        text-decoration: none;
+        cursor: pointer;
     }
 
     &__time {
@@ -961,7 +937,7 @@ a {
         // without border we have imho nice animation
     }
 
-    &__img-container:hover::after {
+    &__item:hover &__img-container::after {
         content: '';
         display: block;
         background-color: #3fbae1;
@@ -1138,12 +1114,19 @@ a {
 // subpage contact
 
 
-.header--contact {
-    &__tear-bg {
-        width: 50%;
+.header {
+    &--contact__tear-bg {
+        width: 53%;
         position: absolute;
-        left: 43.5%;
-        top: -2vw;
+        right: 0;
+        top: 0l
+    }
+
+    &--purchase__tear-bg {
+        width: 69%;
+        position: absolute;
+        right: -16%;
+        top: 0;
     }
 }
 
@@ -1286,17 +1269,35 @@ a {
     }
 
     &__subheading {
-        font-size: $variable-text-small-1;
+        font-size: $variable-text-medium-default;
         line-height: 1.7;
     }
 
     &__p {
-        font-size: $variable-text-small-2;
+        font-size: $variable-text-small-1;
     }
 
     &__deco-line {
+        display: none;
         height: 3px;
         background-color: white;
+    }
+}
+
+.purchase-cleaning {
+    min-height: 50vh;
+    position: relative;
+    color: white;
+    margin-top: 80px;
+
+    &__background {
+        width: 70%;
+        position: absolute;
+    }
+
+    &__heading {
+        padding-top: 150px;
+        font-size: $variable-text-huge;
     }
 }
 
@@ -1844,31 +1845,52 @@ a {
 
     }
 
-    .insurance {
-        margin-top: -3rem;
+
+    .communication__heading {
+        padding-top: 50px;
     }
+
 }
 
 @media (min-width: 1600px) {
-    .header--contact__tear-bg {
-        width: 41%;
-        position: absolute;
-        left: 45%;
-        top: -2vw;
-    }
-
     .insurance {
         margin-top: -150px;
     }
+
+    .about-us {
+        &__deco-line {
+            display: inline-block;
+        }
+    }
+
 }
 
 
 @media (min-width:1921px) {
-    .header--contact__tear-bg {
-        width: 30%;
-        position: absolute;
-        left: 46%;
-        top: -2vw;
+    .header {
+
+        &--contact__tear-bg,
+        &--purchase__tear-bg {
+
+            overflow: hidden;
+            position: absolute;
+            width: 52%;
+            right: 0;
+        }
+    }
+
+    .about-us {
+        &__subheading {
+            font-size: $variable-text-medium-1;
+        }
+
+        &__p {
+            font-size: $variable-text-medium-default;
+        }
+    }
+
+    .communication__heading {
+        padding-top: 150px;
     }
 
     .insurance {
@@ -1877,7 +1899,40 @@ a {
 
 }
 
+@media (max-width:1440px) {
 
+    .about-us,
+    .our-services {
+
+        min-height: 70vh;
+        position: relative;
+        color: white;
+
+        &__background {
+            width: 70%;
+            position: static;
+            background-size: contain;
+        }
+
+        .row {
+            text-align: center;
+            position: static;
+            width: 100%;
+            left: 0;
+            color: $clern-dark-text;
+        }
+
+        &__heading {
+            color: $clern-blue;
+        }
+
+        &__subheading {
+            text-align: justify;
+
+        }
+
+    }
+}
 
 @media (max-width:1200px) {
     .header {
@@ -1910,23 +1965,7 @@ a {
         }
     }
 
-    .about-us {
-        position: relative;
-        color: white;
 
-        &__background {
-            width: 70%;
-            position: absolute;
-        }
-
-        .row {
-            position: absolute;
-            width: 35%;
-            left: 35%;
-            top: 10%;
-        }
-
-    }
 
     .steps {
         background-position-x: -300px;
@@ -1969,7 +2008,7 @@ a {
         }
 
         &__item {
-            min-height: 80vh;
+            min-height: 60vh;
         }
     }
 
@@ -1987,44 +2026,20 @@ a {
         padding-top: 150px;
     }
 
-    .header--contact__tear-bg {
-        width: 55%;
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
+    .header {
 
-    .about-us,
-    .our-services {
+        &--contact__tear-bg,
+        &--purchase__tear-bg {
 
-        min-height: 70vh;
-        position: relative;
-        color: white;
-
-        &__background {
-            width: 70%;
-            position: static;
-            background-size: contain;
-        }
-
-        .row {
-            text-align: center;
-            position: static;
-            width: 100%;
-            left: 0;
-            color: $clern-dark-text;
-        }
-
-        &__heading {
-            color: $clern-blue;
-        }
-
-        &__subheading {
-            text-align: justify;
-
+            width: 55%;
+            position: absolute;
+            right: 0;
+            top: 0;
         }
 
     }
+
+
 
     .company-services {
         margin-left: 0;
@@ -2033,19 +2048,17 @@ a {
 
 
 
+//containers...
 
 
 
 
 
 
-
-
-
-
-
-
-
-
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1640px;
+    }
+}
 
 //those fancy owl-carousel dots
