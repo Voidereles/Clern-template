@@ -32,16 +32,15 @@
         <![endif]-->
     <header id="header" class="header header--contact">
         <img class="header--purchase__tear-bg" src="images/blue-header-bg.png" alt="">
-        <div class="container">
 
-            <nav id="headerNavbar" class="navbar px-0 navbar-default header__navbar navbar-expand-lg custom-carets"
+        <div class="container-fluid">
+            <nav id="headerNavbar" class="navbar px-0 navbar-light header__navbar navbar-expand-xl custom-carets"
                 role="navigation">
-                <div class="row w-100">
-                    <a class="navbar-brand col-2 px-0 mr-0" href="index.html">
-                        <img src="images/logo.png" id="headerLogo" class="d-inline-block align-top header__logo p-3"
-                            alt="">
-                    </a>
+                <a class="navbar-brand px-0 mr-0" href="index.html">
+                    <img src="images/logo.png" id="headerLogo" class="d-inline-block align-top header__logo p-3" alt="">
+                </a>
 
+                <div class="container">
                     <button id="navToggler" class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -49,7 +48,7 @@
                     </button>
 
 
-                    <div class="collapse navbar-collapse col-10 col-xl-12 px-0" id="navbarNavAltMarkup">
+                    <div class="collapse navbar-collapse col-12 px-0" id="navbarNavAltMarkup">
                         <div class="row d-flex mx-0 px-0 w-100 justify-content-between">
                             <div class="navbar-nav header__navbar-nav">
                                 <ul id="headerNavPills"
@@ -84,15 +83,12 @@
 
 
                                 </ul>
-                                <div class="nav-item header__nav-item">
-                                    <a class="btn btn-lg rounded-pill header__contact-btn px-3" href="#contact">Zaloguj
-                                        się</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
-
                 </div>
+
 
                 <div class="dropdown header__lang-change">
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -106,6 +102,11 @@
                     </div>
                 </div>
 
+
+                <div class="nav-item header__nav-item">
+                    <a class="btn btn-lg rounded-pill header__contact-btn px-3" href="#contact">Zaloguj
+                        się</a>
+                </div>
             </nav>
 
         </div>
@@ -116,249 +117,255 @@
 
         <section class="purchase-cleaning">
             <img class="purchase-cleaning__background" src="images/background_purchase.png" alt="">
-            <div class="container">
-                <div class="row mx-0 mt-xl-4">
-                    <h3 class="purchase-cleaning__heading col-12 px-0 mb-4 text-light-green">Zamów sprzątanie</h3>
-                    <div class="purchase-cleaning__description-container col-12 px-0 ">
-                        <p class="purchase-cleaning__p text-justify text-dark">Zarezerwuj usługę na określoną liczbę
-                            godzin. Czas
-                            sprzątania, podany dla poszczególnych metraży, jest czasem sugerowanym. Więcej informacji
-                            znajdziesz w zakładce Pomoc.
-                        </p>
-                    </div>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row mx-0 mt-xl-4">
+                        <h3 class="purchase-cleaning__heading col-12 mb-4 text-light-green">Zamów sprzątanie</h3>
+                        <div class="purchase-cleaning__description-container col-12">
+                            <p class="purchase-cleaning__p text-justify text-dark">Zarezerwuj usługę na określoną liczbę
+                                godzin. Czas
+                                sprzątania, podany dla poszczególnych metraży, jest czasem sugerowanym. Więcej
+                                informacji
+                                znajdziesz w zakładce Pomoc.
+                            </p>
+                        </div>
 
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="purchase mx-lg-5 mb-5">
-            <div class="container">
-                <div class="row text-center justify-content-center w-100 mt-2">
-                    <div class="purchase__step col-12 col-lg-3">
-                        <div class="purchase__svg-container p-3 steps__svg-1 mx-auto">
-                            <img class="" src="images/svg/time-n-place.svg" alt="">
-                        </div>
-
-                        <h4 class="purchase__svg-description mt-3">Wybierz miejsce i czas</h4>
-                    </div>
-                    <div class="purchase__step col-12 col-lg-3 mt-4 mt-lg-0">
-                        <div class="purchase__svg-container p-3 steps__svg-2 mx-auto">
-                            <img class="" src="images/svg/note-checkboxes.svg" alt="">
-                        </div>
-                        <h4 class="purchase__svg-description mt-3">Skonfiguruj usługę</h4>
-                    </div>
-
-
-
-
-
-
-                    <div class="purchase__step col-12 col-lg-3 mt-4 mt-lg-0">
-                        <div class="purchase__svg-container p-3 steps__svg-3 mx-auto">
-                            <img class="" src="images/svg/card-security.svg" alt="">
-                        </div>
-                        <h4 class="purchase__svg-description mt-3">Finalizuj zamówienie</h4>
-                    </div>
-                </div>
-
-                <div class="row d-flex justify-content-center my-5">
-                    <div class="col-12 col-lg-4 order-2 order-lg-1">
-                        <div class="purchase__summary summary p-4">
-                            <h3 class="summary__heading mb-4">Podsumowanie</h3>
-
-                            <p>Data i godzina sprzątania:</p>
-                            <div class="summary__info p-2 mb-4">
-                                <span class="d-block">17.06.2016 14:50</span>
+        <section class="purchase mb-5">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row text-center justify-content-center w-100 mt-2">
+                        <div class="purchase__step col-12 col-lg-3">
+                            <div class="purchase__svg-container p-3 steps__svg-1 mx-auto">
+                                <img class="" src="images/svg/time-n-place.svg" alt="">
                             </div>
 
-                            <p>Usługi:</p>
-                            <div class="summary__info p-2">
-                                <span class="d-block">Sprzątanie STANDARD</span>
-                                <span class="d-block">Mycie okien</span>
-                                <span class="d-block">Prasowanie</span>
+                            <h4 class="purchase__svg-description mt-3">Wybierz miejsce i czas</h4>
+                        </div>
+                        <div class="purchase__step col-12 col-lg-3 mt-4 mt-lg-0">
+                            <div class="purchase__svg-container p-3 steps__svg-2 mx-auto">
+                                <img class="" src="images/svg/note-checkboxes.svg" alt="">
                             </div>
+                            <h4 class="purchase__svg-description mt-3">Skonfiguruj usługę</h4>
+                        </div>
 
-                            <div class="summary__final-cost p-3 d-flex justify-content-between text-white">
-                                <div class="text-small-1 pt-2">Do zapłaty</div>
-                                <div>175 PLN</div>
 
+
+
+
+
+                        <div class="purchase__step col-12 col-lg-3 mt-4 mt-lg-0">
+                            <div class="purchase__svg-container p-3 steps__svg-3 mx-auto">
+                                <img class="" src="images/svg/card-security.svg" alt="">
                             </div>
+                            <h4 class="purchase__svg-description mt-3">Finalizuj zamówienie</h4>
                         </div>
                     </div>
-                    <div class="col-12 offset-lg-1 col-lg-7 order-1 order-lg-2">
-                        <form action="" class="purchase__form mt-4">
 
-                            <div class="row m-0">
+                    <div class="row d-flex justify-content-center my-5">
+                        <div class="col-12 col-lg-4 order-2 order-lg-1">
+                            <div class="purchase__summary summary p-4">
+                                <h3 class="summary__heading mb-4">Podsumowanie</h3>
 
-                                <!-- LOKALIZACJA -->
-                                <h5 class="purchase__form-heading col-12 pl-0">Lokalizacja:</h5>
-                                <div class="row w-100 m-0">
-                                    <div class="purchase__form-description col-12 col-lg-3 mt-3 pl-0">Gdzie mamy
-                                        przyjechać?
-                                    </div>
-                                    <div class="col-12 col-lg-9 pl-0">
-                                        <div class="row m-0">
-                                            <div class="form-group col-6 col-lg-4 pl-0">
-                                                <label class="form-label" for="zipcode">Kod pocztowy</label>
-                                                <input id="zipcode" name="zipcode" class="form-input" type="text" />
-                                            </div>
-                                            <div class="form-group col-6 col-lg-8 pl-0">
-                                                <label class="form-label" for="city">Miejscowość</label>
-                                                <input id="city" name="city" class="form-input" type="text" />
-                                            </div>
-                                            <div class="form-group col-12 col-lg-12 pl-0">
-                                                <label class="form-label" for="street">Ulica i nr lokalu</label>
-                                                <input id="street" name="street" class="form-input" type="text" />
-                                                <?xml version="1.0" encoding="utf-8"?>
-                                                <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                                                <svg class="form-icon" version="1.1" id="Layer_1"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                    viewBox="0 0 230.6 320.9"
-                                                    style="enable-background:new 0 0 230.6 320.9;" xml:space="preserve">
-                                                    <g>
-                                                        <path
-                                                            d="M0,113.2C-1.4,63.3,37.8,11.7,96.5,1.6c63.8-11,125.9,35.4,133.2,99.7c4,35.7-5.2,67.8-25.9,96.9
+                                <p>Data i godzina sprzątania:</p>
+                                <div class="summary__info p-2 mb-4">
+                                    <span class="d-block">17.06.2016 14:50</span>
+                                </div>
+
+                                <p>Usługi:</p>
+                                <div class="summary__info p-2">
+                                    <span class="d-block">Sprzątanie STANDARD</span>
+                                    <span class="d-block">Mycie okien</span>
+                                    <span class="d-block">Prasowanie</span>
+                                </div>
+
+                                <div class="summary__final-cost p-3 d-flex justify-content-between text-white">
+                                    <div class="text-small-1 pt-2">Do zapłaty</div>
+                                    <div>175 PLN</div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 offset-lg-1 col-lg-7 order-1 order-lg-2">
+                            <form action="" class="purchase__form mt-4">
+
+                                <div class="row m-0">
+
+                                    <!-- LOKALIZACJA -->
+                                    <h5 class="purchase__form-heading col-12 pl-0">Lokalizacja:</h5>
+                                    <div class="row w-100 m-0">
+                                        <div class="purchase__form-description col-12 col-lg-3 mt-3 pl-0">Gdzie mamy
+                                            przyjechać?
+                                        </div>
+                                        <div class="col-12 col-lg-9 pl-0">
+                                            <div class="row m-0">
+                                                <div class="form-group col-6 col-lg-4 pl-0">
+                                                    <label class="form-label" for="zipcode">Kod pocztowy</label>
+                                                    <input id="zipcode" name="zipcode" class="form-input" type="text" />
+                                                </div>
+                                                <div class="form-group col-6 col-lg-8 pl-0">
+                                                    <label class="form-label" for="city">Miejscowość</label>
+                                                    <input id="city" name="city" class="form-input" type="text" />
+                                                </div>
+                                                <div class="form-group col-12 col-lg-12 pl-0">
+                                                    <label class="form-label" for="street">Ulica i nr lokalu</label>
+                                                    <input id="street" name="street" class="form-input" type="text" />
+                                                    <?xml version="1.0" encoding="utf-8"?>
+                                                    <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                                    <svg class="form-icon" version="1.1" id="Layer_1"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                        viewBox="0 0 230.6 320.9"
+                                                        style="enable-background:new 0 0 230.6 320.9;"
+                                                        xml:space="preserve">
+                                                        <g>
+                                                            <path
+                                                                d="M0,113.2C-1.4,63.3,37.8,11.7,96.5,1.6c63.8-11,125.9,35.4,133.2,99.7c4,35.7-5.2,67.8-25.9,96.9
 		c-28.3,39.8-56.7,79.4-85.1,119.1c-3.4,4.7-3.4,4.8-6.7,0.2c-29.4-41.1-59-82-88-123.3C7.8,171,0,144.8,0,113.2z M197.6,114.5
 		c-0.2-2-0.6-5.7-1-9.4c-4-35.7-33.9-67.1-73.7-71.5C89,29.9,52.3,51.1,39.4,84.4c-12.5,32.3-6.6,62.8,12.1,90.8
 		c19.6,29.1,40.6,57.2,60.9,85.8c2.2,3.1,3.5,3.2,5.7,0c19.9-28.1,39.9-56,59.9-84.1C190.9,158.8,197,138.5,197.6,114.5z" />
-                                                        <path d="M131.9,112.4c0,9.3-7.3,16.6-16.6,16.6c-9.3,0-16.5-7.4-16.5-16.7c0.1-9.2,7-16.2,16.3-16.3
+                                                            <path d="M131.9,112.4c0,9.3-7.3,16.6-16.6,16.6c-9.3,0-16.5-7.4-16.5-16.7c0.1-9.2,7-16.2,16.3-16.3
 		C124.6,95.9,131.9,103.1,131.9,112.4z" />
-                                                    </g>
-                                                </svg>
+                                                        </g>
+                                                    </svg>
 
+                                                </div>
                                             </div>
+
                                         </div>
-
                                     </div>
-                                </div>
 
-                                <!-- TERMIN -->
-                                <h5 class="purchase__form-heading col-12 pl-0">Termin:</h5>
-                                <div class="row w-100 m-0 pr-lg-3">
-                                    <div class="form-group col-6 col-lg-4 pl-0">
-                                        <label class="form-label" for="date">Data</label>
-                                        <input id="date" name="date" class="form-input" type="date min=2019-08-20" />
-                                        <!-- Można by zrobić, aby nie można było wprowadzać dat z przeszłości -->
-                                        <svg class="form-icon" version="1.1" id="Layer_1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                            viewBox="0 0 319.3 319.9" style="enable-background:new 0 0 319.3 319.9;"
-                                            xml:space="preserve">
-                                            <g>
-                                                <path
-                                                    d="M63.3,0c11,0,21.1,0,31.9,0c0,10.6,0,21.1,0,31.9c42.9,0,85.1,0,128,0c0-10.5,0-21,0-31.8c10.9,0,21.2,0,32.1,0
+                                    <!-- TERMIN -->
+                                    <h5 class="purchase__form-heading col-12 pl-0">Termin:</h5>
+                                    <div class="row w-100 m-0 pr-lg-3">
+                                        <div class="form-group col-6 col-lg-4 pl-0">
+                                            <label class="form-label" for="date">Data</label>
+                                            <input id="date" name="date" class="form-input"
+                                                type="date min=2019-08-20" />
+                                            <!-- Można by zrobić, aby nie można było wprowadzać dat z przeszłości -->
+                                            <svg class="form-icon" version="1.1" id="Layer_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                viewBox="0 0 319.3 319.9" style="enable-background:new 0 0 319.3 319.9;"
+                                                xml:space="preserve">
+                                                <g>
+                                                    <path
+                                                        d="M63.3,0c11,0,21.1,0,31.9,0c0,10.6,0,21.1,0,31.9c42.9,0,85.1,0,128,0c0-10.5,0-21,0-31.8c10.9,0,21.2,0,32.1,0
                                                     c0,10.5,0,21.1,0,32.1c11.9,0,23.2-0.1,34.5,0.1c3.8,0.1,7.7,0.2,11.3,1.2c11.3,3.2,18.2,13.1,18.2,25.6c0,58.1,0,116.3,0,174.4
                                                     c0,19.5,0,39,0,58.5c0,16.9-10.8,27.8-27.7,27.8c-88,0-175.9-0.1-263.9,0.1C11.9,320,0,308.4,0,292.6C0.4,215,0.4,137.3,0,59.7
                                                     c-0.1-14,9.7-27.8,27.5-27.5c11.5,0.2,23,0,34.5-0.1c0.3,0,0.6-0.2,1.3-0.6C63.3,21.3,63.3,10.9,63.3,0z M287.1,128.2
                                                     c-85.4,0-170.5,0-255.3,0c0,53.4,0,106.4,0,159.4c85.3,0,170.2,0,255.3,0C287.1,234.4,287.1,181.5,287.1,128.2z M287.1,64.2
                                                     c-85.4,0-170.4,0-255.3,0c0,10.7,0,21.1,0,31.4c85.3,0,170.2,0,255.3,0C287.1,85.1,287.1,74.8,287.1,64.2z" />
-                                                <path
-                                                    d="M146.8,191.5c0-10.5,0-20.7,0-31.3c10.4,0,20.6,0,31.2,0c0,10.2,0,20.6,0,31.3C167.8,191.5,157.6,191.5,146.8,191.5z" />
-                                                <path
-                                                    d="M210.9,160.1c10.4,0,20.7,0,31.2,0c0,10.5,0,20.8,0,31.5c-10.4,0-20.6,0-31.2,0C210.9,181.1,210.9,170.8,210.9,160.1z" />
-                                                <path
-                                                    d="M82.9,224c10.5,0,20.7,0,31.1,0c0,10.5,0,20.9,0,31.6c-10.3,0-20.5,0-31.1,0C82.9,245.1,82.9,234.6,82.9,224z" />
-                                                <path
-                                                    d="M178,255.7c-10.5,0-20.6,0-31.1,0c0-10.5,0-20.9,0-31.5c10.3,0,20.5,0,31.1,0C178,234.5,178,244.9,178,255.7z" />
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div class="form-group col-6 col-lg-8 pl-0">
-                                        <label class="form-label" for="hour">Godzina</label>
-                                        <input id="hour" name="hour" class="form-input"
-                                            type="time min=8:00 max=20:00" />
-                                        <svg class="form-icon" version="1.1" id="Layer_1"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                            viewBox="0 0 251.8 251.4" style="enable-background:new 0 0 251.8 251.4;"
-                                            xml:space="preserve">
-                                            <g>
-                                                <path
-                                                    d="M251.8,136c-2.1,4.8-1.9,9.9-2.9,14.9c-10.6,54.5-58.7,96.7-114.2,100.2C67.5,255.4,10.1,208.3,1.1,141.4
+                                                    <path
+                                                        d="M146.8,191.5c0-10.5,0-20.7,0-31.3c10.4,0,20.6,0,31.2,0c0,10.2,0,20.6,0,31.3C167.8,191.5,157.6,191.5,146.8,191.5z" />
+                                                    <path
+                                                        d="M210.9,160.1c10.4,0,20.7,0,31.2,0c0,10.5,0,20.8,0,31.5c-10.4,0-20.6,0-31.2,0C210.9,181.1,210.9,170.8,210.9,160.1z" />
+                                                    <path
+                                                        d="M82.9,224c10.5,0,20.7,0,31.1,0c0,10.5,0,20.9,0,31.6c-10.3,0-20.5,0-31.1,0C82.9,245.1,82.9,234.6,82.9,224z" />
+                                                    <path
+                                                        d="M178,255.7c-10.5,0-20.6,0-31.1,0c0-10.5,0-20.9,0-31.5c10.3,0,20.5,0,31.1,0C178,234.5,178,244.9,178,255.7z" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="form-group col-6 col-lg-8 pl-0">
+                                            <label class="form-label" for="hour">Godzina</label>
+                                            <input id="hour" name="hour" class="form-input"
+                                                type="time min=8:00 max=20:00" />
+                                            <svg class="form-icon" version="1.1" id="Layer_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                viewBox="0 0 251.8 251.4" style="enable-background:new 0 0 251.8 251.4;"
+                                                xml:space="preserve">
+                                                <g>
+                                                    <path
+                                                        d="M251.8,136c-2.1,4.8-1.9,9.9-2.9,14.9c-10.6,54.5-58.7,96.7-114.2,100.2C67.5,255.4,10.1,208.3,1.1,141.4
                                                     C-7.9,75.5,40.6,11.3,106.4,1.9c3.1-0.4,6.3-0.8,9.4-1.3c6.3-0.5,12.7,0.6,19-0.7c0.7,0,1.3,0,2,0c0.8,1.6,2.3,1,3.5,1.2
                                                     c55.7,7.5,97.8,46.9,109,101.9c0.9,4.6,0.6,9.5,2.5,14C251.8,123.3,251.8,129.7,251.8,136z M126,220c52.2-0.1,93.9-42.1,93.8-94.3
                                                     c-0.1-52.2-42.1-93.9-94.3-93.8c-52.2,0.1-93.9,42-93.8,94.2C31.8,178.4,73.8,220.1,126,220z" />
-                                                <path d="M140.8,97c0,6.7,0.1,13.3-0.1,20c-0.1,2.5,0.7,4.3,2.5,6.1c7.8,7.7,15.7,15.3,23.3,23.3c8.7,9.3,5.8,20.8-5.8,25
+                                                    <path d="M140.8,97c0,6.7,0.1,13.3-0.1,20c-0.1,2.5,0.7,4.3,2.5,6.1c7.8,7.7,15.7,15.3,23.3,23.3c8.7,9.3,5.8,20.8-5.8,25
                                                     c-5.3,1.9-9.8-0.2-13.3-3.5c-11.1-10.6-21.8-21.4-32.5-32.4c-3.2-3.3-4.4-7.8-4.3-12.4c0-15.5-0.1-30.9,0-46.4
                                                     c0-5.7,1.6-11,6.5-14.4c4.4-3.2,9.2-4.2,14.5-1.6c6.1,3,8.6,8.2,9,14.5C141.1,82.3,140.8,89.6,140.8,97C140.8,97,140.8,97,140.8,97
                                                     z" />
-                                            </g>
-                                        </svg>
-                                    </div>
-                                </div>
-
-                                <!-- WYBÓR STANDARDU -->
-                                <h5 class="purchase__form-heading col-12 pl-0 mt-5 mb-4">Skonfiguruj usługę:</h5>
-                                <div class="row w-100">
-                                    <label class="form-check-label col-12 mb-2">
-                                        <input type="radio" class="form-check-input" value="Standard" name="serviceType"
-                                            checked>
-                                        <div class="w-100 px-4 py-2 form-check">
-                                            Standard<div class="purchase__more">
-                                                <div class="purchase__more-dots">...</div>
-                                            </div>
+                                                </g>
+                                            </svg>
                                         </div>
-                                    </label>
-
-
-
-
-
-
-
-                                    <label class="form-check-label col-12">
-                                        <input type="radio" class="form-check-input" value="Premium Plus"
-                                            name="serviceType">
-                                        <div class="w-100 px-4 py-2 form-check">
-                                            Premium plus<div class="purchase__more">
-                                                <div class="purchase__more-dots">...</div>
-                                            </div>
-                                        </div>
-
-                                    </label>
-
-
-
-
-
-
-                                </div>
-
-
-
-                                <div class="row w-100 mt-4">
-                                    <div class="form-group col-6 col-lg-5 mt-3">
-                                        Podaj wielkość powierzchni:
                                     </div>
-                                    <div class="form-group col-6 col-lg-7">
-                                        <label class="form-label" for="surface">Wielkość powierzchni w m<sup>2</sup>
+
+                                    <!-- WYBÓR STANDARDU -->
+                                    <h5 class="purchase__form-heading col-12 pl-0 mt-5 mb-4">Skonfiguruj usługę:</h5>
+                                    <div class="row w-100">
+                                        <label class="form-check-label col-12 mb-2">
+                                            <input type="radio" class="form-check-input" value="Standard"
+                                                name="serviceType" checked>
+                                            <div class="w-100 px-4 py-2 form-check">
+                                                Standard<div class="purchase__more">
+                                                    <div class="purchase__more-dots">...</div>
+                                                </div>
+                                            </div>
                                         </label>
-                                        <input id="surface" name="surface" class="form-input" type="number" />
+
+
+
+
+
+
+
+                                        <label class="form-check-label col-12">
+                                            <input type="radio" class="form-check-input" value="Premium Plus"
+                                                name="serviceType">
+                                            <div class="w-100 px-4 py-2 form-check">
+                                                Premium plus<div class="purchase__more">
+                                                    <div class="purchase__more-dots">...</div>
+                                                </div>
+                                            </div>
+
+                                        </label>
+
+
+
+
+
+
                                     </div>
-                                </div>
 
 
 
-                                <div class="row w-100">
-                                    <p class="col-12">Usługi dodatkowe:</p>
-                                    <div class="purchase__additional-item col-6 col-lg-4">
-                                        <div class="checkbox">
-                                            <label class="checkbox-container">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
+                                    <div class="row w-100 mt-4">
+                                        <div class="form-group col-6 col-lg-5 mt-3">
+                                            Podaj wielkość powierzchni:
+                                        </div>
+                                        <div class="form-group col-6 col-lg-7">
+                                            <label class="form-label" for="surface">Wielkość powierzchni w m<sup>2</sup>
+                                            </label>
+                                            <input id="surface" name="surface" class="form-input" type="number" />
+                                        </div>
+                                    </div>
 
-                                                <div class="purchase__img-container">
-                                                    <svg class="purchase__img" version="1.1" id="Layer_1"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 511.5 479.4"
-                                                        style="enable-background:new 0 0 511.5 479.4;"
-                                                        xml:space="preserve">
 
-                                                        <g>
-                                                            <path
-                                                                d="M511.2,463.9c0,5.5,0,10.3,0,15.5c-170.3,0-340.5,0-511.1,0c0-4.7,0-9.7,0-15.2c98.7,0,197.6,0,295.6,0
+
+                                    <div class="row w-100">
+                                        <p class="col-12">Usługi dodatkowe:</p>
+                                        <div class="purchase__additional-item col-6 col-lg-4">
+                                            <div class="checkbox">
+                                                <label class="checkbox-container">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+
+                                                    <div class="purchase__img-container">
+                                                        <svg class="purchase__img" version="1.1" id="Layer_1"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                            viewBox="0 0 511.5 479.4"
+                                                            style="enable-background:new 0 0 511.5 479.4;"
+                                                            xml:space="preserve">
+
+                                                            <g>
+                                                                <path
+                                                                    d="M511.2,463.9c0,5.5,0,10.3,0,15.5c-170.3,0-340.5,0-511.1,0c0-4.7,0-9.7,0-15.2c98.7,0,197.6,0,295.6,0
                                                                     c0-58.3-0.2-116.1,0.1-173.8c0.1-14.9,6.4-27.6,17-38.2c30.5-30.5,60.8-61.2,91.3-91.8c2.6-2.6,3.6-5.1,3.6-8.7
                                                                     c-0.2-13,0-26-0.1-39c0-3.1,0.5-5.5,3.4-7.1c10.3-5.7,15.2-14,12.8-26.1c-0.5-2.4-0.1-4.9-0.1-9.2c-3.5,2-6.3,2.9-8.2,4.8
                                                                     c-24.3,24.1-48.4,48.2-72.5,72.5c-3.1,3.1-6.1,4.6-10.4,4.3c-4.1-0.3-8.3-0.1-12.7-0.1c0-5.4,0-10.3,0-15.1c0.4-0.2,0.7-0.5,1-0.5
@@ -372,54 +379,55 @@
                                                                     c-16.5,0-33,0.1-49.4,0c-3.5,0-6.4,1.2-6.5,4.6c-0.3,11.7-0.1,23.5-0.1,35.8c40.3,0,80,0,119.6,0c0,5.5,0,10.4,0,15.9
                                                                     c-5.4,0-10.4,0-15.2,0c0,5.7,0,10.7,0,15.6c10.8,0,21.2,0,31.6,0C473,66.5,477.9,59.9,495.7,55.6z M303.6,55.7c5.6,0,10.6,0,15.8,0
                                                                     c0-5.4,0-10.4,0-15.5c-5.4,0-10.6,0-15.8,0C303.6,45.5,303.6,50.5,303.6,55.7z" />
-                                                            <path
-                                                                d="M319.2,88.3c0,5.2,0,10,0,15.4c-31.9,0-63.6,0-95.6,0c0,93.6,0,186.7,0,280.2c15.8,0,31.4,0,47.4,0c0,5.3,0,10.2,0,15.5
+                                                                <path
+                                                                    d="M319.2,88.3c0,5.2,0,10,0,15.4c-31.9,0-63.6,0-95.6,0c0,93.6,0,186.7,0,280.2c15.8,0,31.4,0,47.4,0c0,5.3,0,10.2,0,15.5
                                                                     c-79.5,0-159,0-239,0c0-15.4,0-31,0-47c4.7,0,9.6,0,15.1,0c0,10.2,0,20.6,0,31.3c53.7,0,106.7,0,160.1,0c0-93.1,0-186.1,0-279.5
                                                                     c-53,0-106.1,0-159.7,0c0,45,0,90,0,135.3c-5.5,0-10.4,0-15.6,0c0-50.4,0-100.6,0-151.1C127.7,88.3,223.2,88.3,319.2,88.3z" />
-                                                            <path d="M175.5,351.7c0-32,0-63.6,0-95.8c-7.8,0-15.6,0-23.5,0c0-5.5,0-10.4,0-15.7c7.8,0,15.4,0,23.3,0c0-34.8,0-69.2,0-104
+                                                                <path d="M175.5,351.7c0-32,0-63.6,0-95.8c-7.8,0-15.6,0-23.5,0c0-5.5,0-10.4,0-15.7c7.8,0,15.4,0,23.3,0c0-34.8,0-69.2,0-104
                                                                     c-31.6,0-63.3,0-95.6,0c0,44.9,0,89.9,0,135.3c-5.5,0-10.4,0-15.6,0c0-50.3,0-100.5,0-151c42.2,0,84.4,0,127,0
                                                                     c0,82.2,0,164.4,0,247c-42.1,0-84.3,0-127,0c0-15.4,0-30.9,0-46.9c4.7,0,9.6,0,15.1,0c0,10.1,0,20.5,0,31.2
                                                                     C111.5,351.7,143.3,351.7,175.5,351.7z" />
-                                                            <path d="M239.9,367.5c0-82.4,0-164.6,0-247.2c21,0,41.9,0,63.2,0c0,5,0,9.9,0,15.4c-15.7,0-31.4,0-47.4,0c0,35,0,69.4,0,104.2
+                                                                <path d="M239.9,367.5c0-82.4,0-164.6,0-247.2c21,0,41.9,0,63.2,0c0,5,0,9.9,0,15.4c-15.7,0-31.4,0-47.4,0c0,35,0,69.4,0,104.2
                                                                     c7.8,0,15.4,0,23.4,0c0,5.3,0,10.2,0,15.7c-7.6,0-15.3,0-23.3,0c0,32.3,0,64,0,96.2c5,0,9.9,0,15.3,0c0,5.4,0,10.5,0,15.7
                                                                     C260.7,367.5,250.4,367.5,239.9,367.5z" />
-                                                            <path
-                                                                d="M47.2,335.6c-5.3,0-10.1,0-15.3,0c-0.5-8.8-2.8-16.8-9.1-23c-6.2-6.2-14-8.6-22.8-9c0-5.1,0-10,0-15.3
+                                                                <path
+                                                                    d="M47.2,335.6c-5.3,0-10.1,0-15.3,0c-0.5-8.8-2.8-16.8-9.1-23c-6.2-6.2-14-8.6-22.8-9c0-5.1,0-10,0-15.3
                                                                     c8.7-0.5,16.7-2.8,22.9-9.2c6.1-6.2,8.7-14,8.9-22.8c5.1,0,10.1,0,15.3,0c0.5,8.7,2.8,16.7,9.2,23c6.2,6.2,14,8.6,22.8,9
                                                                     c0,5.1,0,10,0,15.3c-8.7,0.5-16.7,2.8-23,9.1C50,318.9,47.6,326.7,47.2,335.6z M51.2,296c-3.6-3.8-8-8.5-11.3-12
                                                                     c-4.1,3.9-8.7,8.3-12.3,11.7c3.8,4,8.3,8.6,11.8,12.3C43.2,304.1,47.6,299.6,51.2,296z" />
-                                                            <path
-                                                                d="M455,447.5c-42.3,0-84.5,0-127.3,0c0-1.8,0-3.5,0-5.1c0-49.3,0-98.6,0-148c0-8.4,3-15.3,9.1-21.3
+                                                                <path
+                                                                    d="M455,447.5c-42.3,0-84.5,0-127.3,0c0-1.8,0-3.5,0-5.1c0-49.3,0-98.6,0-148c0-8.4,3-15.3,9.1-21.3
                                                                     c23.5-23.2,46.8-46.6,70-70c2.3-2.3,4.6-3.3,7.8-3.2c13.3,0.2,26.7,0.1,40.4,0.1C455,282.5,455,364.9,455,447.5z M439.3,431.8
                                                                     c0-72.3,0-144,0-216c-6.1,0-12,0.2-17.7-0.1c-3.8-0.2-6.5,1-9.2,3.7c-21.7,21.9-43.5,43.7-65.4,65.4c-2.6,2.5-3.7,5-3.7,8.7
                                                                     c0.1,44.3,0.1,88.6,0.1,133c0,1.8,0,3.5,0,5.4C375.8,431.8,407.4,431.8,439.3,431.8z" />
-                                                        </g>
-                                                    </svg>
-                                                    <p class="mt-2">Mycie okien</p>
-                                                </div>
-                                            </label>
+                                                            </g>
+                                                        </svg>
+                                                        <p class="mt-2">Mycie okien</p>
+                                                    </div>
+                                                </label>
+                                            </div>
+
                                         </div>
 
-                                    </div>
+                                        <div class="purchase__additional-item col-6 col-lg-4">
+                                            <div class="checkbox">
+                                                <label class="checkbox-container">
+                                                    <input type="checkbox" checked="checked">
+                                                    <span class="checkmark"></span>
 
-                                    <div class="purchase__additional-item col-6 col-lg-4">
-                                        <div class="checkbox">
-                                            <label class="checkbox-container">
-                                                <input type="checkbox" checked="checked">
-                                                <span class="checkmark"></span>
-
-                                                <div class="purchase__img-container purchase__additional-item--checked">
+                                                    <div
+                                                        class="purchase__img-container purchase__additional-item--checked">
 
 
-                                                    <svg class="purchase__img" version="1.1" id="Layer_1"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 511.1 463.1"
-                                                        style="enable-background:new 0 0 511.1 463.1;"
-                                                        xml:space="preserve">
+                                                        <svg class="purchase__img" version="1.1" id="Layer_1"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                            viewBox="0 0 511.1 463.1"
+                                                            style="enable-background:new 0 0 511.1 463.1;"
+                                                            xml:space="preserve">
 
-                                                        <g>
-                                                            <path d="M359.3,463.1c-5.4,0-10.2,0-15.3,0c-0.1-1.1-0.6-2.3-0.4-3.3c1.5-8.6-2.3-14.4-8.4-20.3c-25.7-24.8-50.8-50.1-76.1-75.2
+                                                            <g>
+                                                                <path d="M359.3,463.1c-5.4,0-10.2,0-15.3,0c-0.1-1.1-0.6-2.3-0.4-3.3c1.5-8.6-2.3-14.4-8.4-20.3c-25.7-24.8-50.8-50.1-76.1-75.2
 		c-1.1-1-2.2-2-3.6-3.4c-1.4,1.3-2.7,2.4-4,3.7c-26.3,26-52.5,52.1-78.9,78c-3.9,3.8-6.1,7.5-5.3,13c0.3,2.3,0.1,4.6,0.1,7.3
 		c-5.2,0-10.1,0-15.7,0c0-6.7-0.2-13.5,0.2-20.2c0.1-1.5,1.9-2.9,3.2-4.2c28.4-28.2,56.8-56.3,85.2-84.5c1.3-1.3,2.9-2.2,4.4-3.3
 		c-4.5-4.3-8.2-7.8-12.1-11.6c-0.7,0.6-1.9,1.7-3,2.8c-30.2,29.9-60.3,59.9-90.5,89.7c-2.6,2.6-3.7,5.1-3.6,8.7
@@ -451,43 +459,44 @@
 		c-0.3,4,1.1,6.7,3.9,9.6c27.4,27,54.6,54.1,81.9,81.2c1.2,1.2,2.6,2.4,3.5,3.2C236.6,312.2,240.2,308.8,244.2,305.1z M255.9,316.6
 		c-4.1,3.9-7.7,7.4-11.2,10.8c3.5,3.7,7.1,7.3,10,10.3c4-3.6,7.8-7.1,11.3-10.4C262.6,323.7,259.2,320.1,255.9,316.6z M463.2,335.3
 		c0-5.4,0-10.6,0-15.7c-5.4,0-10.5,0-15.6,0c0,5.4,0,10.4,0,15.7C452.9,335.3,458,335.3,463.2,335.3z" />
-                                                            <path d="M143,118.9c-21.2,2.9-30.1,11.8-31.9,32.1c-5,0-10,0-15.1,0C93.1,129.8,84,120.7,64,119.1c0-5,0-10.1,0-15.1
+                                                                <path d="M143,118.9c-21.2,2.9-30.1,11.8-31.9,32.1c-5,0-10,0-15.1,0C93.1,129.8,84,120.7,64,119.1c0-5,0-10.1,0-15.1
 		c21.1-2.9,30.2-12.1,31.9-32.1c5,0,10.1,0,15.1,0c2.8,21.1,11.9,30.2,32.1,31.9C143,108.8,143,113.9,143,118.9z M114.9,111.7
 		c-3.6-3.9-7.9-8.6-11-12c-4.1,3.8-8.7,8.2-12.2,11.5c3.9,3.8,8.4,8.3,11.8,11.6C107,119.4,111.5,115,114.9,111.7z" />
-                                                            <path d="M343.8,46.8c0-4.9,0-9.8,0-14.7c21.7-3.6,30.4-12.3,32-32.1c5,0,10,0,15,0c1.9,19.4,11.4,30,32.2,32.1c0,4.9,0,9.8,0,14.7
+                                                                <path d="M343.8,46.8c0-4.9,0-9.8,0-14.7c21.7-3.6,30.4-12.3,32-32.1c5,0,10,0,15,0c1.9,19.4,11.4,30,32.2,32.1c0,4.9,0,9.8,0,14.7
 		c-19.4,1.9-30.2,11.4-32.3,32.3c-4.9,0-9.8,0-14.7,0C374.2,59.6,364.8,48.9,343.8,46.8z M395.3,39.8c-3.9-3.9-8.4-8.5-11.9-11.9
 		c-3.8,3.7-8.4,8.2-11.7,11.5c3.8,4,8.3,8.5,11.7,12C387.3,47.5,391.8,43.1,395.3,39.8z" />
-                                                            <path
-                                                                d="M184,447.8c47.6,0,95.2,0,143,0c0,5,0,9.9,0,15.2c-47.6,0-95.1,0-143,0C184,458.2,184,453.3,184,447.8z" />
-                                                            <path
-                                                                d="M103.1,447.9c0,5.2,0,9.9,0,15c-34.4,0-68.6,0-103.1,0c0-4.8,0-9.7,0-15C34.1,447.9,68.5,447.9,103.1,447.9z" />
-                                                            <path
-                                                                d="M511.1,447.9c0,5.2,0,10,0,15c-34.4,0-68.6,0-103.1,0c0-4.8,0-9.7,0-15C442.1,447.9,476.4,447.9,511.1,447.9z" />
-                                                        </g>
-                                                    </svg>
-                                                    <p class="mt-2 purchase__additional-item--checked">Prasowanie</p>
-                                                </div>
-                                            </label>
+                                                                <path
+                                                                    d="M184,447.8c47.6,0,95.2,0,143,0c0,5,0,9.9,0,15.2c-47.6,0-95.1,0-143,0C184,458.2,184,453.3,184,447.8z" />
+                                                                <path
+                                                                    d="M103.1,447.9c0,5.2,0,9.9,0,15c-34.4,0-68.6,0-103.1,0c0-4.8,0-9.7,0-15C34.1,447.9,68.5,447.9,103.1,447.9z" />
+                                                                <path
+                                                                    d="M511.1,447.9c0,5.2,0,10,0,15c-34.4,0-68.6,0-103.1,0c0-4.8,0-9.7,0-15C442.1,447.9,476.4,447.9,511.1,447.9z" />
+                                                            </g>
+                                                        </svg>
+                                                        <p class="mt-2 purchase__additional-item--checked">Prasowanie
+                                                        </p>
+                                                    </div>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="purchase__additional-item col-6 col-lg-4">
-                                        <div class="checkbox">
-                                            <label class="checkbox-container">
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
+                                        <div class="purchase__additional-item col-6 col-lg-4">
+                                            <div class="checkbox">
+                                                <label class="checkbox-container">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
 
-                                                <div class="purchase__img-container">
-                                                    <svg class="purchase__img" version="1.1" id="Layer_1"
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                        viewBox="0 0 507.4 486.6"
-                                                        style="enable-background:new 0 0 507.4 486.6;"
-                                                        xml:space="preserve">
+                                                    <div class="purchase__img-container">
+                                                        <svg class="purchase__img" version="1.1" id="Layer_1"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                            viewBox="0 0 507.4 486.6"
+                                                            style="enable-background:new 0 0 507.4 486.6;"
+                                                            xml:space="preserve">
 
-                                                        <g>
-                                                            <path
-                                                                d="M246.1,44.3c-4.5,4.4-8.7,8.1-12.5,12.3c-0.9,1-1.1,3.3-0.6,4.7c7.7,21,4.3,39.5-11.7,55.4c-13.3,13.1-26.3,26.5-39.7,39.5
+                                                            <g>
+                                                                <path
+                                                                    d="M246.1,44.3c-4.5,4.4-8.7,8.1-12.5,12.3c-0.9,1-1.1,3.3-0.6,4.7c7.7,21,4.3,39.5-11.7,55.4c-13.3,13.1-26.3,26.5-39.7,39.5
                                                                     c-3.2,3.1-4.1,5.2-1.6,9.5c6.5,11.1,9.6,23.2,9.8,36.1c0.2,11.8-3.9,21.7-12.1,30.1c-5.7,5.8-5.4,8.1,1.1,12.8
                                                                     c7,5,11.1,11.6,11.1,20.6c-0.1,67.8-0.2,135.6,0.1,203.5c0,10.7-9.3,17.9-17.9,17.8c-34.7-0.3-69.3-0.1-104-0.1c-1.3,0-2.6,0-4.4,0
                                                                     c0-5.1,0-10,0-15.5c36.8,0,73.5,0,110.7,0c0-5.6,0-10.6,0-16.3c-26.3,0-52.5,0-79,0c0-5.3,0-10,0-15.2c2.1-0.1,4-0.3,6-0.3
@@ -513,91 +522,93 @@
                                                                     c-0.4,4.2-0.2,8.5-0.2,13.1C333.1,120.6,348.7,120.6,365.1,120.6z M126.6,96.8c-8.4,0-16.2,0-23.9,0c-6.6,0-6.6,0-6.7,6.5
                                                                     c-0.1,10.2-0.1,10.3,10.3,10.3c6.8,0,13.5,0,20.4,0C126.6,107.6,126.6,102.7,126.6,96.8z M222.1,45.4c4.1-4,8.3-8,12.2-11.7
                                                                     c-4.1-4.1-8.1-8.1-11.3-11.3c-4,3.7-8.2,7.6-12.5,11.6C214.4,37.8,218.3,41.7,222.1,45.4z" />
-                                                            <path
-                                                                d="M364.5,216.7c0,74.2,0,147.6,0,221.4c-42,0-83.9,0-126.6,0c0-1.6,0-3.3,0-5.1c0-60.6,0.2-121.2-0.1-181.8
+                                                                <path
+                                                                    d="M364.5,216.7c0,74.2,0,147.6,0,221.4c-42,0-83.9,0-126.6,0c0-1.6,0-3.3,0-5.1c0-60.6,0.2-121.2-0.1-181.8
                                                                     c-0.1-21.3,17.3-35.2,34.4-34.7c29,0.7,57.9,0.2,86.9,0.2C360.7,216.7,362.4,216.7,364.5,216.7z M253.6,423c1.7,0.2,2.8,0.4,4,0.4
                                                                     c29.2,0,58.3,0,87.5,0.1c3.7,0,4.5-1.5,4.4-4.8c-0.1-18.2-0.1-36.3-0.1-54.5c0-42.3,0-84.6,0.1-126.9c0-4.1-1.1-5.4-5.3-5.4
                                                                     c-24.3,0.2-48.6,0-73,0.1c-12.6,0.1-17.6,5.2-17.6,17.6c0,55.8,0,111.6,0,167.4C253.6,418.8,253.6,420.6,253.6,423z" />
-                                                            <path d="M380.9,323.5c0-27.1-0.1-54.3,0-81.4c0.1-19,14.7-33.7,33-33.3c16.7,0.4,30.3,15.4,30.3,33.9c0.1,44.5,0.1,88.9,0,133.4
+                                                                <path d="M380.9,323.5c0-27.1-0.1-54.3,0-81.4c0.1-19,14.7-33.7,33-33.3c16.7,0.4,30.3,15.4,30.3,33.9c0.1,44.5,0.1,88.9,0,133.4
                                                                     c0,11.6,0.3,23.3-0.6,34.9c-1.2,14.7-15.3,27.3-29.5,27.5c-15.8,0.3-29.9-11.1-32.3-26.2c-0.5-3.1-0.8-6.3-0.8-9.4
                                                                     C380.9,376.4,380.9,349.9,380.9,323.5z M396.5,323.8c0,27.8,0,55.6,0,83.5c0,8,3.4,13.4,9.7,15.1c11.4,2.9,22.7-1,22.5-16.3
                                                                     c-0.3-20.2-0.1-40.3-0.1-60.5c0-35,0-70,0-105c0-8.4-3.6-14.4-10.3-15.8c-13.2-2.7-22.1,2.6-22,16.4
                                                                     C396.7,268.8,396.5,296.3,396.5,323.8z" />
-                                                            <path
-                                                                d="M507.4,471.2c0,5.1,0,9.9,0,15c-23.4,0-46.6,0-70.2,0c0-4.8,0-9.7,0-15C460.3,471.2,483.6,471.2,507.4,471.2z" />
-                                                            <path
-                                                                d="M0,486.1c0-5.2,0-9.9,0-15c15.4,0,30.7,0,46.3,0c0,4.9,0,9.7,0,15C31.1,486.1,15.7,486.1,0,486.1z" />
-                                                            <path
-                                                                d="M79.2,255.4c0-4.9,0-9.5,0-14.4c5,0,9.9,0,15.1,0c0,4.7,0,9.4,0,14.4C89.2,255.4,84.3,255.4,79.2,255.4z" />
-                                                            <path
-                                                                d="M63.6,280.6c5,0,9.6,0,14.6,0c0,4.8,0,9.5,0,14.6c-4.7,0-9.4,0-14.6,0C63.6,290.6,63.6,285.9,63.6,280.6z" />
-                                                            <path d="M78.4,439.3c0,5.3,0,9.9,0,14.8c-4.9,0-9.6,0-15.1,0c0-4.2-0.1-8.4,0.1-12.6c0-0.8,1.7-2.1,2.6-2.1
+                                                                <path
+                                                                    d="M507.4,471.2c0,5.1,0,9.9,0,15c-23.4,0-46.6,0-70.2,0c0-4.8,0-9.7,0-15C460.3,471.2,483.6,471.2,507.4,471.2z" />
+                                                                <path
+                                                                    d="M0,486.1c0-5.2,0-9.9,0-15c15.4,0,30.7,0,46.3,0c0,4.9,0,9.7,0,15C31.1,486.1,15.7,486.1,0,486.1z" />
+                                                                <path
+                                                                    d="M79.2,255.4c0-4.9,0-9.5,0-14.4c5,0,9.9,0,15.1,0c0,4.7,0,9.4,0,14.4C89.2,255.4,84.3,255.4,79.2,255.4z" />
+                                                                <path
+                                                                    d="M63.6,280.6c5,0,9.6,0,14.6,0c0,4.8,0,9.5,0,14.6c-4.7,0-9.4,0-14.6,0C63.6,290.6,63.6,285.9,63.6,280.6z" />
+                                                                <path d="M78.4,439.3c0,5.3,0,9.9,0,14.8c-4.9,0-9.6,0-15.1,0c0-4.2-0.1-8.4,0.1-12.6c0-0.8,1.7-2.1,2.6-2.1
                                                                     C69.9,439.2,73.9,439.3,78.4,439.3z" />
-                                                        </g>
-                                                    </svg>
-                                                    <p class="mt-2">Środki czystości</p>
-                                                </div>
+                                                            </g>
+                                                        </svg>
+                                                        <p class="mt-2">Środki czystości</p>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <h5 class="purchase__form-heading col-12 pl-0 mt-4">Finalizuj zamówienie:</h5>
+                                    <div class="col-12 col-12 mt-2 pl-0">
+                                        <div class="row">
+                                            <div class="form-group col-12 col-lg-6 mt-2">
+                                                <label class="form-label" for="firstName">Imię</label>
+                                                <input id="firstName" type="text" name="firstName" class="form-input" />
+                                            </div>
+
+                                            <div class="form-group col-12 col-lg-6 mt-2">
+                                                <label class="form-label" for="lastName">Nazwisko</label>
+                                                <input id="lastName" name="lastName" class="form-input" type="text" />
+                                            </div>
+
+                                            <div class="form-group col-12 col-lg-6 mt-2">
+                                                <label class="form-label" for="tel">Telefon</label>
+                                                <input id="tel" type="tel" name="tel" class="form-input" />
+                                            </div>
+
+                                            <div class="form-group col-12 col-lg-6 mt-2">
+                                                <label class="form-label" for="email">Adres e-mail</label>
+                                                <input id="email" type="email" name="email" class="form-input"
+                                                    type="text" required />
+                                            </div>
+
+                                            <div class="form-group col-12 col-lg-12 mt-2">
+                                                <label class="form-label" for="additional">Uwagi dodatkowe</label>
+                                                <input id="additional" type="textarea" name="additional"
+                                                    class="form-input"></input>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12 pl-0 my-4">
+                                        <div class="checkbox">
+                                            <label class="checkbox-container">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+
+
+                                                <p class="mt-2 ml-5 text-small-1">Zapoznałem się z Regulaminem oraz
+                                                    Polityką
+                                                    prywatności
+                                                    i
+                                                    akceptuję ich warunki.</p>
+
                                             </label>
                                         </div>
                                     </div>
+
+                                    <button type="submit" class="btn purchase__btn px-4 py-2 mx-auto text-small-1">Zamów
+                                        sprzątanie</button>
                                 </div>
-
-
-
-
-                                <h5 class="purchase__form-heading col-12 pl-0 mt-4">Finalizuj zamówienie:</h5>
-                                <div class="col-12 col-12 mt-2 pl-0">
-                                    <div class="row">
-                                        <div class="form-group col-12 col-lg-6 mt-2">
-                                            <label class="form-label" for="firstName">Imię</label>
-                                            <input id="firstName" type="text" name="firstName" class="form-input" />
-                                        </div>
-
-                                        <div class="form-group col-12 col-lg-6 mt-2">
-                                            <label class="form-label" for="lastName">Nazwisko</label>
-                                            <input id="lastName" name="lastName" class="form-input" type="text" />
-                                        </div>
-
-                                        <div class="form-group col-12 col-lg-6 mt-2">
-                                            <label class="form-label" for="tel">Telefon</label>
-                                            <input id="tel" type="tel" name="tel" class="form-input" />
-                                        </div>
-
-                                        <div class="form-group col-12 col-lg-6 mt-2">
-                                            <label class="form-label" for="email">Adres e-mail</label>
-                                            <input id="email" type="email" name="email" class="form-input" type="text"
-                                                required />
-                                        </div>
-
-                                        <div class="form-group col-12 col-lg-12 mt-2">
-                                            <label class="form-label" for="additional">Uwagi dodatkowe</label>
-                                            <input id="additional" type="textarea" name="additional"
-                                                class="form-input"></input>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-12 pl-0 my-4">
-                                    <div class="checkbox">
-                                        <label class="checkbox-container">
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-
-
-                                            <p class="mt-2 ml-5 text-small-1">Zapoznałem się z Regulaminem oraz Polityką
-                                                prywatności
-                                                i
-                                                akceptuję ich warunki.</p>
-
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <button type="submit" class="btn purchase__btn px-4 py-2 mx-auto text-small-1">Zamów
-                                    sprzątanie</button>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -605,120 +616,127 @@
 
 
         <section class="testimonials testimonials--contact-subpage">
-            <div class="container text-center">
-                <h3 class="testimonials__heading text-white">Opinie klientów</h3>
-                <div class="owl-container">
-                    <div class="owl-three owl-carousel wow fadeInUp mt-4">
+            <div class="container-fluid">
 
-                        <div class="testimonials__item w-75 mx-auto">
-                            <img class="testimonials__portrait mx-0" src="images/testimonials-person-1.png"
-                                alt="zdjęcie Jana Nowaka">
-                            <div class="card testimonials__card">
-                                <div class="card-body">
-                                    <blockquote class="blockquote testimonials__blockquote text-white">
-                                        <p class="font-italic">Jak wiadomo, klienci zwracają uwagę na wszystko. Nie
-                                            można sobie pozwolić na bałagan w biurze, ponieważ zrobi to na nich złe
-                                            wrażenie. O czystość w naszej firmie dba clern.pl i wiemy, że nikt nie
-                                            zrobi
-                                            tego lepiej.</p>
-                                        <footer class="card-blockquote"><cite title="Source title">Paweł Nowak,
-                                                Sosnowiec</cite></footer>
-                                    </blockquote>
+                <div class="container text-center">
+                    <h3 class="testimonials__heading text-white">Opinie klientów</h3>
+                    <div class="owl-container">
+                        <div class="owl-three owl-carousel wow fadeInUp mt-4">
+
+                            <div class="testimonials__item w-75 mx-auto">
+                                <img class="testimonials__portrait mx-0" src="images/testimonials-person-1.png"
+                                    alt="zdjęcie Jana Nowaka">
+                                <div class="card testimonials__card">
+                                    <div class="card-body">
+                                        <blockquote class="blockquote testimonials__blockquote text-white">
+                                            <p class="font-italic">Jak wiadomo, klienci zwracają uwagę na wszystko. Nie
+                                                można sobie pozwolić na bałagan w biurze, ponieważ zrobi to na nich złe
+                                                wrażenie. O czystość w naszej firmie dba clern.pl i wiemy, że nikt nie
+                                                zrobi
+                                                tego lepiej.</p>
+                                            <footer class="card-blockquote"><cite title="Source title">Paweł Nowak,
+                                                    Sosnowiec</cite></footer>
+                                        </blockquote>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="testimonials__item w-75 mx-auto">
-                            <img class="testimonials__portrait mx-0" src="images/testimonials-person-1.png"
-                                alt="zdjęcie Jana Nowaka">
-                            <div class="card testimonials__card">
-                                <div class="card-body">
-                                    <blockquote class="blockquote testimonials__blockquote text-white">
-                                        <p class="font-italic">Super.</p>
-                                        <footer class="card-blockquote"><cite title="Source title">Michael Jackson,
-                                                Radom</cite></footer>
-                                    </blockquote>
+                            <div class="testimonials__item w-75 mx-auto">
+                                <img class="testimonials__portrait mx-0" src="images/testimonials-person-1.png"
+                                    alt="zdjęcie Jana Nowaka">
+                                <div class="card testimonials__card">
+                                    <div class="card-body">
+                                        <blockquote class="blockquote testimonials__blockquote text-white">
+                                            <p class="font-italic">Super.</p>
+                                            <footer class="card-blockquote"><cite title="Source title">Michael Jackson,
+                                                    Radom</cite></footer>
+                                        </blockquote>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="testimonials__item w-75 mx-auto">
-                            <img class="testimonials__portrait mx-0" src="images/testimonials-person-1.png"
-                                alt="zdjęcie Jana Nowaka">
-                            <div class="card testimonials__card">
-                                <div class="card-body">
-                                    <blockquote class="blockquote testimonials__blockquote text-white">
-                                        <p class="font-italic">Nikt tak nie posprząta jak clern!</p>
-                                        <footer class="card-blockquote"><cite title="Source title">Maćko z Bogdańca,
-                                                Łódź</cite></footer>
-                                    </blockquote>
+                            <div class="testimonials__item w-75 mx-auto">
+                                <img class="testimonials__portrait mx-0" src="images/testimonials-person-1.png"
+                                    alt="zdjęcie Jana Nowaka">
+                                <div class="card testimonials__card">
+                                    <div class="card-body">
+                                        <blockquote class="blockquote testimonials__blockquote text-white">
+                                            <p class="font-italic">Nikt tak nie posprząta jak clern!</p>
+                                            <footer class="card-blockquote"><cite title="Source title">Maćko z Bogdańca,
+                                                    Łódź</cite></footer>
+                                        </blockquote>
+                                    </div>
                                 </div>
                             </div>
+
+
                         </div>
-
-
                     </div>
-                </div>
 
+                </div>
 
             </div>
         </section>
 
         <footer class="footer footer--contact-subpage">
-            <div class="container px-5">
-                <div class="row py-4">
-                    <div class="col-12 col-lg-3">
-                        <a class="footer__logo-container" href="#start">
-                            <img src="images/logo.png" class="footer__logo pb-3" alt="">
-                        </a>
-                        <p class="footer__grey"> &copy; 2019 clern.pl</p>
-                    </div>
+            <div class="container-fluid">
 
-                    <div class="col-6 col-lg-2 pr-3 mt-4 mt-lg-0">
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a class="footer__link" href="#">Zamów sprzątanie</a></li>
-                            <li class="mb-2"><a class="footer__link" href="#">Oferta</a></li>
-                            <li class="mb-2"><a class="footer__link" href="#">O firmie</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-lg-2 mt-4 mt-lg-0">
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a class="footer__link" href="#">Aktualności</a></li>
-                            <li class="mb-2"><a class="footer__link" href="#">Blog</a></li>
-                            <li class="mb-2"><a class="footer__link" href="#">Food Services</a></li>
-                        </ul>
-                    </div>
-
-
-                    <div class="col-12 col-lg-5 text-left text-lg-right mt-4 mt-lg-0">
-                        <div class="footer__address">
-                            <p class="footer__grey">42-500 Będzin, ul. Modrzejowska 95</p>
+                <div class="container px-5">
+                    <div class="row py-4">
+                        <div class="col-12 col-lg-3">
+                            <a class="footer__logo-container" href="#start">
+                                <img src="images/logo.png" class="footer__logo pb-3" alt="">
+                            </a>
+                            <p class="footer__grey"> &copy; 2019 clern.pl</p>
                         </div>
 
-                        <a class="footer__tel" href="#tel:+48519017017"><span class="text-small-3">+48 </span>519
-                            017
-                            017</a>
-                        <a class="footer__email" href="mailto:info@clern.pl">info@clern.pl</a>
-                    </div>
+                        <div class="col-6 col-lg-2 pr-3 mt-4 mt-lg-0">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a class="footer__link" href="#">Zamów sprzątanie</a></li>
+                                <li class="mb-2"><a class="footer__link" href="#">Oferta</a></li>
+                                <li class="mb-2"><a class="footer__link" href="#">O firmie</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-2 mt-4 mt-lg-0">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a class="footer__link" href="#">Aktualności</a></li>
+                                <li class="mb-2"><a class="footer__link" href="#">Blog</a></li>
+                                <li class="mb-2"><a class="footer__link" href="#">Food Services</a></li>
+                            </ul>
+                        </div>
 
 
-                </div>
-                <div class="row py-4">
-                    <div class="col-12 col-lg-6 footer__social text-center text-lg-left my-4 my-lg-0">
-                        <i class="fab fa-facebook-f p-2"></i>
-                        <i class="fab fa-twitter p-2"></i>
-                        <i class="fab fa-instagram p-2"></i>
+                        <div class="col-12 col-lg-5 text-left text-lg-right mt-4 mt-lg-0">
+                            <div class="footer__address">
+                                <p class="footer__grey">42-500 Będzin, ul. Modrzejowska 95</p>
+                            </div>
+
+                            <a class="footer__tel" href="#tel:+48519017017"><span class="text-small-3">+48 </span>519
+                                017
+                                017</a>
+                            <a class="footer__email" href="mailto:info@clern.pl">info@clern.pl</a>
+                        </div>
+
+
                     </div>
-                    <div class="col-12 col-lg-6 footer__pay text-center text-lg-right">
-                        <a href="#"><img class="footer__pay-img" src="images/przelewy24.png" alt="Logo przelewy24"></a>
-                        <a href="#"><img class="footer__pay-img" src="images/visa.png" alt="Logo przelewy24"></a>
-                        <a href="#"><img class="footer__pay-img" src="images/mastercard.png" alt="Logo przelewy24"></a>
+                    <div class="row py-4">
+                        <div class="col-12 col-lg-6 footer__social text-center text-lg-left my-4 my-lg-0">
+                            <i class="fab fa-facebook-f p-2"></i>
+                            <i class="fab fa-twitter p-2"></i>
+                            <i class="fab fa-instagram p-2"></i>
+                        </div>
+                        <div class="col-12 col-lg-6 footer__pay text-center text-lg-right">
+                            <a href="#"><img class="footer__pay-img" src="images/przelewy24.png"
+                                    alt="Logo przelewy24"></a>
+                            <a href="#"><img class="footer__pay-img" src="images/visa.png" alt="Logo przelewy24"></a>
+                            <a href="#"><img class="footer__pay-img" src="images/mastercard.png"
+                                    alt="Logo przelewy24"></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </footer>
     </main>
-
 
     <script src="https://kit.fontawesome.com/9b57601780.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js">

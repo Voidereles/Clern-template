@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var time = 555555; // time in seconds
+    var time = 5; // time in seconds
 
     var $progressBar,
         $bar,

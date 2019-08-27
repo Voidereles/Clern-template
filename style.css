@@ -154,6 +154,10 @@ a {
   transform: rotate(45deg);
 }
 
+.container-fluid {
+  width: 90%;
+}
+
 .header {
   max-height: 120px;
   z-index: 5;
@@ -729,7 +733,7 @@ a {
   position: relative;
 }
 
-.testimonials .container {
+.testimonials .container-fluid {
   background-color: #5DB65A;
   background: #5db65a;
   background: -webkit-gradient(left bottom, right top, color-stop(0%, #5db65a), color-stop(100%, #93d057));
@@ -1006,7 +1010,7 @@ a {
   z-index: -1;
 }
 
-.footer .container {
+.footer .container-fluid {
   background-color: #f3f7ff;
   border-top-left-radius: 15vh;
   padding: 3rem 6rem;
@@ -1163,7 +1167,7 @@ a {
   margin-top: initial;
 }
 
-.testimonials--contact-subpage .container {
+.testimonials--contact-subpage .container-fluid {
   border-bottom-right-radius: 0;
   padding-top: 10vh;
 }
@@ -1173,7 +1177,7 @@ a {
   margin-top: 0;
 }
 
-.footer--contact-subpage .container {
+.footer--contact-subpage .container-fluid {
   border-top-left-radius: 0;
 }
 
@@ -1569,6 +1573,10 @@ a {
   font-size: 1.25rem;
 }
 
+.purchase__form-description {
+  font-size: 1rem;
+}
+
 .purchase .form-label {
   left: initial;
   opacity: 0.6;
@@ -1698,6 +1706,7 @@ a {
 
 .purchase__form-heading {
   color: #14b9ec;
+  font-size: 1.5rem;
 }
 
 .purchase__btn {
@@ -1873,12 +1882,6 @@ a {
   }
   .company-services {
     margin-left: 0;
-  }
-}
-
-@media (min-width: 1920px) {
-  .container {
-    max-width: 1640px;
   }
 }
 /*# sourceMappingURL=style.css.map */

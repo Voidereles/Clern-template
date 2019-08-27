@@ -196,7 +196,9 @@ a {
 
 
 
-
+.container-fluid {
+    width: 90%;
+}
 
 
 .header {
@@ -774,7 +776,7 @@ a {
     margin-top: -20vh;
     position: relative;
 
-    .container {
+    .container-fluid {
         background-color: #5DB65A;
         background: rgba(93, 182, 90, 1);
         background: -moz-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
@@ -1054,7 +1056,7 @@ a {
     margin-top: -90px;
     z-index: -1;
 
-    .container {
+    .container-fluid {
         background-color: $clern-grey;
         border-top-left-radius: 15vh;
         padding: 3rem 6rem;
@@ -1218,7 +1220,7 @@ a {
 .testimonials--contact-subpage {
     margin-top: initial;
 
-    .container {
+    .container-fluid {
         border-bottom-right-radius: 0;
         padding-top: 10vh;
     }
@@ -1228,7 +1230,7 @@ a {
     z-index: -1;
     margin-top: 0;
 
-    .container {
+    .container-fluid {
         border-top-left-radius: 0;
     }
 
@@ -1649,6 +1651,9 @@ a {
         }
     }
 
+    &__form-description {
+        font-size: $variable-text-medium-default;
+    }
 
 
     .form-label {
@@ -1782,6 +1787,7 @@ a {
 
     &__form-heading {
         color: $clern-blue;
+        font-size: $variable-text-medium-1;
     }
 
 
@@ -2048,17 +2054,11 @@ a {
 
 
 
-//containers...
 
 
 
-
-
-
-@media (min-width: 1920px) {
-    .container {
-        max-width: 1640px;
-    }
-}
-
-//those fancy owl-carousel dots
+// @media (min-width: 1921px) {
+//     .container {
+//         max-width: 1640px;
+//     }
+// }
