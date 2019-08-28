@@ -207,11 +207,13 @@ a {
 
 .container-fluid {
     width: 90%;
+
 }
 
 
 .header {
     max-height: 120px;
+    height: 400px;
     z-index: 5;
     position: relative;
 
@@ -254,7 +256,6 @@ a {
 
     .navbar-toggler {
         height: 40px;
-        margin-top: 20px;
         background-color: white;
     }
 
@@ -310,7 +311,7 @@ a {
 
         &--green {
             background-color: white;
-            color: $clern-blue;
+            color: $clern-lightGreen;
             border: 1px solid transparent;
             box-shadow: rgba(25, 25, 25, 0.3) 0px 5px 12px 0px;
         }
@@ -788,12 +789,16 @@ a {
 }
 
 .testimonials {
-    margin-top: -20vh;
     position: relative;
+
+    &--main-site {
+        margin-top: -20vh;
+    }
+
 
     .container-fluid {
         background-color: #5DB65A;
-        background: rgba(93, 182, 90, 1);
+        background: #5db65a;
         background: linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
         background: -moz-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
         background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(93, 182, 90, 1)), color-stop(100%, rgba(147, 208, 87, 1)));
@@ -801,10 +806,15 @@ a {
         background: -o-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
         background: -ms-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
         background: linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
-        padding-top: 30vh;
+        padding-top: 10vh;
         min-height: 40vh;
         border-bottom-right-radius: 10vh;
         border-top-left-radius: 10vh;
+    }
+
+
+    .no-radius {
+        border-radius: 0 !important;
     }
 
     &__portrait,
@@ -1076,6 +1086,9 @@ a {
     .container-fluid {
         background-color: $clern-grey;
         border-top-left-radius: 15vh;
+    }
+
+    .container {
         padding: 3rem 6rem;
     }
 
@@ -1106,6 +1119,7 @@ a {
     &__email {
         color: $clern-blue;
         display: block;
+        font-size: $variable-text-medium-2;
     }
 
     &__social .fab {
@@ -1827,7 +1841,6 @@ a {
 
 
 
-
 @media (min-width:1200px) {
 
     .header {
@@ -1997,6 +2010,11 @@ a {
 }
 
 @media (max-width: 992px) {
+
+    .container-fluid {
+        max-width: 100%;
+        width: 100%;
+    }
 
     .owl-one {
 

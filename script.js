@@ -162,6 +162,7 @@ $('.owl-companies').owlCarousel({
     loop: true,
     margin: 10,
     autoplay: true,
+    dots: false,
     responsiveClass: true,
     responsive: {
         0: {
@@ -190,10 +191,10 @@ $('.owl-services').owlCarousel({
     items: 1
 })
 
-////////////////////////////////////////////
+////////////////////////////////////////////'.header .container-fluid'
 //menu nav
 $('#navToggler').on('click', function () {
-    $('.header__container').toggleClass('bg-white dark-shadow');
+    $('.header .container-fluid').toggleClass('bg-white dark-shadow');
 
 })
 
