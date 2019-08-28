@@ -3,6 +3,7 @@ body {
   font-family: vag-rundschrift-d, sans-serif;
   font-weight: 300;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 h1,
@@ -73,10 +74,9 @@ a {
 }
 
 .bg-green-grad {
-  background-color: #8dce57;
-  background: #5db65a;
-  background: -webkit-gradient(left bottom, right top, color-stop(0%, #5db65a), color-stop(100%, #93d057));
-  background: linear-gradient(45deg, #5db65a 0%, #93d057 100%);
+  background-color: #5DB65A;
+  background-image: linear-gradient(55deg, #5cb75a 0%, #93d056 99%);
+  background-image: -ms-linear-gradient(55deg, #5cb75a 0%, #93d056 99%);
 }
 
 .green-shadow {
@@ -91,8 +91,8 @@ a {
 
 .bg-blue-grad {
   background: #00ace0;
-  background: -webkit-gradient(left bottom, right top, color-stop(0%, #00ace0), color-stop(100%, #75dfff));
-  background: linear-gradient(45deg, #00ace0 0%, #75dfff 100%);
+  background-image: linear-gradient(55deg, #12b2e9 0%, #18c8f3 100%);
+  background-image: -ms-linear-gradient(55deg, #12b2e9 0%, #18c8f3 100%);
 }
 
 .checkbox-container {
@@ -1685,6 +1685,8 @@ a {
   cursor: pointer;
   color: white;
   text-transform: uppercase;
+  background: #00ace0;
+  background-image: linear-gradient(55deg, #12b2e9 0%, #18c8f3 100%);
   background-image: -ms-linear-gradient(55deg, #12b2e9 0%, #18c8f3 100%);
   -webkit-box-shadow: 0px 8px 21px 0px rgba(24, 200, 243, 0.3);
           box-shadow: 0px 8px 21px 0px rgba(24, 200, 243, 0.3);
@@ -1835,6 +1837,10 @@ a {
     left: 0;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+  .header--purchase__tear-bg {
+    width: 54%;
+    right: 0;
   }
   .owl-one .owl-dots {
     position: absolute;
