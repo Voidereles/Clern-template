@@ -31,12 +31,20 @@ a {
   font-size: 0.5rem;
 }
 
+.text-medium-2 {
+  font-size: 1.25rem;
+}
+
 .text-medium-3 {
   font-size: 0.9rem;
 }
 
 .text-size-default {
   font-size: 1rem;
+}
+
+.text-medium-1 {
+  font-size: 1.5rem;
 }
 
 .text-light-green {
@@ -246,10 +254,16 @@ a {
           box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
 }
 
-.header__contact-btn:hover {
+.header__contact-btn:hover, .header__contact-btn--inverse {
   background-color: white;
   color: #14b9ec;
   border: 1px solid transparent;
+}
+
+.header__contact-btn--inverse:hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
 }
 
 .header__contact-btn--green {
@@ -510,12 +524,6 @@ a {
   padding-bottom: 300px;
 }
 
-.steps__container {
-  width: 100%;
-  z-index: 2;
-  position: relative;
-}
-
 .steps__heading {
   color: #14b9ec;
 }
@@ -736,6 +744,7 @@ a {
 .testimonials .container-fluid {
   background-color: #5DB65A;
   background: #5db65a;
+  background: linear-gradient(45deg, #5db65a 0%, #93d057 100%);
   background: -webkit-gradient(left bottom, right top, color-stop(0%, #5db65a), color-stop(100%, #93d057));
   background: linear-gradient(45deg, #5db65a 0%, #93d057 100%);
   padding-top: 30vh;
@@ -1014,6 +1023,10 @@ a {
   background-color: #f3f7ff;
   border-top-left-radius: 15vh;
   padding: 3rem 6rem;
+}
+
+.footer--main-site .container-fluid {
+  margin-top: -75px;
   padding-top: 150px;
 }
 
@@ -1185,7 +1198,7 @@ a {
   margin-top: initial;
 }
 
-.testimonials--about-us-subpage .container {
+.testimonials--about-us-subpage .container-fluid {
   border-radius: 0;
   padding-top: 10vh;
 }
@@ -1290,7 +1303,7 @@ a {
   line-height: 1;
 }
 
-.comp-coop .container {
+.comp-coop .container-fluid {
   background-color: #f3f7ff;
   padding: 3rem 3rem;
 }
@@ -1482,7 +1495,7 @@ a {
 }
 
 .purchase {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .purchase__step {
@@ -1499,23 +1512,6 @@ a {
   opacity: 0.5;
 }
 
-.purchase__step:not(:last-child) .purchase__svg-container::after {
-  content: '';
-  position: absolute;
-  width: 10vw;
-  border-top: 2px dotted;
-  border-style: dotted;
-  border-color: #14b9ec;
-  border-image-source: url("images/svg/border-dots.svg");
-  border-image-slice: 33% 33%;
-  border-image-repeat: round;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-  border-width: 0 0 8px 0;
-  top: calc(50% - 1.5rem);
-  left: 7.5vw;
-}
-
 .purchase__step:hover,
 .purchase__step:hover .purchase__step:nth-child(2) img {
   opacity: 1;
@@ -1525,8 +1521,8 @@ a {
 
 .purchase__svg-container {
   background: white;
-  -webkit-box-shadow: -1px 2px 5px 1px #efefef;
-  box-shadow: -1px 2px 5px 1px #efefef;
+  -webkit-box-shadow: 0px 8px 21px 0px rgba(187, 193, 194, 0.3);
+          box-shadow: 0px 8px 21px 0px rgba(187, 193, 194, 0.3);
   border-radius: 15px;
   max-height: 70px;
   max-width: 70px;
@@ -1541,14 +1537,14 @@ a {
 
 .purchase__summary {
   background: white;
-  -webkit-box-shadow: -1px 2px 5px 1px rgba(25, 25, 25, 0.3);
-  box-shadow: -1px 2px 5px 1px rgba(25, 25, 25, 0.3);
+  -webkit-box-shadow: 0px 4px 21px 0px rgba(144, 144, 144, 0.22);
+          box-shadow: 0px 4px 21px 0px rgba(144, 144, 144, 0.22);
   position: relative;
   text-align: center;
   border-bottom-right-radius: 25px;
   border-top-left-radius: 25px;
   overflow: hidden;
-  height: 380px;
+  height: 450px;
 }
 
 .purchase .summary__heading {
@@ -1567,10 +1563,8 @@ a {
   left: 0;
   right: 0;
   background-color: #5DB65A;
-  background: #5db65a;
-  background: -webkit-gradient(left bottom, right top, color-stop(0%, #5db65a), color-stop(100%, #93d057));
-  background: linear-gradient(45deg, #5db65a 0%, #93d057 100%);
-  font-size: 1.25rem;
+  background-image: linear-gradient(55deg, #5cb75a 0%, #93d056 99%);
+  background-image: -ms-linear-gradient(55deg, #5cb75a 0%, #93d056 99%);
 }
 
 .purchase__form-description {
@@ -1621,29 +1615,6 @@ a {
   opacity: 0;
 }
 
-.purchase .form-check-label > input {
-  visibility: hidden;
-  position: absolute;
-}
-
-.purchase .form-check-label > input + div {
-  cursor: pointer;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.purchase .form-check-label > input:not(:checked) + div {
-  color: #14b9ec;
-  background: #f3f7ff;
-}
-
-.purchase .form-check-label > input:checked + div {
-  background: #00ace0;
-  color: white;
-  background: -webkit-gradient(left bottom, right top, color-stop(0%, #00ace0), color-stop(100%, #75dfff));
-  background: linear-gradient(45deg, #00ace0 0%, #75dfff 100%);
-}
-
 .purchase__more {
   display: inline-block;
   font-size: 1.5rem;
@@ -1652,8 +1623,8 @@ a {
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
-  -webkit-box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 5px 3px;
-          box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 5px 3px;
+  -webkit-box-shadow: 0px 8px 21px 0px rgba(24, 200, 243, 0.3);
+          box-shadow: 0px 8px 21px 0px rgba(24, 200, 243, 0.3);
   z-index: 2;
   position: absolute;
   right: 1rem;
@@ -1662,29 +1633,6 @@ a {
           transform: translateY(-50%);
   text-align: center;
   color: white;
-}
-
-.form-check-label > input:checked + div .purchase__more {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  background: transparent;
-  border: 2px solid white;
-}
-
-.purchase__more:hover {
-  background: white;
-  cursor: pointer;
-  color: #322c2e;
-}
-
-.purchase__more-dots {
-  top: -8px;
-  left: 7px;
-  position: absolute;
-}
-
-.form-check-label > input:checked + div .purchase__more:hover {
-  background: white;
 }
 
 .purchase__img-container {
@@ -1704,9 +1652,14 @@ a {
   height: 50px;
 }
 
-.purchase__form-heading {
+.purchase__accordion-heading {
   color: #14b9ec;
   font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.purchase__accordion-heading:hover {
+  color: #14b9ec;
 }
 
 .purchase__btn {
@@ -1714,17 +1667,66 @@ a {
   position: relative;
   background: #14b9ec;
   font-size: 0.8rem;
-  background: -webkit-gradient(left bottom, right top, color-stop(0%, #00ace0), color-stop(100%, #14b9ec));
-  background: linear-gradient(45deg, #00ace0 0%, #14b9ec 100%);
   -webkit-transition: 0.5s, color 0.2s;
   transition: 0.5s, color 0.2s;
-  -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
-  box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
   z-index: 2;
   border-radius: 40px;
   cursor: pointer;
   color: white;
   text-transform: uppercase;
+  background-image: -ms-linear-gradient(55deg, #12b2e9 0%, #18c8f3 100%);
+  -webkit-box-shadow: 0px 8px 21px 0px rgba(24, 200, 243, 0.3);
+          box-shadow: 0px 8px 21px 0px rgba(24, 200, 243, 0.3);
+}
+
+.purchase .card {
+  border: none;
+}
+
+.purchase .card-header {
+  border: none;
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  position: relative;
+  cursor: pointer;
+  color: #14b9ec;
+  background-color: #f3f7ff;
+}
+
+.purchase .card-header:not(.collapsed) {
+  background-image: -webkit-gradient(linear, left top, right top, from(#12b2e9), color-stop(99%, #18c8f3));
+  background-image: linear-gradient(90deg, #12b2e9 0%, #18c8f3 99%);
+  background-image: -ms-linear-gradient(90deg, #12b2e9 0%, #18c8f3 99%);
+}
+
+.purchase .card-header:not(.collapsed) .purchase__accordion-heading {
+  color: white;
+}
+
+.purchase .card-header:not(.collapsed) .purchase__more {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.purchase .card .purchase__more {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border: 2px solid #f3f7ff;
+  -webkit-box-shadow: 0px 8px 21px 0px rgba(24, 200, 243, 0.3);
+          box-shadow: 0px 8px 21px 0px rgba(24, 200, 243, 0.3);
+}
+
+.purchase .card .purchase__more-dots {
+  -webkit-transform: translateY(-19%);
+          transform: translateY(-19%);
+}
+
+.purchase .card-header:hover .purchase__more {
+  background: white;
+  color: black;
 }
 
 @media (min-width: 1200px) {
@@ -1869,10 +1871,6 @@ a {
   .fa-chevron-right {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
-  }
-  .footer .container {
-    padding: 15px;
-    padding-top: 150px;
   }
   .header--contact__tear-bg, .header--purchase__tear-bg {
     width: 55%;

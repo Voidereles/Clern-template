@@ -52,6 +52,10 @@ a {
     font-size: $variable-text-small-3;
 }
 
+.text-medium-2 {
+    font-size: $variable-text-medium-2;
+}
+
 .text-medium-3 {
     font-size: $variable-text-medium-3;
 }
@@ -60,9 +64,14 @@ a {
     font-size: $variable-text-medium-default;
 }
 
+.text-medium-1 {
+    font-size: $variable-text-medium-1;
+}
+
 .text-light-green {
     color: $clern-lightGreen !important;
 }
+
 
 .text-dark {
     color: $clern-dark-text !important;
@@ -283,11 +292,21 @@ a {
         text-transform: uppercase;
         box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
 
-        &:hover {
+        &:hover,
+        &--inverse {
             background-color: white;
             color: $clern-blue;
             border: 1px solid transparent;
         }
+
+
+        &--inverse:hover {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
+
 
         &--green {
             background-color: white;
@@ -556,11 +575,7 @@ a {
     background-position-y: -30px;
     padding-bottom: 300px;
 
-    &__container {
-        width: 100%;
-        z-index: 2;
-        position: relative;
-    }
+
 
     &__heading {
         color: $clern-blue;
@@ -779,6 +794,7 @@ a {
     .container-fluid {
         background-color: #5DB65A;
         background: rgba(93, 182, 90, 1);
+        background: linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
         background: -moz-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
         background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(93, 182, 90, 1)), color-stop(100%, rgba(147, 208, 87, 1)));
         background: -webkit-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
@@ -1056,10 +1072,16 @@ a {
     margin-top: -90px;
     z-index: -1;
 
+
     .container-fluid {
         background-color: $clern-grey;
         border-top-left-radius: 15vh;
         padding: 3rem 6rem;
+    }
+
+
+    &--main-site .container-fluid {
+        margin-top: -75px;
         padding-top: 150px;
     }
 
@@ -1241,7 +1263,7 @@ a {
 .testimonials--about-us-subpage {
     margin-top: initial;
 
-    .container {
+    .container-fluid {
         border-radius: 0;
         padding-top: 10vh;
     }
@@ -1356,7 +1378,7 @@ a {
 }
 
 .comp-coop {
-    .container {
+    .container-fluid {
         background-color: $clern-grey;
         padding: 3rem 3rem;
     }
@@ -1555,7 +1577,7 @@ a {
 
 
 .purchase {
-    font-size: $variable-text-small-1;
+    font-size: $variable-text-medium-default;
 
     &__step {
         position: relative;
@@ -1570,23 +1592,6 @@ a {
         opacity: 0.5;
     }
 
-    &__step:not(:last-child) &__svg-container::after {
-        content: '';
-        position: absolute;
-        width: 10vw;
-        border-top: 2px dotted;
-        border-style: dotted;
-        border-color: $clern-blue;
-        border-image-source: url('images/svg/border-dots.svg');
-        border-image-slice: 33% 33%;
-        border-image-repeat: round;
-        padding-bottom: 1rem;
-        margin-bottom: 2rem;
-        border-width: 0 0 8px 0;
-        top: calc(50% - 1.5rem);
-        left: 7.5vw;
-    }
-
     &__step:hover,
     &__step:hover &__step:nth-child(2) img {
         opacity: 1;
@@ -1595,9 +1600,7 @@ a {
 
     &__svg-container {
         background: white;
-        -webkit-box-shadow: -1px 2px 5px 1px #efefef;
-        -moz-box-shadow: -1px 2px 5px 1px #efefef;
-        box-shadow: -1px 2px 5px 1px #efefef;
+        box-shadow: 0px 8px 21px 0px rgba(187, 193, 194, 0.3);
         border-radius: 15px;
         max-height: 70px;
         max-width: 70px;
@@ -1612,15 +1615,13 @@ a {
 
     &__summary {
         background: white;
-        -webkit-box-shadow: -1px 2px 5px 1px rgba(25, 25, 25, 0.3);
-        -moz-box-shadow: -1px 2px 5px 1px rgba(25, 25, 25, 0.3);
-        box-shadow: -1px 2px 5px 1px rgba(25, 25, 25, 0.3);
+        box-shadow: 0px 4px 21px 0px rgba(144, 144, 144, 0.22);
         position: relative;
         text-align: center;
         border-bottom-right-radius: 25px;
         border-top-left-radius: 25px;
         overflow: hidden;
-        height: 380px;
+        height: 450px;
     }
 
     .summary {
@@ -1640,14 +1641,10 @@ a {
             left: 0;
             right: 0;
             background-color: #5DB65A;
-            background: rgba(93, 182, 90, 1);
-            background: -moz-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
-            background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(93, 182, 90, 1)), color-stop(100%, rgba(147, 208, 87, 1)));
-            background: -webkit-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
-            background: -o-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
-            background: -ms-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
-            background: linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
-            font-size: $variable-text-medium-2;
+            background-image: linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
+            background-image: -moz-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
+            background-image: -webkit-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
+            background-image: -ms-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
         }
     }
 
@@ -1696,34 +1693,6 @@ a {
         opacity: 0;
     }
 
-    //element>element div>p Selects all <p>elements where the parent is a
-    //<div>element element+element 
-
-    //div+p Selects all 
-    // <p>elements that are placed immediately after <div>elements .labl {
-
-
-    .form-check-label>input {
-        visibility: hidden;
-        position: absolute;
-    }
-
-    .form-check-label>input+div {
-        cursor: pointer;
-        transition: $fast;
-    }
-
-    .form-check-label>input:not(:checked)+div {
-        color: $clern-blue;
-        background: $clern-grey;
-    }
-
-    .form-check-label>input:checked+div {
-        background: #00ace0;
-        color: white;
-        background: -webkit-gradient(left bottom, right top, color-stop(0%, #00ace0), color-stop(100%, #75dfff));
-        background: linear-gradient(45deg, #00ace0 0%, #75dfff 100%);
-    }
 
     &__more {
         display: inline-block;
@@ -1733,7 +1702,7 @@ a {
         border-radius: 50%;
         width: 2rem;
         height: 2rem;
-        box-shadow: rgba(25, 25, 25, 0.1) -1px -1px 5px 3px;
+        box-shadow: 0px 8px 21px 0px rgba(24, 200, 243, 0.3);
         z-index: 2;
         position: absolute;
         right: 1rem;
@@ -1742,29 +1711,6 @@ a {
         text-align: center;
         color: white;
     }
-
-    .form-check-label>input:checked+div &__more {
-        box-sizing: content-box;
-        background: transparent;
-        border: 2px solid white;
-    }
-
-    &__more:hover {
-        background: white;
-        cursor: pointer;
-        color: $clern-dark-text;
-    }
-
-    &__more-dots {
-        top: -8px;
-        left: 7px;
-        position: absolute;
-    }
-
-    .form-check-label>input:checked+div &__more:hover {
-        background: white;
-    }
-
 
 
     &__img-container {
@@ -1785,9 +1731,14 @@ a {
     }
 
 
-    &__form-heading {
+    &__accordion-heading {
         color: $clern-blue;
         font-size: $variable-text-medium-1;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $clern-blue;
+        }
     }
 
 
@@ -1796,19 +1747,69 @@ a {
         position: relative;
         background: $clern-blue;
         font-size: $variable-text-small-1;
-        background: -webkit-gradient(left bottom, right top, color-stop(0%, #00ace0), color-stop(100%, $clern-blue));
-        background: linear-gradient(45deg, #00ace0 0%, $clern-blue 100%);
         -webkit-transition: 0.5s, color 0.2s;
         transition: 0.5s, color 0.2s;
-        -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
-        box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
         z-index: 2;
         border-radius: 40px;
         cursor: pointer;
         color: white;
         text-transform: uppercase;
+        background-image: -moz-linear-gradient(55deg, rgb(18, 178, 233) 0%, rgb(24, 200, 243) 100%);
+        background-image: -webkit-linear-gradient(55deg, rgb(18, 178, 233) 0%, rgb(24, 200, 243) 100%);
+        background-image: -ms-linear-gradient(55deg, rgb(18, 178, 233) 0%, rgb(24, 200, 243) 100%);
+        box-shadow: 0px 8px 21px 0px rgba(24, 200, 243, 0.3);
     }
 
+    .card {
+        border: none;
+
+        &-header {
+            border: none;
+            border-top-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+            position: relative;
+            cursor: pointer;
+            color: $clern-blue;
+            background-color: $clern-grey;
+
+            &:not(.collapsed) {
+                background-image: linear-gradient(90deg, rgb(18, 178, 233) 0%, rgb(24, 200, 243) 99%);
+                background-image: -moz-linear-gradient(90deg, rgb(18, 178, 233) 0%, rgb(24, 200, 243) 99%);
+                background-image: -webkit-linear-gradient(90deg, rgb(18, 178, 233) 0%, rgb(24, 200, 243) 99%);
+                background-image: -ms-linear-gradient(90deg, rgb(18, 178, 233) 0%, rgb(24, 200, 243) 99%);
+
+                .purchase__accordion-heading {
+                    color: white;
+                }
+
+                .purchase__more {
+                    background: transparent;
+                    color: white;
+                    border: 2px solid white;
+
+                }
+            }
+        }
+
+        .purchase__more {
+            transition: $fast;
+            box-sizing: content-box;
+            border: 2px solid $clern-grey;
+            box-shadow: 0px 8px 21px 0px rgba(24, 200, 243, 0.3);
+
+            &-dots {
+                transform: translateY(-19%);
+            }
+        }
+
+        &-header:hover .purchase__more {
+            background: white;
+            color: black;
+        }
+
+
+
+    }
 
 
 }
@@ -2025,13 +2026,6 @@ a {
     }
 
 
-
-
-    .footer .container {
-        padding: 15px;
-        padding-top: 150px;
-    }
-
     .header {
 
         &--contact__tear-bg,
@@ -2051,14 +2045,3 @@ a {
         margin-left: 0;
     }
 }
-
-
-
-
-
-
-// @media (min-width: 1921px) {
-//     .container {
-//         max-width: 1640px;
-//     }
-// }

@@ -27,39 +27,37 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <header id="header" class="header">
-        <div class="container-fluid header__container">
-
-            <nav id="headerNavbar" class="navbar navbar-light header__navbar navbar-expand-xl custom-carets p-0"
+    <header id="header" class="header header--contact">
+        <div class="container-fluid">
+            <nav id="headerNavbar" class="navbar px-0 navbar-light header__navbar navbar-expand-xl custom-carets"
                 role="navigation">
-                <div class="row w-100 d-flex justify-content-between z-fix">
-                    <a class="navbar-brand col-3 col-lg-3 offset-xl-1 col-xl-2 mr-0 pl-lg-5" href="index.html">
-                        <img src="images/logo.png" id="headerLogo" class="d-inline-block align-top header__logo py-3"
-                            alt="">
-                    </a>
-
-                    <button id="navToggler" class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                <a class="navbar-brand px-0 mr-0" href="index.html">
+                    <img src="images/logo.png" id="headerLogo" class="d-inline-block align-top header__logo p-3" alt="">
+                </a>
 
 
-                    <div class="collapse navbar-collapse col-10 col-lg-9 pl-lg-0 pr-lg-5" id="navbarNavAltMarkup">
-                        <div class="row d-flex w-100 px-3 justify-content-between mx-auto">
+                <button id="navToggler" class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="container">
+                    <div class="collapse navbar-collapse col-12 px-0" id="navbarNavAltMarkup">
+                        <div class="row d-flex mx-0 px-0 w-100 justify-content-between">
                             <div class="navbar-nav header__navbar-nav">
                                 <ul id="headerNavPills"
-                                    class="nav nav-pills nav-fill header__nav-pills flex-lg-row px-2 px-xl-3 px-lg-0">
-                                    <li class="nav-item header__nav-item px-xl-2">
+                                    class="nav nav-pills nav-fill header__nav-pills flex-lg-row px-3 px-lg-0">
+                                    <li class="nav-item header__nav-item px-2">
                                         <a class="nav-link header__nav-link" href="company-offer.html">Oferta</a>
                                     </li>
-                                    <li class="nav-item header__nav-item px-xl-2">
+                                    <li class="nav-item header__nav-item px-2">
                                         <a class="nav-link header__nav-link" href="about-us.html">O firmie</a>
                                     </li>
-                                    <li class="nav-item header__nav-item px-xl-2">
-                                        <a class="nav-link header__nav-link" href="#blog">Blog</a>
+                                    <li class="nav-item header__nav-item px-2">
+                                        <a class="nav-link header__nav-link" href="#drive">Blog</a>
                                     </li>
-                                    <li class="nav-item header__nav-item px-xl-2">
+                                    <li class="nav-item header__nav-item px-2">
                                         <a class="nav-link header__nav-link" href="contact.html">Kontakt</a>
                                     </li>
                                 </ul>
@@ -73,20 +71,23 @@
                                         <a class="nav-link header__nav-link" href="#tel:+48519017017"><span
                                                 class="text-small-3">+48 </span>519 017 017</a>
                                     </li>
-                                    <li class="nav-item header__nav-item px-2">
+                                    <li class="nav-item header__nav-item">
                                         <a class="nav-link header__nav-link"
                                             href="mailto:info@clern.pl">info@clern.pl</a>
                                     </li>
-                                    <li class="nav-item header__nav-item px-2 pt-2 pt-xl-0 pb-5 pb-xl-0">
-                                        <a class="btn btn-lg rounded-pill header__contact-btn px-3"
-                                            href="#contact">Zaloguj się</a>
+                                    <li class="nav-item header__nav-item d-inline-block d-xl-none">
+                                        <a class="btn btn-lg rounded-pill header__contact-btn header__contact-btn--inverse head px-3"
+                                            href="#contact">Zaloguj
+                                            się</a>
                                     </li>
+
                                 </ul>
+
                             </div>
                         </div>
                     </div>
-
                 </div>
+
 
                 <div class="dropdown header__lang-change">
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -99,15 +100,16 @@
                         <a class="dropdown-item" href="#">UA</a>
                     </div>
                 </div>
+
+
+                <div class="nav-item header__nav-item d-none d-xl-inline-block">
+                    <a class="btn btn-lg rounded-pill header__contact-btn header__contact-btn--inverse head px-3"
+                        href="#contact">Zaloguj
+                        się</a>
+                </div>
             </nav>
 
-
-
-
-
         </div>
-
-
 
     </header>
     <main class="main">
@@ -117,7 +119,7 @@
 
 
             <div class="owl-one__item owl-one__item--1st">
-                <div class="container-fluid">
+                <div class="container-fluid w-100">
                     <div class="row">
                         <div class="col-12 col-md-5 offset-xl-1 col-xl-4 mt-lg-5 mt-xl-0 owl-one__left">
                             <div class="owl-one__text px-3 p-lg-5">
@@ -143,7 +145,7 @@
             </div>
 
             <div class="owl-one__item owl-one__item--2nd">
-                <div class="container-fluid">
+                <div class="container-fluid w-100">
                     <div class="row">
                         <div class="col-12 col-md-5 offset-xl-1 col-xl-4 mt-lg-5 mt-xl-0 owl-one__left">
                             <div class="owl-one__text px-3 p-lg-5">
@@ -169,7 +171,7 @@
             </div>
 
             <div class="owl-one__item owl-one__item--3rd">
-                <div class="container-fluid">
+                <div class="container-fluid w-100">
                     <div class="row">
                         <div class="col-12 col-md-5 offset-xl-1 col-xl-4 mt-lg-5 mt-xl-0 owl-one__left">
                             <div class="owl-one__text px-3 p-lg-5">
@@ -756,60 +758,75 @@
         </section>
 
         <section class="testimonials">
-            <div class="container text-center">
-                <h3 class="testimonials__heading text-white">Opinie klientów</h3>
-                <div class="owl-container">
-                    <div class="owl-three owl-carousel wow fadeInUp mt-4">
+            <div class="container-fluid">
 
-                        <div class="testimonials__item w-75 mx-auto">
-                            <img class="testimonials__portrait mx-0" src="images/testimonials-person-1.png"
-                                alt="zdjęcie Jana Nowaka">
-                            <div class="card testimonials__card">
-                                <div class="card-body">
-                                    <blockquote class="blockquote testimonials__blockquote text-white">
-                                        <p class="font-italic">Jak wiadomo, klienci zwracają uwagę na wszystko. Nie
-                                            można sobie pozwolić na bałagan w biurze, ponieważ zrobi to na nich złe
-                                            wrażenie. O czystość w naszej firmie dba clern.pl i wiemy, że nikt nie zrobi
-                                            tego lepiej.</p>
-                                        <footer class="card-blockquote"><cite title="Source title">Paweł Nowak,
-                                                Sosnowiec</cite></footer>
-                                    </blockquote>
+                <div class="text-center">
+                    <h3 class="testimonials__heading text-white">Opinie klientów</h3>
+                    <div class="owl-container">
+                        <div class="owl-three owl-carousel wow fadeInUp mt-4">
+
+                            <div class="testimonials__item mx-auto">
+                                <div class="container">
+                                    <img class="testimonials__portrait mx-0" src="images/testimonials-person-1.png"
+                                        alt="zdjęcie Jana Nowaka">
+                                    <div class="card testimonials__card">
+                                        <div class="card-body">
+                                            <blockquote class="blockquote testimonials__blockquote text-white">
+                                                <p class="font-italic">Jak wiadomo, klienci zwracają uwagę na wszystko.
+                                                    Nie
+                                                    można sobie pozwolić na bałagan w biurze, ponieważ zrobi to na nich
+                                                    złe
+                                                    wrażenie. O czystość w naszej firmie dba clern.pl i wiemy, że nikt
+                                                    nie
+                                                    zrobi
+                                                    tego lepiej.</p>
+                                                <footer class="card-blockquote"><cite title="Source title">Paweł Nowak,
+                                                        Sosnowiec</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="testimonials__item w-75 mx-auto">
-                            <img class="testimonials__portrait mx-0" src="images/testimonials-person-1.png"
-                                alt="zdjęcie Jana Nowaka">
-                            <div class="card testimonials__card">
-                                <div class="card-body">
-                                    <blockquote class="blockquote testimonials__blockquote text-white">
-                                        <p class="font-italic">Super.</p>
-                                        <footer class="card-blockquote"><cite title="Source title">Michael Jackson,
-                                                Radom</cite></footer>
-                                    </blockquote>
+                            <div class="testimonials__item w-75 mx-auto">
+                                <div class="container">
+                                    <img class="testimonials__portrait mx-0" src="images/testimonials-person-1.png"
+                                        alt="zdjęcie Jana Nowaka">
+                                    <div class="card testimonials__card">
+                                        <div class="card-body">
+                                            <blockquote class="blockquote testimonials__blockquote text-white">
+                                                <p class="font-italic">Super.</p>
+                                                <footer class="card-blockquote"><cite title="Source title">Michael
+                                                        Jackson,
+                                                        Radom</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="testimonials__item w-75 mx-auto">
-                            <img class="testimonials__portrait mx-0" src="images/testimonials-person-1.png"
-                                alt="zdjęcie Jana Nowaka">
-                            <div class="card testimonials__card">
-                                <div class="card-body">
-                                    <blockquote class="blockquote testimonials__blockquote text-white">
-                                        <p class="font-italic">Nikt tak nie posprząta jak clern!</p>
-                                        <footer class="card-blockquote"><cite title="Source title">Maćko z Bogdańca,
-                                                Łódź</cite></footer>
-                                    </blockquote>
+                            <div class="testimonials__item w-75 mx-auto">
+                                <div class="container">
+                                    <img class="testimonials__portrait mx-0" src="images/testimonials-person-1.png"
+                                        alt="zdjęcie Jana Nowaka">
+                                    <div class="card testimonials__card">
+                                        <div class="card-body">
+                                            <blockquote class="blockquote testimonials__blockquote text-white">
+                                                <p class="font-italic">Nikt tak nie posprząta jak clern!</p>
+                                                <footer class="card-blockquote"><cite title="Source title">Maćko z
+                                                        Bogdańca,
+                                                        Łódź</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
+
                         </div>
-
-
                     </div>
-                </div>
 
+                </div>
 
             </div>
         </section>
@@ -897,78 +914,63 @@
         </section>
 
 
-        <footer class="footer">
-            <div class="container">
-                <div class="row py-4">
-                    <div class="col-12 col-lg-3">
-                        <a class="footer__logo-container" href="#start">
-                            <img src="images/logo.png" class="footer__logo pb-3" alt="">
-                        </a>
-                        <p class="footer__grey"> &copy; 2019 clern.pl</p>
-                    </div>
+        <footer class="footer footer--main-site">
+            <div class="container-fluid">
 
-                    <div class="col-6 col-lg-2 pr-3 mt-4 mt-lg-0">
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a class="footer__link" href="#">Zamów sprzątanie</a></li>
-                            <li class="mb-2"><a class="footer__link" href="#">Oferta</a></li>
-                            <li class="mb-2"><a class="footer__link" href="#">O firmie</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-lg-2 mt-4 mt-lg-0">
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a class="footer__link" href="#">Aktualności</a></li>
-                            <li class="mb-2"><a class="footer__link" href="#">Blog</a></li>
-                            <li class="mb-2"><a class="footer__link" href="#">Food Services</a></li>
-                        </ul>
-                    </div>
-
-
-                    <div class="col-12 col-lg-5 text-left text-lg-right mt-4 mt-lg-0">
-                        <div class="footer__address">
-                            <p class="footer__grey">42-500 Będzin, ul. Modrzejowska 95</p>
+                <div class="container px-5">
+                    <div class="row py-4">
+                        <div class="col-12 col-lg-3">
+                            <a class="footer__logo-container" href="#start">
+                                <img src="images/logo.png" class="footer__logo pb-3" alt="">
+                            </a>
+                            <p class="footer__grey"> &copy; 2019 clern.pl</p>
                         </div>
 
-                        <a class="footer__tel" href="#tel:+48519017017"><span class="text-small-3">+48 </span>519 017
-                            017</a>
-                        <a class="footer__email" href="mailto:info@clern.pl">info@clern.pl</a>
-                    </div>
+                        <div class="col-6 col-lg-2 pr-3 mt-4 mt-lg-0">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a class="footer__link" href="#">Zamów sprzątanie</a></li>
+                                <li class="mb-2"><a class="footer__link" href="#">Oferta</a></li>
+                                <li class="mb-2"><a class="footer__link" href="#">O firmie</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-2 mt-4 mt-lg-0">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a class="footer__link" href="#">Aktualności</a></li>
+                                <li class="mb-2"><a class="footer__link" href="#">Blog</a></li>
+                                <li class="mb-2"><a class="footer__link" href="#">Food Services</a></li>
+                            </ul>
+                        </div>
 
 
-                </div>
-                <div class="row py-4">
-                    <div class="col-12 col-lg-6 footer__social text-center text-lg-left my-4 my-lg-0">
-                        <i class="fab fa-facebook-f p-2"></i>
-                        <i class="fab fa-twitter p-2"></i>
-                        <i class="fab fa-instagram p-2"></i>
+                        <div class="col-12 col-lg-5 text-left text-lg-right mt-4 mt-lg-0">
+                            <div class="footer__address">
+                                <p class="footer__grey">42-500 Będzin, ul. Modrzejowska 95</p>
+                            </div>
+
+                            <a class="footer__tel" href="#tel:+48519017017"><span class="text-small-3">+48 </span>519
+                                017
+                                017</a>
+                            <a class="footer__email" href="mailto:info@clern.pl">info@clern.pl</a>
+                        </div>
+
+
                     </div>
-                    <div class="col-12 col-lg-6 footer__pay text-center text-lg-right">
-                        <a href="#"><img class="footer__pay-img" src="images/przelewy24.png" alt="Logo przelewy24"></a>
-                        <a href="#"><img class="footer__pay-img" src="images/visa.png" alt="Logo przelewy24"></a>
-                        <a href="#"><img class="footer__pay-img" src="images/mastercard.png" alt="Logo przelewy24"></a>
+                    <div class="row py-4">
+                        <div class="col-12 col-lg-6 footer__social text-center text-lg-left my-4 my-lg-0">
+                            <i class="fab fa-facebook-f p-2"></i>
+                            <i class="fab fa-twitter p-2"></i>
+                            <i class="fab fa-instagram p-2"></i>
+                        </div>
+                        <div class="col-12 col-lg-6 footer__pay text-center text-lg-right">
+                            <a href="#"><img class="footer__pay-img" src="images/przelewy24.png"
+                                    alt="Logo przelewy24"></a>
+                            <a href="#"><img class="footer__pay-img" src="images/visa.png" alt="Logo przelewy24"></a>
+                            <a href="#"><img class="footer__pay-img" src="images/mastercard.png"
+                                    alt="Logo przelewy24"></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- logo - kolumna - kolumna - kolumna justify end
-
-            hr
-
-            social media - płatności -->
-
-
-            <!-- <img src="images/svg/Ikony_Clern_-02.svg">
-            <img src="images/svg/Ikony_Clern_-04.svg">
-            <img src="images/svg/Ikony_Clern_-05.svg">
-
-            <img src="images/svg/Ikony_Clern_-11.svg">
-            <img src="images/svg/Ikony_Clern_-12.svg">
-            <img src="images/svg/Ikony_Clern_-14.svg">
-            <img src="images/svg/Ikony_Clern_-15.svg">
-            <img src="images/svg/Ikony_Clern_-16.svg">
-            <img src="images/svg/Ikony_Clern_-17.svg">
-            <img src="images/svg/Ikony_Clern_-18.svg"> -->
-
-
-
         </footer>
     </main>
 
