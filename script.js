@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var time = 5; // time in seconds
+    var time = 5555; // time in seconds
 
     var $progressBar,
         $bar,
@@ -138,7 +138,7 @@ $('.owl-two').owlCarousel({
 $('.owl-four').owlCarousel({
     loop: true,
     margin: 10,
-    autoplay: true,
+    // autoplay: true,
     nav: false,
     dots: false,
     responsive: {

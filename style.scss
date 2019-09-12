@@ -1,30 +1,40 @@
-$clern-blue: #14b9ec;
+$clern-blue: #14b8eb;
 $clern-lightGreen:#66ba5a;
 $clern-lightYellow: #d3ef8b;
 $clern-dark-text: #322c2e;
 $clern-grey: #f3f7ff;
 
-$variable-text-small-1:0.8rem;
+$variable-text-small-1:0.85rem;
 $variable-text-small-2:0.75rem;
 $variable-text-small-3:0.5rem;
 $variable-text-medium-default:1rem;
 $variable-text-medium-3:0.9rem;
-$variable-text-medium-2:1.25rem;
-$variable-text-medium-1:1.5rem;
 $variable-text-big-1:3rem;
 $variable-text-big-2:2.5rem;
 $variable-text-big-3:2rem;
-$variable-text-huge:3.5rem;
+// $variable-text-huge:3.5rem;
+
+$variable-text-menu:1.08rem;
+$variable-text-main-heading:2.72rem;
+$variable-text-tips:0.8725rem;
+$variable-text-newsletter:2.18rem;
+$variable-text-newsletter-email:0.98rem;
+$variable-text-increased:160%;
+$variable-text-medium-2:1.2rem;
+$variable-text-medium-1:1.36375rem;
+$variable-text-main-owl-heading:4.90875rem;
+$variable-text-steps-svg:1.63625rem;
 
 $fast:0.2s;
-$variable-text-doubled:200%;
+$variable-text-doubled:160%;
+$variable-cookie-height:75px;
 
 body {
     color: $clern-dark-text;
     font-family: vag-rundschrift-d, sans-serif;
     font-weight: 300;
     overflow-x: hidden;
-    width: 100vw;
+    width: 100%;
 }
 
 h1,
@@ -39,6 +49,10 @@ input,
 button,
 a {
     font-weight: 300 !important;
+}
+
+.font-increased {
+    font-size: $variable-text-increased;
 }
 
 .font-size-doubled {
@@ -190,7 +204,7 @@ a {
 
 
 .container-fluid {
-    width: 90%;
+    width: 100%;
 
 }
 
@@ -211,7 +225,7 @@ a {
     }
 
     &__nav-link {
-        font-size: $variable-text-medium-default;
+        font-size: $variable-text-menu;
         color: $clern-dark-text;
         transition: $fast;
     }
@@ -502,7 +516,7 @@ a {
 
     &__heading {
         color: $clern-lightGreen;
-        font-size: $variable-text-big-2;
+        font-size: $variable-text-main-owl-heading;
     }
 
     &__heading-underline {
@@ -512,24 +526,25 @@ a {
 
     &__heading-underline::after {
         content: '';
-        background-color: $clern-lightYellow;
-        height: 5px;
-        width: 104%;
+        background-color: #d3ef8b;
+        height: 10px;
+        width: 100%;
         position: absolute;
         display: block;
-        left: -2%;
-        bottom: 4px;
+        left: 0;
+        bottom: 15px;
         z-index: -1;
-        border-radius: 15px;
+        border-radius: 30px;
     }
 
     &__p {
         line-height: 1.6;
+        font-size: $variable-text-medium-1;
     }
 
     &__btn {
         text-transform: uppercase;
-        font-size: $variable-text-small-1;
+        font-size: $variable-text-newsletter-email;
         border-radius: 50px;
         background-color: $clern-blue;
         border-color: $clern-blue;
@@ -564,6 +579,7 @@ a {
 
     &__heading {
         color: $clern-blue;
+        font-size: $variable-text-main-heading;
     }
 
     &__intro {
@@ -576,8 +592,8 @@ a {
         -moz-box-shadow: -1px 2px 5px 1px #efefef;
         box-shadow: -1px 2px 5px 1px #efefef;
         border-radius: 15px;
-        max-height: 70px;
-        max-width: 70px;
+        max-height: 85px;
+        max-width: 85px;
         position: relative;
         text-align: center;
     }
@@ -589,6 +605,7 @@ a {
         color: $clern-lightGreen;
         position: absolute;
         width: 10px;
+        font-size: $variable-text-menu;
         right: -12px;
         height: 10px;
         bottom: 8px;
@@ -604,11 +621,11 @@ a {
 
     &__info-step-heading {
         color: $clern-blue;
-        font-size: $variable-text-medium-1;
+        font-size: $variable-text-steps-svg;
     }
 
     &__info-step-subheading {
-        font-size: $variable-text-small-1;
+        font-size: $variable-text-newsletter-email;
     }
 
     .owl-item {
@@ -790,10 +807,11 @@ a {
         background: -o-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
         background: -ms-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
         background: linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
-        padding-top: 10vh;
+        padding-top: 25vh;
         min-height: 40vh;
         border-bottom-right-radius: 10vh;
         border-top-left-radius: 10vh;
+        width: 90%;
     }
 
 
@@ -847,11 +865,6 @@ a {
 
 .news {
     margin-top: 100px;
-
-    .container {
-        padding-left: 10vw;
-        padding-right: 10vw;
-    }
 
     &__heading {
         color: $clern-blue;
@@ -942,11 +955,29 @@ a {
         border-top-left-radius: 35px;
     }
 
+    &__img-container::before {
+        content: '• • •';
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid white;
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        text-align: center;
+        line-height: 36px;
+        letter-spacing: -1px;
+    }
+
+    &__item:hover &__img-container::before {
+        z-index: 20;
+    }
+
     &__img-container::after {
         content: '';
-        // border-bottom-right-radius: 35px;
-        // border-top-left-radius: 35px;
-        // without border we have imho nice animation
     }
 
     &__item:hover &__img-container::after {
@@ -972,10 +1003,6 @@ a {
 }
 
 .newsletter {
-    .container {
-        padding-left: 10vw;
-        padding-right: 10vw;
-    }
 
     .row {
         background-color: $clern-blue;
@@ -1319,7 +1346,7 @@ a {
 
     &__heading {
         padding-top: 150px;
-        font-size: $variable-text-huge;
+        // font-size: $variable-text-huge;
     }
 }
 
@@ -1984,7 +2011,7 @@ a {
         position: relative;
     }
 
-    .steps::after {
+    .steps::before {
         content: '';
         background: white;
         display: block;
