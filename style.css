@@ -26,7 +26,7 @@ a {
 }
 
 .font-size-doubled {
-  font-size: 160%;
+  font-size: 200%;
 }
 
 .text-small-1 {
@@ -224,7 +224,7 @@ a {
 
 .header__contact .header__nav-link {
   color: white;
-  font-size: 1rem;
+  font-size: 1.08rem;
   position: relative;
   overflow: hidden;
 }
@@ -266,7 +266,7 @@ a {
 }
 
 .header__contact-btn--inverse:hover {
-  background-color: transparent;
+  background-color: #14b8eb;
   color: white;
   border: 1px solid white;
 }
@@ -772,14 +772,17 @@ a {
 .testimonials .container-fluid {
   background-color: #5DB65A;
   background: #5db65a;
-  background: linear-gradient(45deg, #5db65a 0%, #93d057 100%);
-  background: -webkit-gradient(left bottom, right top, color-stop(0%, #5db65a), color-stop(100%, #93d057));
-  background: linear-gradient(45deg, #5db65a 0%, #93d057 100%);
+  background-image: -ms-linear-gradient(55deg, #5cb75a 0%, #93d056 99%);
+  background: linear-gradient(55deg, #5cb75a 0%, #93d056 99%);
   padding-top: 35vh;
   min-height: 40vh;
   border-bottom-right-radius: 10vh;
   border-top-left-radius: 10vh;
   width: 90%;
+}
+
+.testimonials--about-us .container-fluid {
+  padding-top: 110px;
 }
 
 .testimonials__item {
@@ -1164,18 +1167,11 @@ a {
   opacity: 0.8;
 }
 
-.header--contact__tear-bg {
+.header--contact__tear-bg, .header--purchase__tear-bg {
+  overflow: hidden;
+  position: absolute;
   width: 53%;
-  position: absolute;
   right: 0;
-  top: 0l;
-}
-
-.header--purchase__tear-bg {
-  width: 69%;
-  position: absolute;
-  right: -16%;
-  top: 0;
 }
 
 .communication {
@@ -1279,6 +1275,8 @@ a {
 
 .footer--contact-subpage .container-fluid {
   border-top-left-radius: 0;
+  padding-top: 110px;
+  padding-bottom: 40px;
 }
 
 .testimonials--about-us-subpage {
@@ -1319,13 +1317,13 @@ a {
 
 .about-us__subheading,
 .our-services__subheading {
-  font-size: 1rem;
+  font-size: 1.08rem;
   line-height: 1.7;
 }
 
 .about-us__p,
 .our-services__p {
-  font-size: 1.08rem;
+  font-size: 0.8725rem;
 }
 
 .about-us__deco-line,
@@ -1370,9 +1368,17 @@ a {
   border-bottom-right-radius: 40px;
 }
 
+.insurance__img-allianz {
+  margin-left: calc(50% + 27px);
+}
+
+.insurance__info {
+  font-size: 0.8725rem;
+}
+
 .numbers__heading {
   color: #14b8eb;
-  font-size: 2.5rem;
+  font-size: 2.18rem;
 }
 
 .numbers__svg {
@@ -1385,8 +1391,12 @@ a {
 
 .numbers__amount {
   color: #14b8eb;
-  font-size: 160%;
+  font-size: 1.98rem;
   line-height: 1;
+}
+
+.numbers__img-description {
+  font-size: 1.08rem;
 }
 
 .comp-coop .container-fluid {
@@ -1467,45 +1477,35 @@ a {
 }
 
 .company-services .owl-services .owl-dot {
-  width: 1rem;
-  height: 1rem;
+  width: 10px;
+  height: 10px;
   -webkit-box-shadow: #66ba5a;
           box-shadow: #66ba5a;
   z-index: 1;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   padding: 0px;
   margin: 0px 15px 0px 0px;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  border: 3px solid #f3f7ff;
   border-radius: 50%;
-  background: white;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: transparent;
-  border: 1px solid #fff;
+  background-color: #f3f7ff;
   cursor: pointer;
   display: inline-block;
-  margin: 0 5px;
   outline: none;
-  padding: 5px;
 }
 
-.company-services .owl-services .owl-dot::after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: grey;
-  -webkit-transition: all 0.25s ease-in-out 0s;
-  transition: all 0.25s ease-in-out 0s;
+.company-services .owl-services .owl-dots .active {
+  border: 3px solid #5cb75a;
+  background-color: white;
 }
 
-.company-services .owl-services .owl-dots .active::after {
-  background: white;
-  border: 3px solid #66ba5a;
+.company-services .owl-dots .owl-dot span {
+  height: initial;
+  width: initial;
+  -webkit-box-shadow: initial;
+          box-shadow: initial;
+  padding: initial;
+  margin: initial;
 }
 
 .company-services .fa-chevron-left,
@@ -1526,8 +1526,11 @@ a {
 
 .company-services .fa-chevron-left,
 .company-services .fa-chevron-right {
-  padding: 0.75rem;
+  width: 45px;
+  height: 45px;
   position: absolute;
+  text-align: center;
+  line-height: 45px;
   top: 50%;
   -webkit-transform: translateY(-85%);
           transform: translateY(-85%);
@@ -1565,6 +1568,7 @@ a {
   color: white;
   width: 100%;
   text-align: left;
+  font-size: 1.2rem;
 }
 
 .company-services__heading:hover {
@@ -1573,11 +1577,19 @@ a {
 }
 
 .company-services__p {
-  font-size: 0.75rem;
+  font-size: 0.8725rem;
 }
 
 .company-services .tariff__heading, .company-services .tariff__price {
   color: #66ba5a;
+}
+
+.company-services .tariff__heading {
+  font-size: 1.98rem;
+}
+
+.company-services .tariff__list-group {
+  font-size: 0.8725rem;
 }
 
 .purchase {
@@ -1679,7 +1691,7 @@ a {
 .purchase .form-check {
   border-top-left-radius: 35px;
   border-bottom-right-radius: 35px;
-  font-size: 160%;
+  font-size: 200%;
   text-transform: uppercase;
 }
 
@@ -1818,6 +1830,9 @@ a {
 }
 
 @media (min-width: 1200px) {
+  .header .container-fluid {
+    padding-top: 20px;
+  }
   .header .navbar-light .navbar-nav .nav-link {
     color: #322c2e;
   }
@@ -1847,13 +1862,7 @@ a {
 }
 
 @media (min-width: 1921px) {
-  .header--contact__tear-bg, .header--purchase__tear-bg {
-    overflow: hidden;
-    position: absolute;
-    width: 52%;
-    right: 0;
-  }
-  .about-us .row {
+  .our-services .row {
     top: 40%;
   }
   .communication__heading {
@@ -1957,7 +1966,6 @@ a {
 @media (max-width: 992px) {
   .container-fluid {
     max-width: 100%;
-    width: 100%;
   }
   .owl-one__left {
     position: static !important;
@@ -1986,6 +1994,11 @@ a {
   }
   .company-services {
     margin-left: 0;
+  }
+  .insurance__img-allianz {
+    margin: 0 auto;
+    display: inherit;
+    padding-top: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

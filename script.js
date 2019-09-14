@@ -162,6 +162,7 @@ $('.owl-companies').owlCarousel({
     loop: true,
     margin: 10,
     autoplay: true,
+    autoplayHoverPause: true,
     dots: false,
     responsiveClass: true,
     responsive: {
@@ -185,8 +186,10 @@ $('.owl-services').owlCarousel({
     loop: true,
     margin: 10,
     nav: true,
-    navText: ["<i class='fa fa-chevron-left'></i>", "< class='fa fa-chevron-right'></>"],
+    navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
     autoplay: true,
+
+    autoplayHoverPause: true,
     dots: true,
     items: 1
 })

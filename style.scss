@@ -29,9 +29,10 @@ $variable-text-footer-contact:1.41rem;
 $variable-text-big-2:2.5rem;
 $variable-text-news-subheading:1.125rem;
 $variable-text-about-us-heading:3.818125rem;
+$variable-accordion-tariff:1.98rem;
 
 $fast:0.2s;
-$variable-text-doubled:160%;
+$variable-text-doubled:200%;
 $variable-cookie-height:75px;
 
 body {
@@ -266,7 +267,7 @@ a {
 
     &__contact &__nav-link {
         color: white;
-        font-size: $variable-text-medium-default;
+        font-size: $variable-text-menu;
         position: relative;
         overflow: hidden;
     }
@@ -306,7 +307,7 @@ a {
 
 
         &--inverse:hover {
-            background-color: transparent;
+            background-color: $clern-blue;
             color: white;
             border: 1px solid white;
         }
@@ -819,18 +820,20 @@ a {
     .container-fluid {
         background-color: #5DB65A;
         background: #5db65a;
-        background: linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
-        background: -moz-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
-        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(93, 182, 90, 1)), color-stop(100%, rgba(147, 208, 87, 1)));
-        background: -webkit-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
-        background: -o-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
-        background: -ms-linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
-        background: linear-gradient(45deg, rgba(93, 182, 90, 1) 0%, rgba(147, 208, 87, 1) 100%);
+        background-image: -moz-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
+        background-image: -webkit-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
+        background-image: -ms-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
+        background: linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
         padding-top: 35vh;
+
         min-height: 40vh;
         border-bottom-right-radius: 10vh;
         border-top-left-radius: 10vh;
         width: 90%;
+    }
+
+    &--about-us .container-fluid {
+        padding-top: 110px;
     }
 
     &__item {
@@ -1224,18 +1227,14 @@ a {
 
 
 .header {
-    &--contact__tear-bg {
-        width: 53%;
-        position: absolute;
-        right: 0;
-        top: 0l
-    }
 
+    &--contact__tear-bg,
     &--purchase__tear-bg {
-        width: 69%;
+
+        overflow: hidden;
         position: absolute;
-        right: -16%;
-        top: 0;
+        width: 53%;
+        right: 0;
     }
 }
 
@@ -1339,6 +1338,8 @@ a {
 
     .container-fluid {
         border-top-left-radius: 0;
+        padding-top: 110px;
+        padding-bottom: 40px;
     }
 
 }
@@ -1378,12 +1379,12 @@ a {
     }
 
     &__subheading {
-        font-size: $variable-text-medium-default;
+        font-size: $variable-text-menu;
         line-height: 1.7;
     }
 
     &__p {
-        font-size: $variable-text-menu;
+        font-size: $variable-text-tips;
     }
 
     &__deco-line {
@@ -1433,18 +1434,19 @@ a {
         border-bottom-right-radius: 40px;
     }
 
-    // &__info {
-    //     width: 50% !important;
-    //     position: absolute;
-    //     right: 0;
-    //     padding: 2rem 1rem 0rem 9rem;
-    // }
+    &__img-allianz {
+        margin-left: calc(50% + 27px);
+    }
+
+    &__info {
+        font-size: $variable-text-tips;
+    }
 }
 
 .numbers {
     &__heading {
         color: $clern-blue;
-        font-size: $variable-text-big-2;
+        font-size: $variable-text-newsletter;
     }
 
     &__svg {
@@ -1457,8 +1459,12 @@ a {
 
     &__amount {
         color: $clern-blue;
-        font-size: $variable-text-doubled;
+        font-size: $variable-accordion-tariff;
         line-height: 1;
+    }
+
+    &__img-description {
+        font-size: $variable-text-menu;
     }
 }
 
@@ -1541,40 +1547,50 @@ a {
     }
 
     .owl-services .owl-dot {
-        width: 1rem;
-        height: 1rem;
+        width: 10px;
+        height: 10px;
         box-shadow: $clern-lightGreen;
         z-index: 1;
-        transform: translateY(-50%);
+        // transform: translateY(-50%);
         padding: 0px;
         margin: 0px 15px 0px 0px;
         transition: all 0.3s ease 0s;
+        border: 3px solid rgb(243, 247, 255);
         border-radius: 50%;
-        background: rgb(255, 255, 255);
-        appearance: none;
-        background-color: transparent;
-        border: 1px solid #fff;
+        background-color: rgb(243, 247, 255);
         cursor: pointer;
         display: inline-block;
-        margin: 0 5px;
+        // margin: 0 5px;
         outline: none;
-        padding: 5px;
     }
 
-    .owl-services .owl-dot::after {
-        content: "";
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: grey;
-        transition: all 0.25s ease-in-out 0s;
+    .owl-services .owl-dots .active {
+        border: 3px solid rgb(92, 183, 90);
+        background-color: white;
     }
 
-    .owl-services .owl-dots .active::after {
-        background: white;
-        border: 3px solid $clern-lightGreen;
+    .owl-dots .owl-dot span {
+        height: initial;
+        width: initial;
+        box-shadow: initial;
+        padding: initial;
+        margin: initial;
     }
+
+    // .owl-services .owl-dot::after {
+    //     content: "";
+    //     position: absolute;
+    //     width: 8px;
+    //     height: 8px;
+    //     border-radius: 50%;
+    //     background: grey;
+    //     transition: all 0.25s ease-in-out 0s;
+    // }
+
+    // .owl-services .owl-dots .active::after {
+    //     background: white;
+    //     border: 3px solid rgb(92, 183, 90);
+    // }
 
     .fa-chevron-left,
     .fa-chevron-right,
@@ -1582,6 +1598,7 @@ a {
         color: white;
         border-radius: 50%;
     }
+
 
     .fa-chevron-left,
     .fa-chevron-right,
@@ -1598,8 +1615,11 @@ a {
 
     .fa-chevron-left,
     .fa-chevron-right {
-        padding: 0.75rem;
+        width: 45px;
+        height: 45px;
         position: absolute;
+        text-align: center;
+        line-height: 45px;
         top: 50%;
         transform: translateY(-85%);
         box-shadow: rgba(147, 208, 87, 0.5) 0 0 6px 3px
@@ -1634,6 +1654,7 @@ a {
         color: white;
         width: 100%;
         text-align: left;
+        font-size: $variable-text-medium-2;
     }
 
     &__heading:hover {
@@ -1642,7 +1663,7 @@ a {
     }
 
     &__p {
-        font-size: $variable-text-small-2;
+        font-size: $variable-text-tips;
     }
 
     .tariff {
@@ -1650,6 +1671,14 @@ a {
         &__heading,
         &__price {
             color: $clern-lightGreen;
+        }
+
+        &__heading {
+            font-size: $variable-accordion-tariff;
+        }
+
+        &__list-group {
+            font-size: $variable-text-tips;
         }
 
     }
@@ -1917,6 +1946,10 @@ a {
 @media (min-width:1200px) {
 
     .header {
+        .container-fluid {
+            padding-top: 20px;
+        }
+
         .navbar-light .navbar-nav .nav-link {
             color: $clern-dark-text;
         }
@@ -1960,19 +1993,7 @@ a {
 
 
 @media (min-width:1921px) {
-    .header {
-
-        &--contact__tear-bg,
-        &--purchase__tear-bg {
-
-            overflow: hidden;
-            position: absolute;
-            width: 52%;
-            right: 0;
-        }
-    }
-
-    .about-us {
+    .our-services {
         .row {
             top: 40%;
         }
@@ -2043,7 +2064,6 @@ a {
 @media (max-width:1200px) {
     .header {
         &__nav-item {
-
             width: 100%;
             text-align: left !important;
         }
@@ -2104,7 +2124,6 @@ a {
 
     .container-fluid {
         max-width: 100%;
-        width: 100%;
     }
 
     .owl-one {
@@ -2149,8 +2168,15 @@ a {
     }
 
 
-
     .company-services {
         margin-left: 0;
+    }
+
+    .insurance {
+        &__img-allianz {
+            margin: 0 auto;
+            display: inherit;
+            padding-top: 20px;
+        }
     }
 }
