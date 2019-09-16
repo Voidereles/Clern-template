@@ -30,6 +30,8 @@ $variable-text-big-2:2.5rem;
 $variable-text-news-subheading:1.125rem;
 $variable-text-about-us-heading:3.818125rem;
 $variable-accordion-tariff:1.98rem;
+$variable-contact-telephone:2.290625rem;
+$variable-text-purchase-svg: 1.309375rem;
 
 $fast:0.2s;
 $variable-text-doubled:200%;
@@ -335,7 +337,7 @@ a {
         left: 50%;
         transform: translateX(-50%);
         z-index: 3;
-        top: 12px;
+        top: 20px;
 
         .dropdown-toggle {
             border-radius: 50%;
@@ -1245,37 +1247,75 @@ a {
         height: 50vh;
         border-top-right-radius: 10vmin;
         border-bottom-left-radius: 10vmin;
+
+        &-container {
+            position: relative;
+        }
+
+        &-link {
+            background: #aecf56;
+            background: -moz-linear-gradient(top, #aecf56 1%, #65ba5a 100%);
+            background: -webkit-linear-gradient(top, #aecf56 1%, #65ba5a 100%);
+            background: linear-gradient(to bottom, #aecf56 1%, #65ba5a 100%);
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            right: -35px;
+            bottom: -35px;
+            padding: 22px;
+            border-radius: 50%;
+        }
+
+        &-svg {
+            fill: white;
+        }
+
+        &__p {
+            font-size: $variable-text-medium-2;
+        }
     }
 
     &__heading {
         color: $clern-lightGreen;
-        font-size: $variable-text-big-2;
+        font-size: $variable-text-about-us-heading;
     }
 
     &__subheading {
         display: inline-block;
+        font-size: $variable-text-menu;
     }
 
     &__deco-line {
         width: 3.75rem;
-        height: 2px;
-        background-color: $clern-lightGreen;
+        height: 3px;
+        background-color: #a7cd56;
         display: inline-block;
         margin-bottom: 1.75rem;
     }
 
     &__tel a {
-        font-size: $variable-text-medium-2;
+        font-size: $variable-contact-telephone;
         color: $clern-blue;
+        text-decoration: none;
+        ;
+
+        &:hover {
+            border-bottom: 2px solid $clern-blue;
+        }
+    }
+
+    &__tel-prefix {
+        font-size: $variable-text-footer-contact;
     }
 
     &__time-open {
-        font-size: $variable-text-medium-1;
+        font-size: $variable-text-footer-contact;
         color: $clern-blue;
     }
 
     &__form-heading {
         color: $clern-blue;
+        font-size: $variable-text-steps-svg;
     }
 
     &__btn {
@@ -1283,15 +1323,19 @@ a {
         position: relative;
         background: #00ace0;
         font-size: $variable-text-small-1;
-        background: -webkit-gradient(left bottom, right top, color-stop(0%, #00ace0), color-stop(100%, #75dfff));
-        background: linear-gradient(45deg, #00ace0 0%, #75dfff 100%);
+        background-image: -moz-linear-gradient(55deg, rgb(18, 178, 233) 0%, rgb(24, 200, 243) 100%);
+        background-image: -webkit-linear-gradient(55deg, rgb(18, 178, 233) 0%, rgb(24, 200, 243) 100%);
+        background-image: -ms-linear-gradient(55deg, rgb(18, 178, 233) 0%, rgb(24, 200, 243) 100%);
+        background-image: linear-gradient(55deg, rgb(18, 178, 233) 0%, rgb(24, 200, 243) 100%);
+        box-shadow: 0px 7px 18px 0px rgba(24, 200, 243, 0.3);
         -webkit-transition: 0.5s, color 0.2s;
         transition: 0.5s, color 0.2s;
         -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
         box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
         z-index: 2;
         border-radius: 40px;
-        width: 100px;
+        height: 60px;
+        width: 126px;
         cursor: pointer;
         color: white;
         text-transform: uppercase;
@@ -1407,7 +1451,11 @@ a {
 
     &__heading {
         padding-top: 150px;
-        // font-size: $variable-text-huge;
+        font-size: $variable-text-about-us-heading;
+    }
+
+    &__p {
+        font-size: $variable-text-menu;
     }
 }
 
@@ -1723,24 +1771,28 @@ a {
     }
 
     &__svg-description {
-        font-size: $variable-text-medium-default;
+        font-size: $variable-text-purchase-svg;
         color: $clern-blue;
     }
 
     &__summary {
         background: white;
-        box-shadow: 0px 4px 21px 0px rgba(144, 144, 144, 0.22);
+        box-shadow: 0px 3px 18px 0px rgba(144, 144, 144, 0.22);
         position: relative;
         text-align: center;
-        border-bottom-right-radius: 25px;
-        border-top-left-radius: 25px;
+        border-bottom-right-radius: 43.64px;
+        border-top-left-radius: 43.64px;
         overflow: hidden;
-        height: 450px;
+        height: 455px;
+        font-size: $variable-text-menu;
     }
+
+
 
     .summary {
         &__heading {
             color: $clern-blue;
+            font-size: $variable-text-steps-svg;
         }
 
         &__info {
@@ -1754,18 +1806,33 @@ a {
             bottom: 0;
             left: 0;
             right: 0;
+            height: 80px;
             background-color: #5DB65A;
             background-image: linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
             background-image: -moz-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
             background-image: -webkit-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
             background-image: -ms-linear-gradient(55deg, rgb(92, 183, 90) 0%, rgb(147, 208, 86) 99%);
+            line-height: 80px;
+
+            &-number {
+                font-size: $variable-text-footer-contact
+            }
+
+            &-p {
+                font-size: $variable-text-menu;
+                padding-top: 0.7rem;
+            }
         }
     }
 
     &__form-description {
-        font-size: $variable-text-medium-default;
+        font-size: $variable-text-menu;
     }
 
+    &__form-heading {
+        font-size: $variable-text-steps-svg;
+        color: $clern-blue;
+    }
 
     .form-label {
         left: initial;
@@ -1972,8 +2039,12 @@ a {
     }
 
 
-    .communication__heading {
-        padding-top: 50px;
+    .communication {
+
+        &__heading,
+        &__map-container {
+            padding-top: 50px;
+        }
     }
 
 }

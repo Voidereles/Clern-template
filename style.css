@@ -293,7 +293,7 @@ a {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 3;
-  top: 12px;
+  top: 20px;
 }
 
 .header__lang-change .dropdown-toggle {
@@ -1184,35 +1184,71 @@ a {
   border-bottom-left-radius: 10vmin;
 }
 
+.communication__map-container {
+  position: relative;
+}
+
+.communication__map-link {
+  background: #aecf56;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #aecf56), to(#65ba5a));
+  background: linear-gradient(to bottom, #aecf56 1%, #65ba5a 100%);
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  right: -35px;
+  bottom: -35px;
+  padding: 22px;
+  border-radius: 50%;
+}
+
+.communication__map-svg {
+  fill: white;
+}
+
+.communication__map__p {
+  font-size: 1.2rem;
+}
+
 .communication__heading {
   color: #66ba5a;
-  font-size: 2.5rem;
+  font-size: 3.81813rem;
 }
 
 .communication__subheading {
   display: inline-block;
+  font-size: 1.08rem;
 }
 
 .communication__deco-line {
   width: 3.75rem;
-  height: 2px;
-  background-color: #66ba5a;
+  height: 3px;
+  background-color: #a7cd56;
   display: inline-block;
   margin-bottom: 1.75rem;
 }
 
 .communication__tel a {
-  font-size: 1.2rem;
+  font-size: 2.29062rem;
   color: #14b8eb;
+  text-decoration: none;
+}
+
+.communication__tel a:hover {
+  border-bottom: 2px solid #14b8eb;
+}
+
+.communication__tel-prefix {
+  font-size: 1.41rem;
 }
 
 .communication__time-open {
-  font-size: 1.36375rem;
+  font-size: 1.41rem;
   color: #14b8eb;
 }
 
 .communication__form-heading {
   color: #14b8eb;
+  font-size: 1.63625rem;
 }
 
 .communication__btn {
@@ -1220,15 +1256,17 @@ a {
   position: relative;
   background: #00ace0;
   font-size: 0.85rem;
-  background: -webkit-gradient(left bottom, right top, color-stop(0%, #00ace0), color-stop(100%, #75dfff));
-  background: linear-gradient(45deg, #00ace0 0%, #75dfff 100%);
+  background-image: linear-gradient(55deg, #12b2e9 0%, #18c8f3 100%);
+  -webkit-box-shadow: 0px 7px 18px 0px rgba(24, 200, 243, 0.3);
+          box-shadow: 0px 7px 18px 0px rgba(24, 200, 243, 0.3);
   -webkit-transition: 0.5s, color 0.2s;
   transition: 0.5s, color 0.2s;
   -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
   box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
   z-index: 2;
   border-radius: 40px;
-  width: 100px;
+  height: 60px;
+  width: 126px;
   cursor: pointer;
   color: white;
   text-transform: uppercase;
@@ -1347,6 +1385,11 @@ a {
 
 .purchase-cleaning__heading {
   padding-top: 150px;
+  font-size: 3.81813rem;
+}
+
+.purchase-cleaning__p {
+  font-size: 1.08rem;
 }
 
 .about-us {
@@ -1629,24 +1672,26 @@ a {
 }
 
 .purchase__svg-description {
-  font-size: 1rem;
+  font-size: 1.30937rem;
   color: #14b8eb;
 }
 
 .purchase__summary {
   background: white;
-  -webkit-box-shadow: 0px 4px 21px 0px rgba(144, 144, 144, 0.22);
-          box-shadow: 0px 4px 21px 0px rgba(144, 144, 144, 0.22);
+  -webkit-box-shadow: 0px 3px 18px 0px rgba(144, 144, 144, 0.22);
+          box-shadow: 0px 3px 18px 0px rgba(144, 144, 144, 0.22);
   position: relative;
   text-align: center;
-  border-bottom-right-radius: 25px;
-  border-top-left-radius: 25px;
+  border-bottom-right-radius: 43.64px;
+  border-top-left-radius: 43.64px;
   overflow: hidden;
-  height: 450px;
+  height: 455px;
+  font-size: 1.08rem;
 }
 
 .purchase .summary__heading {
   color: #14b8eb;
+  font-size: 1.63625rem;
 }
 
 .purchase .summary__info {
@@ -1660,13 +1705,29 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
+  height: 80px;
   background-color: #5DB65A;
   background-image: linear-gradient(55deg, #5cb75a 0%, #93d056 99%);
   background-image: -ms-linear-gradient(55deg, #5cb75a 0%, #93d056 99%);
+  line-height: 80px;
+}
+
+.purchase .summary__final-cost-number {
+  font-size: 1.41rem;
+}
+
+.purchase .summary__final-cost-p {
+  font-size: 1.08rem;
+  padding-top: 0.7rem;
 }
 
 .purchase__form-description {
-  font-size: 1rem;
+  font-size: 1.08rem;
+}
+
+.purchase__form-heading {
+  font-size: 1.63625rem;
+  color: #14b8eb;
 }
 
 .purchase .form-label {
@@ -1847,7 +1908,7 @@ a {
   .header__contact .navbar-nav .nav-link:hover {
     color: white !important;
   }
-  .communication__heading {
+  .communication__heading, .communication__map-container {
     padding-top: 50px;
   }
 }
