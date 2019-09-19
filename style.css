@@ -555,7 +555,7 @@ a {
   background-color: #fff;
   background-position-x: -22vmin;
   background-position-y: -30px;
-  padding-bottom: 18vw;
+  padding-bottom: 17vw;
 }
 
 .steps__heading {
@@ -569,7 +569,8 @@ a {
 }
 
 .steps__intro {
-  padding-top: 160px;
+  padding-top: 18vh;
+  padding-bottom: 80px;
 }
 
 .steps__svg {
@@ -628,6 +629,17 @@ a {
   position: relative;
 }
 
+.offer .owl-two,
+.offer .owl-stage-outer,
+.offer .owl-stage {
+  min-height: 450px;
+}
+
+.offer .owl-item {
+  -webkit-transform: translateY(37px);
+          transform: translateY(37px);
+}
+
 .offer .owl-item {
   padding: 0.5rem;
 }
@@ -636,7 +648,7 @@ a {
   color: #66ba5a;
   font-size: 2.72rem;
   text-align: center;
-  margin-bottom: 110px;
+  margin-bottom: 40px;
 }
 
 .offer__item {
@@ -645,25 +657,29 @@ a {
   border-bottom-right-radius: 25px;
   border-top-left-radius: 25px;
   position: relative;
-  -webkit-transition: 1s, border-radius 0s;
-  transition: 1s, border-radius 0s;
+  -webkit-transition: 0.4s, border-radius 0s;
+  transition: 0.4s, border-radius 0s;
   z-index: 1;
   background-color: white;
-  height: 310px;
+  height: 320px;
+  -webkit-transform: translateY(37px);
+          transform: translateY(37px);
 }
 
 .offer__item::after {
   content: "";
   opacity: 0;
-  -webkit-transition: 1s, border-radius 0s;
-  transition: 1s, border-radius 0s;
+  -webkit-transition: 0.4s, border-radius 0s;
+  transition: 0.4s, border-radius 0s;
 }
 
 .offer__item:hover {
   background-color: #3fbae1;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   cursor: pointer;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
   height: 347px;
 }
 
@@ -729,7 +745,7 @@ a {
 
 .offer__item:hover .offer__more {
   border-radius: 25px;
-  width: 60%;
+  width: 50%;
   background-color: white;
   cursor: pointer;
 }
@@ -806,7 +822,7 @@ a {
 }
 
 .testimonials--main-site {
-  margin-top: -20vh;
+  margin-top: calc(-14vh - 140px);
 }
 
 .testimonials__heading {
@@ -818,7 +834,7 @@ a {
   background: #5db65a;
   background-image: -ms-linear-gradient(55deg, #5cb75a 0%, #93d056 99%);
   background: linear-gradient(55deg, #5cb75a 0%, #93d056 99%);
-  padding-top: 35vh;
+  padding-top: calc(35vh + 130px);
   min-height: 40vh;
   border-bottom-right-radius: 10vh;
   border-top-left-radius: 10vh;
@@ -928,7 +944,7 @@ a {
           box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
   z-index: 2;
   border-radius: 25px;
-  width: 130px;
+  width: 110px;
   cursor: pointer;
   color: white;
 }
@@ -1182,6 +1198,34 @@ a {
   color: #14b8eb;
   display: block;
   font-size: 1.41rem;
+}
+
+.footer__tel, .footer__email {
+  color: #14b8eb;
+  font-size: 1.41rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer__tel:hover, .footer__tel:visited, .footer__email:hover, .footer__email:visited {
+  text-decoration: none;
+  color: #14b8eb;
+}
+
+.footer__tel::after, .footer__email::after {
+  content: "";
+  position: absolute;
+  width: 8.75rem;
+  height: 2px;
+  background-color: #14b8eb;
+  bottom: 0;
+  right: -100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__tel:hover::after, .footer__email:hover::after {
+  right: 0;
 }
 
 .footer__social .fab {
@@ -1958,9 +2002,6 @@ a {
   .header__contact .navbar-nav .nav-link:hover {
     color: white !important;
   }
-  .offer .container {
-    max-width: 1280px;
-  }
   .communication__heading, .communication__map-container {
     padding-top: 50px;
   }
@@ -1973,9 +2014,15 @@ a {
   .about-us__deco-line {
     display: inline-block;
   }
+  .offer .container {
+    max-width: 1280px;
+  }
 }
 
 @media (min-width: 1921px) {
+  .steps {
+    padding-bottom: 30vw;
+  }
   .our-services .row {
     top: 40%;
   }
@@ -2082,6 +2129,9 @@ a {
     position: absolute;
     z-index: 0;
   }
+  .testimonials .container-fluid {
+    width: 100%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -2120,6 +2170,9 @@ a {
     margin: 0 auto;
     display: inherit;
     padding-top: 20px;
+  }
+  .footer--main-site .container-fluid {
+    padding-bottom: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */

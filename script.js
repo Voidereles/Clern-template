@@ -173,14 +173,17 @@ $('.owl-four').owlCarousel({
     responsive: {
         0: {
             items: 1,
-            nav: true
+            dots: false,
+            nav: false
         },
         600: {
             items: 2,
+            dots: false,
             nav: false
         },
         992: {
             items: 3,
+            dots: false,
             nav: false
         }
     }
