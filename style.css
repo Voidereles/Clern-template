@@ -224,7 +224,7 @@ a {
 
 .header__contact .header__nav-link {
   color: white;
-  font-size: 1.08rem;
+  font-size: 1.41rem;
   position: relative;
   overflow: hidden;
 }
@@ -249,11 +249,13 @@ a {
   background-color: transparent;
   color: white;
   border: 1px solid white;
-  border-radius: 25px;
+  width: 131px;
+  height: 61px;
+  border-radius: 30.11px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  font-size: 0.85rem;
-  line-height: 1.5rem;
+  font-size: 0.98rem;
+  line-height: 2.8;
   text-transform: uppercase;
   -webkit-box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
           box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
@@ -293,14 +295,22 @@ a {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 3;
-  top: 20px;
+  top: 13px;
+}
+
+.header__lang-change-arrow {
+  fill: #14b8eb;
+  width: 0.9rem;
+  height: 1rem;
+  padding: 2px;
+  margin-left: 3px;
 }
 
 .header__lang-change .dropdown-toggle {
   border-radius: 50%;
-  width: 46px;
-  height: 46px;
-  font-size: 0.85rem;
+  width: 63px;
+  height: 60px;
+  font-size: 0.98rem;
   background-color: white;
   color: #14b8eb;
   border: 0px white;
@@ -312,6 +322,10 @@ a {
 .header__lang-change .dropdown-toggle:hover {
   background-color: #14b8eb;
   color: white;
+}
+
+.header__lang-change .dropdown-toggle:hover .header__lang-change-arrow {
+  fill: white;
 }
 
 .header__lang-change .dropdown-toggle::after {
@@ -345,10 +359,10 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 46px;
+  width: 62px;
   float: left;
   min-width: 0;
-  padding: 3.5rem 0 1rem;
+  padding: 4.4rem 0 1rem;
   margin: .125rem 0 0;
   font-size: 1rem;
   color: #212529;
@@ -454,12 +468,26 @@ a {
           transform: translate(-50%, -50%) rotate(90deg);
 }
 
+.owl-one .main-counter {
+  position: absolute;
+  right: calc(7vw - 0.25rem);
+  top: calc(50% + 55px);
+  color: white;
+  font-size: 1.41rem;
+}
+
+.owl-one .main-counter__number {
+  font-size: 2.18rem;
+  margin-right: 5px;
+  font-weight: 400;
+}
+
 .owl-one .owl-carousel .owl-item img, .owl-one__img {
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 100%;
   display: inline-block !important;
-  width: 89% !important;
+  width: 88% !important;
   z-index: -1;
 }
 
@@ -555,6 +583,10 @@ a {
   text-align: center;
 }
 
+.steps__svg img {
+  margin: 6px;
+}
+
 .steps__svg-1::after, .steps__svg-2::after, .steps__svg-3::after {
   content: '01';
   color: #14b8eb;
@@ -604,6 +636,7 @@ a {
   color: #66ba5a;
   font-size: 2.72rem;
   text-align: center;
+  margin-bottom: 110px;
 }
 
 .offer__item {
@@ -612,10 +645,18 @@ a {
   border-bottom-right-radius: 25px;
   border-top-left-radius: 25px;
   position: relative;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 1s, border-radius 0s;
+  transition: 1s, border-radius 0s;
   z-index: 1;
   background-color: white;
+  height: 310px;
+}
+
+.offer__item::after {
+  content: "";
+  opacity: 0;
+  -webkit-transition: 1s, border-radius 0s;
+  transition: 1s, border-radius 0s;
 }
 
 .offer__item:hover {
@@ -623,10 +664,10 @@ a {
   -webkit-transition: 1s;
   transition: 1s;
   cursor: pointer;
+  height: 347px;
 }
 
 .offer__item:hover::after {
-  content: "";
   background: url("images/offer-flats-bg.png");
   opacity: 0.9;
   top: 0;
@@ -730,7 +771,7 @@ a {
 }
 
 .offer__item-heading {
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   position: relative;
   display: block;
   z-index: 2;
@@ -739,9 +780,12 @@ a {
   text-decoration: none;
 }
 
+.offer__item:hover a {
+  text-decoration: none;
+}
+
 .offer__item:hover .offer__item-heading {
   color: white;
-  text-decoration: none;
 }
 
 .offer__item-heading:hover {
@@ -1894,6 +1938,12 @@ a {
   .header .container-fluid {
     padding-top: 20px;
   }
+  .header__navbar-nav {
+    padding-right: 46px;
+  }
+  .header__navbar-nav, .header__contact {
+    width: 50%;
+  }
   .header .navbar-light .navbar-nav .nav-link {
     color: #322c2e;
   }
@@ -1907,6 +1957,9 @@ a {
   .header__contact .navbar-nav .nav-link:focus,
   .header__contact .navbar-nav .nav-link:hover {
     color: white !important;
+  }
+  .offer .container {
+    max-width: 1280px;
   }
   .communication__heading, .communication__map-container {
     padding-top: 50px;
@@ -1979,6 +2032,13 @@ a {
 }
 
 @media (max-width: 1200px) {
+  .header .container-fluid {
+    width: 100%;
+  }
+  .header .menu-container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
   .header__nav-item {
     width: 100%;
     text-align: left !important;

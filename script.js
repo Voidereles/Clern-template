@@ -14,7 +14,6 @@ $(document).ready(function () {
     }
 
 
-
     function buildProgressBar() {
         $progressBar = $("<div>", {
             class: "progressBar"
@@ -23,15 +22,43 @@ $(document).ready(function () {
             class: "bar"
         });
         $progressBar.append($bar).appendTo($(" .owl-three .owl-dots .active, .owl-one .owl-dots .active"));
+
     }
+
     function moved() {
         $(".progressBar").remove();
         buildProgressBar();
         clearTimeout(tick);
         start();
     }
+
+
     var owl = $(".owl-one");
     var owlTestimonials = $(".owl-three");
+
+    function counter(event) {
+        var items = event.item.count;
+        var item = event.item.index + 2;
+
+        if (item > items) {
+            item = item - items
+        }
+
+        if (item == 4) {
+            item = 1;
+        }
+        $('.main-counter').html('<span class="main-counter__number">' + item + '</span><span class="main-counter__slash">/ </span>' +
+            '<span class="main-counter__total">' + items + '</span>')
+    }
+
+    owl.on('initialized.owl.carousel', function (event) {
+        // $('.owl-one .owl-dots .active').insertAdjacentHTML('<div class="main-counter">dasdas</div>');
+        counter(event);
+    });
+
+    owl.on('translate.owl.carousel', function (event) {
+        counter(event);
+    });
 
     owl.owlCarousel({
         autoplayHoverPause: true,
@@ -52,6 +79,8 @@ $(document).ready(function () {
         }
 
     });
+
+
 
     owlTestimonials.owlCarousel({
         autoplayHoverPause: true,

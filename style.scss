@@ -269,7 +269,7 @@ a {
 
     &__contact &__nav-link {
         color: white;
-        font-size: $variable-text-menu;
+        font-size: $variable-text-footer-contact;
         position: relative;
         overflow: hidden;
     }
@@ -293,10 +293,12 @@ a {
         background-color: transparent;
         color: white;
         border: 1px solid white;
-        border-radius: 25px;
+        width: 131px;
+        height: 61px;
+        border-radius: 30.11px;
         transition: $fast;
-        font-size: $variable-text-small-1;
-        line-height: 1.5rem;
+        font-size: $variable-text-newsletter-email;
+        line-height: 2.8;
         text-transform: uppercase;
         box-shadow: rgba(20, 184, 235, 0.5) 0px 5px 12px 0px;
 
@@ -337,13 +339,21 @@ a {
         left: 50%;
         transform: translateX(-50%);
         z-index: 3;
-        top: 20px;
+        top: 13px;
+
+        &-arrow {
+            fill: $clern-blue;
+            width: 0.9rem;
+            height: 1rem;
+            padding: 2px;
+            margin-left: 3px;
+        }
 
         .dropdown-toggle {
             border-radius: 50%;
-            width: 46px;
-            height: 46px;
-            font-size: $variable-text-small-1;
+            width: 63px;
+            height: 60px;
+            font-size: $variable-text-newsletter-email;
             background-color: white;
             color: $clern-blue;
             border: 0px white;
@@ -355,6 +365,10 @@ a {
             &:hover {
                 background-color: $clern-blue;
                 color: white;
+            }
+
+            &:hover .header__lang-change-arrow {
+                fill: white;
             }
 
             &::after {
@@ -391,10 +405,10 @@ a {
             position: absolute;
             top: 0;
             left: 0;
-            width: 46px;
+            width: 62px;
             float: left;
             min-width: 0;
-            padding: 3.5rem 0 1rem;
+            padding: 4.4rem 0 1rem;
             margin: .125rem 0 0;
             font-size: 1rem;
             color: #212529;
@@ -505,6 +519,20 @@ a {
         transform: translate(-50%, -50%) rotate(90deg);
     }
 
+    .main-counter {
+        position: absolute;
+        right: calc(7vw - 0.25rem);
+        top: calc(50% + 55px);
+        color: white;
+        font-size: $variable-text-footer-contact;
+
+        &__number {
+            font-size: $variable-text-newsletter;
+            margin-right: 5px;
+            font-weight: 400;
+        }
+    }
+
 
 
     .owl-carousel .owl-item img,
@@ -512,7 +540,7 @@ a {
         object-fit: cover;
         max-width: 100%;
         display: inline-block !important;
-        width: 89% !important;
+        width: 88% !important;
         z-index: -1;
     }
 
@@ -606,6 +634,10 @@ a {
         max-width: 85px;
         position: relative;
         text-align: center;
+
+        img {
+            margin: 6px;
+        }
     }
 
     &__svg-1::after,
@@ -658,6 +690,7 @@ a {
         color: $clern-lightGreen;
         font-size: $variable-text-main-heading;
         text-align: center;
+        margin-bottom: 110px;
     }
 
     &__item {
@@ -665,19 +698,28 @@ a {
         border-bottom-right-radius: 25px;
         border-top-left-radius: 25px;
         position: relative;
-        transition: 1s;
+        transition: 1s, border-radius 0s;
         z-index: 1;
         background-color: white;
+        height: 310px;
+    }
+
+    &__item::after {
+        content: "";
+        opacity: 0;
+        transition: 1s, border-radius 0s;
     }
 
     &__item:hover {
         background-color: #3fbae1;
         transition: 1s;
         cursor: pointer;
+        // transform: translateY(-37px);
+        height: 347px;
     }
 
+
     &__item:hover::after {
-        content: "";
         background: url('images/offer-flats-bg.png');
         opacity: 0.9;
         top: 0;
@@ -779,7 +821,7 @@ a {
 
 
     &__item-heading {
-        font-size: $variable-text-small-1;
+        font-size: $variable-text-medium-2;
         position: relative;
         display: block;
         z-index: 2;
@@ -788,9 +830,12 @@ a {
         text-decoration: none;
     }
 
+    &__item:hover a {
+        text-decoration: none;
+    }
+
     &__item:hover &__item-heading {
         color: white;
-        text-decoration: none;
     }
 
     &__item-heading:hover {
@@ -2017,6 +2062,16 @@ a {
             padding-top: 20px;
         }
 
+        &__navbar-nav {
+            padding-right: 46px;
+        }
+
+        &__navbar-nav,
+        &__contact {
+            width: 50%;
+        }
+
+
         .navbar-light .navbar-nav .nav-link {
             color: $clern-dark-text;
         }
@@ -2036,6 +2091,12 @@ a {
         }
 
 
+    }
+
+    .offer {
+        .container {
+            max-width: 1280px;
+        }
     }
 
 
@@ -2134,6 +2195,14 @@ a {
 
 @media (max-width:1200px) {
     .header {
+        .container-fluid {
+            width: 100%;
+        }
+
+        .menu-container {
+            box-shadow: none;
+        }
+
         &__nav-item {
             width: 100%;
             text-align: left !important;
@@ -2196,6 +2265,7 @@ a {
     .container-fluid {
         max-width: 100%;
     }
+
 
     .owl-one {
 
